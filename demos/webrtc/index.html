@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+      <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+      <title>WebRTC Test</title>
+
+      <link rel="stylesheet" type="text/css" media="all" href="reset.css" />
+      <link rel="stylesheet" type="text/css" media="all" href="style.css" />
+    </head>
+
+    <body onload="webrtc.showVideo();">
+      <video id="webcam" autoplay="autoplay" width="600px" height="600px">
+        Sad panda does not have video
+      </video>
+      <canvas id="photo"></canvas>
+      <input id="takePhoto" type="button" value="Cheese!"/>
+
+      <canvas id="feed"></canvas>
+      <canvas id="display"></canvas>
+
+      <script src="video.js"></script>
+    </body>
+</html>
