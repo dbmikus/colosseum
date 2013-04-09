@@ -19,13 +19,50 @@ if (window.AudioContext === undefined) {
 
 if (window.requestAnimationFrame === undefined) {
     window.requestAnimationFrame = (
-        window.webkitRequestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
             window.mozRequestAnimationFrame ||
             window.oRequestAnimationFrame ||
             window.msRequestAnimationFrame ||
             function (callback) {
                 window.setTimeout(callback, 1000 / 60);
             });
+}
+
+if (window.RTCPeerConnection === undefined) {
+    window.RTCPeerConnection = (
+            window.webkitRTCPeerConnection ||
+            window.mozRTCPeerConnection ||
+            window.oRTCPeerConnection ||
+            window.msRTCPeerConnection
+    );
+}
+
+// TODO this shit is totally incomplete
+webrtc.createPeerConnection = function (servers, stream) {
+    // servers is an optional config file (see TURN and STUN discussion below)
+
+    // Caller pc1 is local peer
+    var pc1 = new RTCPeerConnection(servers);
+    // ...
+    pc1.addStream(stream);
+
+    // Callee pc2 is remote peer
+    var pc2 = new RTCPeerConnection(servers);
+
+    function gotRemoteStream (e) {
+        vid2.src = URL.createObjectURL(e.stream);
+    }
+
+    pc2.onaddstream = gotRemoteStream;
+
+    function gotDescription1 (desc) {
+        pc1.setLocalDescription(desc);
+        trace("Offer from pc1 \n" + desc.sdp);
+        pc2.setRemoteDescription(desc);
+        pc2.createAnswer(gotDescription2);
+    }
+
+    pc1.createOffer(gotDescription1);
 }
 
 var video = document.getElementById("webcam");
@@ -46,6 +83,8 @@ function getUserMediaSuccess (stream) {
     var mediaStreamSource = audioContext.createMediaStreamSource(stream);
     mediaStreamSource.connect(audioContext.destination);
 
+    // This is the same as the code from adapter.js:
+    // attachMediaStream(video, stream);
 	video.src = window.webkitURL.createObjectURL(stream);
 
     // Setting up the initial drawing of video to canvas
