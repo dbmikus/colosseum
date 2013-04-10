@@ -1,0 +1,23 @@
+{
+  "name": "mongo-express-auth",
+  "version": "0.0.7",
+  "description": "authentication with MongoDB and Express",
+  "main": "lib/mongoExpressAuth.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/es92/mongo-express-auth"
+  },
+  "dependencies": {
+    "mongodb": ""
+  },
+  "keywords": [
+    "mongo",
+    "express",
+    "authentication"
+  ],
+  "author": "Evan Shapiro",
+  "license": "MIT"
+}
