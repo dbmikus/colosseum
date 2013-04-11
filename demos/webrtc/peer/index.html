@@ -1,0 +1,31 @@
+<!DOCTYP html>
+
+<html>
+    <head>
+      <title>PeerConnection Demo</title>
+
+      <link rel="stylesheet" type="text/css" media="all" href="reset.css" />
+      <link rel="stylesheet" type="text/css" media="all" href="style.css" />
+    </head>
+
+    <body>
+      <div id="videos">
+        <video id="vid1" autoplay="true" muted="true"></video>
+        <video id="vid2" autoplay="true"></video>
+      </div>
+
+      <div id="buttons">
+        <button id="btn1" onclick="start()">Start</button>
+        <button id="btn2" onclick="call()">Call</button>
+        <button id="btn3" onclick="hangup()">Hang Up</button>
+      </div>
+
+      <div id="textdiv">
+        <xtextarea id="ta1"></xtextarea>
+        <xtextarea id="ta2"></xtextarea>
+      </div>
+
+      <script src="adapter.js"></script>
+      <script src="peer-video.js"></script>
+    </body>
+</html>
