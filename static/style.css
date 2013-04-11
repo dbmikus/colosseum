@@ -1,0 +1,29 @@
+/* Style code will go here */
+
+#titlebar {
+    background-color: green;
+}
+
+#wrapper {
+    background-color: blue;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#competitors {
+    background-color: teal;
+}
+
+#spectators {
+    background-color: red;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#spec_controls {
+    background-color: rgba(242, 165, 165, 1);
+}
