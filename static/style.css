@@ -15,6 +15,7 @@
 
 #competitors {
     background-color: teal;
+    z-index: 3;
 }
 
 #spectators {
@@ -22,8 +23,17 @@
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 2;
+
+    width: 400px;
 }
 
 #spec_controls {
     background-color: rgba(242, 165, 165, 1);
+}
+
+.row_items li {
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
 }
