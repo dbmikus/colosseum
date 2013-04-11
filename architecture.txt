@@ -1,0 +1,14 @@
+This is how our code will be structured for the game part of the app.
+
+Front-end:
+
+  We will handle chatting and voting of the audience in border.js (since it will handle the stuff in the border of the screen) It will communicate to the socket server any changes that to the gamestate that take place from the audience.
+
+  The front end also has code in an iframe that is potentially hosted anywhere, but will follow our API. It will communicate the socket server as well.
+
+Back-end:
+  Our socket server will be located in app.js, and will use game.js to handle all game related events.
+
+  Our webserver will handle page requests, and will call different page construction methods based in order to construct dynamic pages. (game rooms, profile pages, current rooms lists)
+
+  For games involving video chat, we will use video.js to help connect two clients using the latest and greatest web video technology (webRTC). This will let our socket server help set up a connection between two clients.
