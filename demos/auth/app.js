@@ -16,7 +16,7 @@ mongoExpressAuth.init({
     }
 }, function(){
     console.log('mongo ready!');
-    app.listen(3000);
+    app.listen(process.env.PORT || 3000);
 });
 
 app.use(express.bodyParser());

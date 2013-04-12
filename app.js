@@ -3,117 +3,101 @@
 // dmikus
 // zim
 
-var express = require("express"); // imports express
-var app = express();        // create a new instance of express
 
-// imports the fs module (reading and writing to a text file)
-var fs = require("fs");
+var express = require("express");
+var app = express();
 
-// the bodyParser middleware allows us to parse the
-// body of a request
+//REPLACE THE REQUIRE WITH "require('mongo-express-auth');" if installed as a node module
+var mongoExpressAuth = require('./mongo-express-auth/lib/mongoExpressAuth.js');
+
+//list containt all the rooms, used for displaying rooms in 
+//the browse rooms view
+var arenalist = [{id: 12, name: "poop"}, {id:1, name: "pee"}];
+
+
+//===========================
+//  init
+//===========================
+
+mongoExpressAuth.init({
+    mongo: { 
+        dbName: 'Colosseum',
+        collectionName: 'accounts'
+    }
+}, function(){
+    console.log('mongo ready!');
+    app.listen(process.env.PORT || 3000);
+});
+
 app.use(express.bodyParser());
+app.use(express.cookieParser());
+app.use(express.session({ secret: 'racial slurs degrade society, white boy!' }));
 
-// The global datastore for something
-var rooms;
+//===========================
+//  routes
+//===========================
 
-// Asynchronously read file contents, then call callbackFn
-function readFile(filename, defaultData, callbackFn) {
-  fs.readFile(filename, function(err, data) {
-    if (err) {
-      console.log("Error reading file: ", filename);
-      data = defaultData;
-    } else {
-      console.log("Success reading file: ", filename);
-    }
-    if (callbackFn) callbackFn(err, data);
-  });
-}
+app.get('/', function(req, res){
+    res.sendfile('static/index.html');
+});
 
-// Asynchronously write file contents, then call callbackFn
-function writeFile(filename, data, callbackFn) {
-  fs.writeFile(filename, data, function(err) {
-    if (err) {
-      console.log("Error writing file: ", filename);
-    } else {
-      console.log("Success writing file: ", filename);
-    }
-    if (callbackFn) callbackFn(err);
-  });
-}
-
-// from https://developer.mozilla.org/en-US/
-// docs/JavaScript/Reference/Global_Objects/Array/map
-function returnInt(element){
-    return parseInt(element, 10);
-}
-
-
-function intList(list){
-    for(var i = 0; i<list.length; i++) {
-        list[i]=list[i].map(returnInt);
-    }
-    return list;
-}
-
-// get a room
-app.get("/room/:id", function(request, response) {
-    var id = request.params.id;
-    console.log(rooms);
-    var room = rooms[id];
-    console.log(rooms[id]);
-    response.send({
-        room: room,
-        sucksess: (room !== undefined),
-        success: true
+app.get('/me', function(req, res){
+    mongoExpressAuth.checkLogin(req, res, function(err){
+        if (err)
+            res.send(err);
+        else {
+            mongoExpressAuth.getAccount(req, function(err, result){
+                if (err)
+                    res.send(err);
+                else 
+                    res.send(result); // NOTE: direct access to the database is a bad idea in a real app
+            });
+        }
     });
 });
 
-// save a room
-app.post("/room/:id", function(request, response){
-    var id = request.params.id;
-    var inputSubRooms = request.body.sendSubRooms;
-    console.log(inputSubRooms);
-    var inputFurniture = request.body.sendFurniture;
-    rooms[id]={"subrooms":  inputSubRooms,
-               "furniture": inputFurniture};
-    writeFile("data.txt", JSON.stringify(rooms));
-    response.send({
-        success: true
-    })
+app.post('/login', function(req, res){
+    mongoExpressAuth.login(req, res, function(err){
+        if (err)
+            res.send(err);
+        else
+            res.send('ok');
+    });
+});
+
+app.post('/logout', function(req, res){
+    mongoExpressAuth.logout(req, res);
+    res.send('ok');
+});
+
+app.post('/register', function(req, res){
+    mongoExpressAuth.register(req, function(err){
+        if (err)
+            res.send(err);
+        else
+            res.send('ok');
+    });
+});
+
+app.get('/arenalist', function(req, res){
+    res.send({
+        arenalist: arenalist
+    });
 });
 
 
 
-app.get("/static/icons/:imagename", function (request, response) {
-    response.sendfile("static/icons/" + request.params.imagename);
+
+app.post('/createarena', function(req, res){
+    mongoExpressAuth.register(req, function(err){
+        if (err)
+            res.send(err);
+        else
+            res.send('ok');
+    });
 });
 
 
-// This is for serving files in the static directory
-app.get("/static/:staticFilename", function (request, response) {
-    response.sendfile("static/" + request.params.staticFilename);
-});
-
-//gives the index when navigating to the server
-app.get("/", function (request,response){
-    response.sendfile("static/index.html");
-})
 
 
-app.get("/favicon.ico", function (request,response){
-    response.sendfile("favicon.ico");
-})
-
-
-
-function initServer() {
-  // When we start the server, we must load the stored data
-  var defaultRooms = "{}";
-  readFile("data.txt", defaultRooms, function(err, data) {
-    rooms = JSON.parse(data);
-  });
-}
-
-// Finally, initialize the server, then activate the server at port 8889
-initServer();
-app.listen(3000);
+app.use(express.static(__dirname + '/static/'));

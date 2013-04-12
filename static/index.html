@@ -19,47 +19,28 @@
       </ol>
     </div>
 
+    <div id="createArena">
+        <form name="createForm" action="javascript:addRoom()">
+          <div class="row">
+            <label>Author:</label>  <input id="author-input" name="Author" type="text" placeholder="Harold"/> 
+          </div>
+          <div class="row">
+            <label>Description:</label>  <input id="desc-input" name="Desc" type="text" placeholder="A blue car..."/>
+          </div>
+          <div class="row">
+            <label>Price:</label>  <input id="price-input" name="Price" type="text" placeholder="3133.70"/>
+          </div>
+          <div class="row right">
+            <input id="submitButton" name="Submit"  type="submit" value="Add Listing"/>
+          </div>
+        </form>
+    </div>
+
     <div id="wrapper">
-      <div id="competitors">
-        <h2>Competitors stuff</h2>
-
-        <div id="comp_display">
-          Competitor Display
-        </div>
-        <div id="comp_info">
-          Stats, description, etc.
-        </div>
-      </div>
-
-      <div id="spectators">
-        <h2>Spectators stuff</h2>
-
-        <div id="chat">
-          <p>chat</p>
-          <p>chat</p>
-          <p>chat</p>
-          <p>chat</p>
-          <p>chat</p>
-          <p>chat</p>
-          <p>chat</p>
-          <p>chat</p>
-          <p>chat</p>
-          <p>chat</p>
-          <p>chat</p>
-          <p>chat</p>
-        </div>
-        <div id="spec_controls">
-          Submit, etc.
-        </div>
-        <div id="spec_demographics">
-        </div>
-      </div>
     </div>
 
 
     <script src="jquery-1.9.0.js"></script>
-    <script src="d3.v3.js"></script>
-    <script src="adapter.js"></script>
-    <script src="main.js"></script>
+    <script src="findarena.js"></script>
   </body>
 </html>
