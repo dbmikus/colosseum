@@ -12,8 +12,9 @@ var mongoExpressAuth = require('./mongo-express-auth/lib/mongoExpressAuth.js');
 
 //list containt all the rooms, used for displaying rooms in 
 //the browse rooms view
-var arenalist = [{id: 12, name: "poop"}, {id:1, name: "pee"}];
+var arenalist = [];
 
+var nextId =0;
 
 //===========================
 //  init
@@ -86,15 +87,20 @@ app.get('/arenalist', function(req, res){
 });
 
 
+app.post('/arena', function(req, res){
+    console.log(req.body);
+    var name = req.body["name"];
+    var desc = req.body["desc"];
 
+    if(name && desc){
+        arenalist.push({id:nextId,name: name, desc: desc});
+        nextId+= 1;
+        res.send({success:true, arenalist:arenalist});
+    }else{
 
-app.post('/createarena', function(req, res){
-    mongoExpressAuth.register(req, function(err){
-        if (err)
-            res.send(err);
-        else
-            res.send('ok');
-    });
+        res.send({success: false});
+    }
+
 });
 
 
