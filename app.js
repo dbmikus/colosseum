@@ -10,9 +10,20 @@ var app = express();
 //REPLACE THE REQUIRE WITH "require('mongo-express-auth');" if installed as a node module
 var mongoExpressAuth = require('./mongo-express-auth/lib/mongoExpressAuth.js');
 
-//list containt all the rooms, used for displaying rooms in 
+//list containing all the rooms, used for displaying rooms in 
 //the browse rooms view
 var arenalist = [];
+
+
+var gameData  = {};
+//gameData[id]=
+// {
+    // name: name,
+    // desc: desc,
+    // player1: player socket,
+    // player2: player socket,
+    // audience: player sockets
+// }
 
 var nextId =0;
 
@@ -94,7 +105,15 @@ app.post('/arena', function(req, res){
 
     if(name && desc){
         arenalist.push({id:nextId,name: name, desc: desc});
+        gameData[nextId] = {
+            name: name,
+            desc: desc, 
+            player1:  null, 
+            player2:  null,
+            audience: []
+        }
         nextId+= 1;
+
         res.send({success:true, arenalist:arenalist});
     }else{
 
@@ -107,3 +126,34 @@ app.post('/arena', function(req, res){
 
 
 app.use(express.static(__dirname + '/static/'));
+
+
+//gameData[id]=
+// {
+    // name: name,
+    // desc: desc,
+    // player1: player socket,
+    // player2: player socket,
+    // audience: player sockets
+// }
+
+
+
+//socket server
+
+var io = require('socket.io').listen(8888);
+
+
+io.sockets.on("connection",function(socket){
+  socket.on("thisArena",function(data){
+    gameData[data.roomid]["audience"].push(socket);
+    socket.on("sendChat",function(chatData){
+        gameData[data.roomid]["audience"].forEach(function(s){
+            s.emit("newChat",chatData);
+        });
+    });
+  });
+  socket.emit("whatArena",{});
+});
+
+

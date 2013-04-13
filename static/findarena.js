@@ -12,8 +12,6 @@ $.ajax({
 });
 
 
-$("#submitButton").click(createRoom);
-
 
 function createRoom(){
     $.ajax({
