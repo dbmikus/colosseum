@@ -112,7 +112,7 @@ app.post('/arena', function(req, res){
             player2:  null,
             audience: []
         }
-        nextId+= 1;
+        nextId += 1;
 
         res.send({success:true, arenalist:arenalist});
     }else{
@@ -145,13 +145,18 @@ var io = require('socket.io').listen(8888);
 
 
 io.sockets.on("connection",function(socket){
-  socket.on("thisArena",function(data){
-    gameData[data.roomid]["audience"].push(socket);
+  socket.on("thisArena", function(data){
+    gameData[data.roomid]["audience"].push({'socket', socket,
+                                            'user': data.username});
+
     socket.on("sendChat",function(chatData){
-        gameData[data.roomid]["audience"].forEach(function(s){
-            s.emit("newChat",chatData);
+        gameData[data.roomid]["audience"].forEach(function(client){
+            var s = client.socket;
+            s.emit("newChat", chatData);
         });
     });
   });
-  socket.emit("whatArena",{});
+
+  // Asks the clients what arena they are part of upon client connection
+  socket.emit("whatArena", {});
 });

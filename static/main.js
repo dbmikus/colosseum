@@ -19,7 +19,13 @@ String.prototype.hashCode = function(){
 
 function getLocal(key) {
     if (typeof(localStorage) !== 'undefined') {
-        return JSON.parse(localStorage[storagePrefix + key]);
+        try {
+            return JSON.parse(localStorage[storagePrefix + key]);
+        }
+        catch (e) {
+            console.log('issue with reading json');
+            return null;
+        }
     }
     else {
         return null;
@@ -38,7 +44,7 @@ function setLocal(key, val) {
 // Should also check cookie against server, somehow
 function isLoggedIn() {
     var uc = getLocal('usercookie');
-    if (uc !== '') {
+    if (uc !== '' && uc !== null) {
         console.log(uc);
         console.log(uc.username);
         // check hash against server, here
