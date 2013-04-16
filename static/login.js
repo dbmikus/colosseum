@@ -8,6 +8,9 @@ window.addEventListener('load', function(){
 
         var g = {
             onLoginSuccess: function(){
+                var userVal = {'username': usernameInput.value,
+                               'userhash': passwordInput.value.hashCode()};
+                setLocal('usercookie', userVal);
                 window.location = '/';
             },
             onRegisterSuccess: function(){
@@ -72,23 +75,23 @@ window.addEventListener('load', function(){
 
         function login(username, password, done){
             post(
-                '/login', 
-                {   
-                    username: username, 
-                    password: password 
-                }, 
+                '/login',
+                {
+                    username: username,
+                    password: password
+                },
                 handleLoginResult
             );
         }
 
         function register(username, password, favBit, done){
             post(
-                '/register', 
-                {   
-                    username: username, 
+                '/register',
+                {
+                    username: username,
                     password: password,
-                    favBit: favBit 
-                }, 
+                    favBit: favBit
+                },
                 handleRegisterResult
             );
         }
@@ -138,4 +141,3 @@ window.addEventListener('load', function(){
         }
     })();
 });
-

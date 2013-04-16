@@ -1,5 +1,3 @@
-
-
 // from Andy E
 //http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values
 
@@ -30,8 +28,9 @@ if(urlParams.id){
 
 
   function sendchat(){
-    socket.emit("sendChat",{chat:$("#chat-input").val(), user:"anybody"});
+    socket.emit("sendChat",
+                {chat:$("#chat-input").val(),
+                 user:"anybody"});
     $("#chat-input").val("");
   }
 }
-

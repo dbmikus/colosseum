@@ -10,7 +10,7 @@ var app = express();
 //REPLACE THE REQUIRE WITH "require('mongo-express-auth');" if installed as a node module
 var mongoExpressAuth = require('./mongo-express-auth/lib/mongoExpressAuth.js');
 
-//list containing all the rooms, used for displaying rooms in 
+//list containing all the rooms, used for displaying rooms in
 //the browse rooms view
 var arenalist = [];
 
@@ -25,14 +25,14 @@ var gameData  = {};
     // audience: player sockets
 // }
 
-var nextId =0;
+var nextId = 0;
 
 //===========================
 //  init
 //===========================
 
 mongoExpressAuth.init({
-    mongo: { 
+    mongo: {
         dbName: 'Colosseum',
         collectionName: 'accounts'
     }
@@ -61,7 +61,7 @@ app.get('/me', function(req, res){
             mongoExpressAuth.getAccount(req, function(err, result){
                 if (err)
                     res.send(err);
-                else 
+                else
                     res.send(result); // NOTE: direct access to the database is a bad idea in a real app
             });
         }
@@ -107,8 +107,8 @@ app.post('/arena', function(req, res){
         arenalist.push({id:nextId,name: name, desc: desc});
         gameData[nextId] = {
             name: name,
-            desc: desc, 
-            player1:  null, 
+            desc: desc,
+            player1:  null,
             player2:  null,
             audience: []
         }
@@ -155,5 +155,3 @@ io.sockets.on("connection",function(socket){
   });
   socket.emit("whatArena",{});
 });
-
-
