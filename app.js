@@ -10,18 +10,18 @@ var app = express();
 //REPLACE THE REQUIRE WITH "require('mongo-express-auth');" if installed as a node module
 var mongoExpressAuth = require('./mongo-express-auth/lib/mongoExpressAuth.js');
 
-//list containt all the rooms, used for displaying rooms in 
+//list containt all the rooms, used for displaying rooms in
 //the browse rooms view
 var arenalist = [];
 
-var nextId =0;
+var nextId = 0;
 
 //===========================
 //  init
 //===========================
 
 mongoExpressAuth.init({
-    mongo: { 
+    mongo: {
         dbName: 'Colosseum',
         collectionName: 'accounts'
     }
@@ -50,7 +50,7 @@ app.get('/me', function(req, res){
             mongoExpressAuth.getAccount(req, function(err, result){
                 if (err)
                     res.send(err);
-                else 
+                else
                     res.send(result); // NOTE: direct access to the database is a bad idea in a real app
             });
         }
