@@ -1,9 +1,10 @@
-
-
 // from Andy E
 //http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values
 
 var urlParams;
+
+var arenaInfo={};
+var secretKey="";
 (window.onpopstate = function () {
     var match,
         pl     = /\+/g,  // Regex for replacing addition symbol with a space
@@ -28,10 +29,30 @@ if(urlParams.id){
     $("#chat").append(c);
   });
 
+  socket.on("arenaInfo",function(data){
+    arenaInfo = data.roomSpecs;
+    secretKey = data.secretKey;
+    var iframe = $("<iframe>");
+    iframe.attr("src","games/chatGame.html?id="+urlParams.id+"&s="+
+      secretKey);
+    iframe.attr("sandbox","allow-same-origin allow-scripts allow-popups allow-forms")
+    iframe.attr("id","gameIFrame");
+
+    $("#game").append(iframe);
+
+  });
 
   function sendchat(){
     socket.emit("sendChat",{chat:$("#chat-input").val(), user:"anybody"});
     $("#chat-input").val("");
   }
 }
+
+
+
+socket.on("gameOver",function(data){
+  $("#other").append("game has ended<br>");
+});
+
+
 

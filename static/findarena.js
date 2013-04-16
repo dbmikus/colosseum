@@ -1,15 +1,5 @@
-var arenalist = [];
+var arenalist = {};
 
-
-
-$.ajax({
-    type: "get",
-    url: "/arenalist",
-    success: function(data) {
-        arenalist = data.arenalist;
-        refreshDOM();
-    }
-});
 
 
 
@@ -23,8 +13,7 @@ function createRoom(){
         url: "/arena",
         success: function(data) {
             if(data.success){
-                arenalist = data.arenalist
-                refreshDOM();
+                refreshList();
             }
         }
     });
@@ -32,14 +21,31 @@ function createRoom(){
     $("#desc-input").val("")
 }
 
+
+function refreshList(){
+    $.ajax({
+    type: "get",
+    url: "/arenalist",
+    success: function(data) {
+        arenalist = data;
+        refreshDOM();
+    }
+});
+
+}
+
 function refreshDOM(){
     $("#wrapper").html("");
-    arenalist.forEach(function(arena){
+    for (var key in arenalist){
+        var arena = arenalist[key]
         var link = $("<a>")
         link.addClass("room-link");
-        link.attr("href","/arena.html?id="+ arena.id);
+        link.attr("href","/arena?id="+ arena.id);
         link.append(arena.name);
         link.append("<br>");
         $("#wrapper").prepend(link);
-    })
+    }
 }
+
+
+$(document).ready(refreshList);

@@ -12,7 +12,7 @@ var mongoExpressAuth = require('./mongo-express-auth/lib/mongoExpressAuth.js');
 
 //list containing all the rooms, used for displaying rooms in 
 //the browse rooms view
-var arenalist = [];
+var arenalist = {};
 
 
 var gameData  = {};
@@ -62,7 +62,8 @@ app.get('/me', function(req, res){
                 if (err)
                     res.send(err);
                 else 
-                    res.send(result); // NOTE: direct access to the database is a bad idea in a real app
+                    res.send(result); 
+// NOTE: direct access to the database is a bad idea in a real app
             });
         }
     });
@@ -92,11 +93,12 @@ app.post('/register', function(req, res){
 });
 
 app.get('/arenalist', function(req, res){
-    res.send({
-        arenalist: arenalist
-    });
+    res.send( arenalist );
 });
 
+app.get('/arena',function(request,response){
+    response.sendfile("static/arena.html");
+})
 
 app.post('/arena', function(req, res){
     console.log(req.body);
@@ -104,13 +106,20 @@ app.post('/arena', function(req, res){
     var desc = req.body["desc"];
 
     if(name && desc){
-        arenalist.push({id:nextId,name: name, desc: desc});
-        gameData[nextId] = {
+        arenalist[nextId] =
+            {   
+                id:nextId,
+                name: name,
+                desc: desc, 
+                type: "textGame"
+            };
+        gameData[nextId] = 
+        {
             name: name,
             desc: desc, 
             player1:  null, 
             player2:  null,
-            audience: []
+            audience: {}
         }
         nextId+= 1;
 
@@ -132,8 +141,8 @@ app.use(express.static(__dirname + '/static/'));
 // {
     // name: name,
     // desc: desc,
-    // player1: player socket,
-    // player2: player socket,
+    // player1: player secretKey,
+    // player2: player secretKey,
     // audience: player sockets
 // }
 
@@ -146,14 +155,34 @@ var io = require('socket.io').listen(8888);
 
 io.sockets.on("connection",function(socket){
   socket.on("thisArena",function(data){
-    gameData[data.roomid]["audience"].push(socket);
-    socket.on("sendChat",function(chatData){
-        gameData[data.roomid]["audience"].forEach(function(s){
-            s.emit("newChat",chatData);
+    if(gameData[data.roomid]){
+        var secretKey = createSecretKey();
+        gameData[data.roomid]["audience"][secretKey]=socket;
+        socket.emit("arenaInfo",
+        {
+           roomSpecs: arenalist[data.roomid],
+           secretKey: secretKey
         });
-    });
+        socket.on("sendChat",function(chatData){
+            for(var s in gameData[data.roomid]["audience"]){
+                gameData[data.roomid]["audience"][s].emit("newChat",chatData);
+            }
+        });
+    }
   });
   socket.emit("whatArena",{});
 });
 
 
+
+// from 
+//http://stackoverflow.com/questions/1349404/
+// generate-a-string-of-5-random-characters-in-javascript
+function createSecretKey(){
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for( var i=0; i < 10; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+    return text;
+}
