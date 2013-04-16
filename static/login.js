@@ -8,6 +8,11 @@ window.addEventListener('load', function(){
 
         var g = {
             onLoginSuccess: function(){
+                // An object with the username string and a hash based on the
+                // password.
+                // I need to figure out how to verify the hash on server and
+                // client side so that the cookie only works for the user it is
+                // matched to.
                 var userVal = {'username': usernameInput.value,
                                'userhash': passwordInput.value.hashCode()};
                 setLocal('usercookie', userVal);
