@@ -1,0 +1,13 @@
+{
+  "name": "Colosseum",
+  "version": "0.0.69",
+  "dependencies": {
+    "express": "3.x.x",
+    "socket.io":"*",
+    "mongodb":"*"
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
+  }
+}
