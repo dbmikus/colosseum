@@ -1,22 +1,24 @@
 var express = require('express');
 var app = express();
 
-app.get("/static/:staticFilename", function (request, response) {
-    response.sendfile("static/" + request.params.staticFilename);
-});
+app.use(expres.bodyParser());
+app.use(express.cookieParser());
 
-app.listen(9876);
+app.listen(9999);
+
+app.get('/', function (req, res) {
+    res.sendfile('static/index.html');
+});
 
 // ========================
 // === Socket.io server ===
 // ========================
 
-var io = require.('socket.io').listen(9889);
+var io = require.('socket.io').listen(8888);
+
 io.sockets.on('connection', function (socket) {
-    socket.on('msg', function (data) {
-        // confirm success to sender
-        socket.emit('status', { success: 'true' });
-        // broadcast message to everyone else
-        io.sockets.emit('newmsg', { body: data.body });
+    // When we recieve a message, just bounce it to all other clients
+    socket.on('message', function (data) {
+        socket.broadcast.emit('message', data);
     });
 });

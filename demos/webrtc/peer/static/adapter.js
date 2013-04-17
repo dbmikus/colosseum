@@ -15,7 +15,8 @@ function trace(text) {
   console.log((performance.now() / 1000).toFixed(3) + ": " + text);
 }
 
-if (navigator.mozGetUserMedia) {
+if (navigator.getUserMedia === undefined
+    && navigator.mozGetUserMedia) {
   console.log("This appears to be Firefox");
 
   webrtcDetectedBrowser = "firefox";
@@ -54,7 +55,8 @@ if (navigator.mozGetUserMedia) {
   MediaStream.prototype.getAudioTracks = function() {
     return [];
   };
-} else if (navigator.webkitGetUserMedia) {
+} else if (navigator.getUserMedia === undefined
+           && navigator.webkitGetUserMedia) {
   console.log("This appears to be Chrome");
 
   webrtcDetectedBrowser = "chrome";
