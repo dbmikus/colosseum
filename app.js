@@ -34,23 +34,24 @@ var nextId = 0;
 //  init
 //===========================
 
-mongoExpressAuth.init({
-    mongo: {
-        dbName: 'Colosseum',
-        collectionName: 'accounts'
-    }
-}, function(){
-    console.log('mongo ready!');
-    app.listen(process.env.PORT || 3000);
-});
+// mongoExpressAuth.init({
+//     mongo: {
+//         dbName: 'Colosseum',
+//         collectionName: 'accounts'
+//     }
+// }, function(){
+//     console.log('mongo ready!');
+//     app.listen(process.env.PORT || 3000);
+// });
 
-app.use(express.bodyParser());
-app.use(express.cookieParser());
-app.use(express.session({ secret: 'racial slurs degrade society, white boy!' }));
+// app.use(express.bodyParser());
+// app.use(express.cookieParser());
+// app.use(express.session({ secret: 'racial slurs degrade society, white boy!' }));
 
 //===========================
 //  routes
 //===========================
+app.listen(process.env.PORT || 3000);
 
 app.get('/', function(req, res){
     res.sendfile('static/index.html');
