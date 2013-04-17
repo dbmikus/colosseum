@@ -10,8 +10,8 @@ var app = express();
 //REPLACE THE REQUIRE WITH "require('mongo-express-auth');" if installed as a node module
 var mongoExpressAuth = require('./mongo-express-auth/lib/mongoExpressAuth.js');
 
-//list containing all the rooms, used for displaying rooms in
-//the browse rooms view
+// list containing all the rooms, used for displaying rooms in the browse
+// rooms view
 var arenalist = {};
 
 // number of milliseconds for a game
@@ -64,8 +64,8 @@ app.get('/me', function(req, res){
             mongoExpressAuth.getAccount(req, function(err, result){
                 if (err)
                     res.send(err);
-                else 
-                    res.send(result); 
+                else
+                    res.send(result);
             });
         }
     });
@@ -109,13 +109,13 @@ app.post('/arena', function(req, res){
 
     if(name && desc){
         arenalist[nextId] =
-            {   
+            {
                 id:nextId,
                 name: name,
-                desc: desc, 
+                desc: desc,
                 type: "textGame"
             };
-        gameData[nextId] = 
+        gameData[nextId] =
         {
             name: name,
             desc: desc,
