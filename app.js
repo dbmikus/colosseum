@@ -119,7 +119,8 @@ app.post('/arena', function(req, res){
             desc: desc, 
             player1:  null, 
             player2:  null,
-            audience: {}
+            audience: {},
+            games: {}
         }
         nextId+= 1;
 
@@ -143,46 +144,116 @@ app.use(express.static(__dirname + '/static/'));
     // desc: desc,
     // player1: player secretKey,
     // player2: player secretKey,
-    // audience: player sockets
+    // audience: audience sockets
+    // games: game sockets
 // }
 
 
+// we have to keep track of which sockets are in which rooms
+// not just the other way around
 
-//socket server
+var gameSockets ={};
+var audienceSockets={};
 
-var io = require('socket.io').listen(8888);
+
+//socket server for audience
+
+var audienceIO = require('socket.io').listen(8888);
 
 
-io.sockets.on("connection",function(socket){
-  socket.on("thisArena",function(data){
-    if(gameData[data.roomid]){
-        var secretKey = createSecretKey();
-        gameData[data.roomid]["audience"][secretKey]=socket;
-        socket.emit("arenaInfo",
-        {
-           roomSpecs: arenalist[data.roomid],
-           secretKey: secretKey
-        });
-        socket.on("sendChat",function(chatData){
-            for(var s in gameData[data.roomid]["audience"]){
-                gameData[data.roomid]["audience"][s].emit("newChat",chatData);
-            }
-        });
-    }
-  });
-  socket.emit("whatArena",{});
+audienceIO.sockets.on("connection",function(socket){
+    socket.on("thisArena",function(data){
+        if(gameData[data.roomid]){
+            audienceSockets[socket.sessionid]= data.roomid;
+            gameData[data.roomid]["audience"][socket.sessionid]=socket;
+            socket.emit("arenaInfo",
+            {
+               roomSpecs: arenalist[data.roomid]
+            });
+            socket.on("sendChat",function(chatData){
+                for(var s in gameData[data.roomid]["audience"]){
+                    gameData[data.roomid]["audience"][s].emit("newChat",chatData);
+                }
+            });
+        }
+    });
+
+    socket.on("disconnect", function(data){
+        delete gameData[audienceSockets[socket.sessionid]]["audience"][socket.sessionid];
+        delete audienceSockets[socket.sessionid]
+    });
+
+    socket.emit("whatArena",{});
 });
 
 
 
-// from 
-//http://stackoverflow.com/questions/1349404/
-// generate-a-string-of-5-random-characters-in-javascript
-function createSecretKey(){
-    var text = "";
-    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-    for( var i=0; i < 10; i++ )
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
-    return text;
+// socket server for gameplay
+
+var gameIO = require('socket.io').listen(8889);
+
+
+gameIO.sockets.on("connection",function(socket){
+    socket.on("setUp",function(data){
+        if(gameData[data.roomid]){
+            gameSockets[socket.id]= data.roomid;
+            gameData[data.roomid]["games"][data.secretKey]=socket;
+            if(Object.keys(gameData[data.roomid]["games"]).length>3){
+                console.log("starting game");
+                startGame(data.roomid);
+            }
+        }else
+        console.log("wat");
+    });
+
+    socket.on("chat",function(data){
+        if(gameData[data.roomid]["player1"]===data.secretKey){
+            emitToAll(gameData[data.roomid]["games"],"msg",{msg:data.msg});
+        }
+        if(gameData[data.roomid]["player2"]===data.secretKey){
+            emitToAll(gameData[data.roomid]["games"],"msg",{msg:data.msg});
+        }
+    });
+
+    socket.on("disconnect", function(data){
+        delete gameData[gameSockets[socket.id]]["games"][socket.id];
+        delete gameSockets[socket.id]
+    });
+
+});
+
+
+
+
+
+function startGame(roomid){
+    var arena = gameData[roomid];
+    if (!arena.player1){
+        arena.player1 = randomSocket(arena.games);
+        while(arena.player1===arena.player2){
+            arena.player1= randomSocket(arena.games);
+        }
+    }
+    if (!arena.player2){
+        arena.player2 = randomSocket(arena.games);
+        while(arena.player1===arena.player2){
+            arena.player1= randomSocket(arena.games);
+        }
+    }
+    arena["games"][arena.player1].emit("newGame",{});
+    arena["games"][arena.player2].emit("newGame",{});
+}
+
+function randomSocket(sockets){
+    var keys = Object.keys(sockets);
+    return keys[Math.floor(keys.length * Math.random())];
+}
+
+
+
+function emitToAll(sockets, msg, data){
+    for (var s in sockets){
+        sockets[s].emit(msg, data);
+    }
 }

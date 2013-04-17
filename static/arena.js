@@ -31,10 +31,9 @@ if(urlParams.id){
 
   socket.on("arenaInfo",function(data){
     arenaInfo = data.roomSpecs;
-    secretKey = data.secretKey;
     var iframe = $("<iframe>");
     iframe.attr("src","games/chatGame.html?id="+urlParams.id+"&s="+
-      secretKey);
+      socket.socket.sessionid);
     iframe.attr("sandbox","allow-same-origin allow-scripts allow-popups allow-forms")
     iframe.attr("id","gameIFrame");
 
