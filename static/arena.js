@@ -3,6 +3,9 @@
 
 // Stuff for formatting based on URL parameters
 var urlParams;
+
+var arenaInfo={};
+var secretKey="";
 (window.onpopstate = function () {
     var match,
         pl     = /\+/g,  // Regex for replacing addition symbol with a space
@@ -36,6 +39,18 @@ if(urlParams.id){
     $("#chat").append(c);
   });
 
+  socket.on("arenaInfo",function(data){
+    arenaInfo = data.roomSpecs;
+    var iframe = $("<iframe>");
+    iframe.attr("src","games/chatGame.html?id="+urlParams.id+"&s="+
+      socket.socket.sessionid);
+    iframe.attr("sandbox","allow-same-origin allow-scripts allow-popups allow-forms")
+    iframe.attr("id","gameIFrame");
+
+    $("#game").append(iframe);
+
+  });
+
   // Called when client sends a chat
   function sendchat(){
     socket.emit("sendChat",
@@ -43,4 +58,16 @@ if(urlParams.id){
                  user: getLocal('usercookie').username});
     $("#chat-input").val("");
   }
+  function sendvote(choice){
+    socket.emit("sendVote",{vote:choice});
+  }
+  $("#player1Vote").click(function(){
+    sendvote(1);
+  });
+  $("#player2Vote").click(function(){
+    sendvote(2);
+  });
+
+
+
 }

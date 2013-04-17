@@ -16,8 +16,6 @@ $("#gameOver").click(gameOver);
 
 
 
-
-
 function gameOver(){
   socket.emit("gameOver",{"roomid": id});
 }

@@ -14,9 +14,7 @@ window.addEventListener('load', function(){
                 // client side so that the cookie only works for the user it is
                 // matched to.
                 var userVal = {'username': usernameInput.value,
-                               'userhash': passwordInput.value.hashCode()};
-                setLocal('usercookie', userVal);
-                window.location = '/';
+                               'userhash': passwordInput.value};
             },
             onRegisterSuccess: function(){
                 var username = usernameInput.value;
