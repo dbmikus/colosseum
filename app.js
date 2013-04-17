@@ -10,8 +10,8 @@ var app = express();
 //REPLACE THE REQUIRE WITH "require('mongo-express-auth');" if installed as a node module
 var mongoExpressAuth = require('./mongo-express-auth/lib/mongoExpressAuth.js');
 
-//list containing all the rooms, used for displaying rooms in
-//the browse rooms view
+// list containing all the rooms, used for displaying rooms in the browse
+// rooms view
 var arenalist = [];
 
 

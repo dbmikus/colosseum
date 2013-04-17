@@ -10,14 +10,12 @@
 
     <body>
       <div id="videos">
-        <video id="vid1" autoplay="true" muted="true"></video>
-        <video id="vid2" autoplay="true"></video>
+        <video id="selfView" autoplay="true" muted="true"></video>
+        <video id="remoteView" autoplay="true"></video>
       </div>
 
       <div id="buttons">
-        <button id="btn1" onclick="start()">Start</button>
-        <button id="btn2" onclick="call()">Call</button>
-        <button id="btn3" onclick="hangup()">Hang Up</button>
+        <button id="callButton">Call</button>
       </div>
 
       <div id="textdiv">
@@ -25,7 +23,9 @@
         <xtextarea id="ta2"></xtextarea>
       </div>
 
-      <script src="adapter.js"></script>
-      <script src="peer-video.js"></script>
+      <!-- <script src="adapter.js"></script> -->
+      <script src="webrtc.js"></script>
+      <script src="http://localhost:8888/socket.io/socket.io.js"></script>
+      <script src="video.js"></script>
     </body>
 </html>
