@@ -9,9 +9,7 @@ window.addEventListener('load', function(){
         var g = {
             onLoginSuccess: function(){
                 var userVal = {'username': usernameInput.value,
-                               'userhash': passwordInput.value.hashCode()};
-                setLocal('usercookie', userVal);
-                window.location = '/';
+                               'userhash': passwordInput.value};
             },
             onRegisterSuccess: function(){
                 var username = usernameInput.value;
