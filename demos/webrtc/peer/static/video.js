@@ -38,6 +38,10 @@ var socket = io.connect('http://localhost:8888');
 var pc;
 var selfView = document.getElementById('selfView');
 var remoteView = document.getElementById('remoteView');
+var callButton = document.getElementById('callButton');
+callButton.addEventListener('click', function (event) {
+    start(true);
+}, false);
 
 // This line below is configuration passed to RTCPeerConnection that includes
 // ICE servers
@@ -66,7 +70,7 @@ function start(isCaller) {
 
     // get the local stream, show it in the local video element, and send it
     navigator.getUserMedia(
-        { "audio": true, "video" true },
+        { "audio": true, "video": true },
         // success on getting user media stream
         function (stream) {
             selfView.src = URL.createObjectURL(stream);
@@ -77,7 +81,7 @@ function start(isCaller) {
                 pc.createOffer(gotDescription);
             } else {
                 // create an answer and send it over the signaling channel
-                pc.createAnswer(pc.remoteDescription, gotDescription);
+                pc.createAnswer(gotDescription);
             }
 
             // Peers need to ascertain and exchange local and remote audio and
@@ -111,13 +115,15 @@ socket.on('message', function (evt) {
     // Socket.io automatically stringifies and parses JSON for us
     // var signal = JSON.parse(evt.data);
     var signal = evt;
-    console.log(signal);
+    console.log('signal: ', signal);
     // If we received an "sdp" message
-    if (signal.sdp) {
+    if (signal.sdp !== undefined && signal.sdp !== null) {
         pc.setRemoteDescription(new RTCSessionDescription(signal.sdp));
     }
     // Otherwise, we received a "candidate" message for ICE
-    else {
+    else if (signal.candidate !== undefined && signal.candidate !== null) {
         pc.addIceCandidate(new RTCIceCandidate(signal.candidate));
+    } else {
+        console.log('Neither sdp or candidate object defined in channel message.');
     }
 });
