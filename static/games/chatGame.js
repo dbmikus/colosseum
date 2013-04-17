@@ -29,11 +29,11 @@ socket.on("msg", function(data){
 
 
 function sendchat(){
-  socket.emit("chat",
+  socket.emit("move",
   {
   roomid: urlParams.id,
-  secretKey: urlParams.s,
-  msg: $("#chat-input").val()
+  msg: $("#chat-input").val(),
+  secretKey: urlParams.s
   });
 }
 

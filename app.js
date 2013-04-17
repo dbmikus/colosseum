@@ -207,12 +207,15 @@ gameIO.sockets.on("connection",function(socket){
         console.log("wat");
     });
 
-    socket.on("chat",function(data){
+    socket.on("move",function(data){
+        console.log(socket.id);
+        console.log(gameData[data.roomid]["player1"]);
+        console.log(gameData[data.roomid]["player2"]);
         if(gameData[data.roomid]["player1"]===data.secretKey){
-            emitToAll(gameData[data.roomid]["games"],"msg",{msg:data.msg});
+            emitToAll(gameData[data.roomid]["games"],"msg",data);
         }
         if(gameData[data.roomid]["player2"]===data.secretKey){
-            emitToAll(gameData[data.roomid]["games"],"msg",{msg:data.msg});
+            emitToAll(gameData[data.roomid]["games"],"msg",data);
         }
     });
 
