@@ -18,21 +18,30 @@ socket.emit("setUp", {
   secretKey: urlParams.s
 });
 
-socket.on("newGame",function(data){
-  console.log("selected");
-  $("#chat-input").css("display","inline");
+
+socket.on("newGame", function(data){
+  $("#chatlog").html("");
+  $("#chatlog").append("<div>Player "+data.winner+ " won the last game!</div>");
+  $("#chat-input").hide();
+});
+
+socket.on("selectedAsPlayer",function(data){
+  $("#chat-input").show();
 })
 
 socket.on("msg", function(data){
-  $("#chatlog").append("<div>"+ data.msg +"</div>");
+  $("#chatlog").append("<div> player "
+    +data.player+": "+ data.moveData.msg +"</div>");
 });
 
 
 function sendchat(){
   socket.emit("move",
   {
+    moveData:{
+      msg: $("#chat-input").val()
+    },
   roomid: urlParams.id,
-  msg: $("#chat-input").val(),
   secretKey: urlParams.s
   });
 }

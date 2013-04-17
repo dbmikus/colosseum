@@ -14,6 +14,9 @@ var mongoExpressAuth = require('./mongo-express-auth/lib/mongoExpressAuth.js');
 //the browse rooms view
 var arenalist = {};
 
+// number of milliseconds for a game
+var gamelength = 10000;
+
 
 var gameData  = {};
 //gameData[id]=
@@ -120,16 +123,15 @@ app.post('/arena', function(req, res){
             player1:  null,
             player2:  null,
             audience: {},
-            games: {}
+            games: {},
+            votes: {}
         }
         nextId += 1;
 
         res.send({success:true, arenalist:arenalist});
     }else{
-
         res.send({success: false});
     }
-
 });
 
 
@@ -145,7 +147,8 @@ app.use(express.static(__dirname + '/static/'));
     // player1: player secretKey,
     // player2: player secretKey,
     // audience: audience sockets
-    // games: game sockets
+    // games: game sockets,
+    // votes: votes
 // }
 
 
@@ -164,8 +167,8 @@ var audienceIO = require('socket.io').listen(8888);
 audienceIO.sockets.on("connection",function(socket){
     socket.on("thisArena",function(data){
         if(gameData[data.roomid]){
-            audienceSockets[socket.sessionid]= data.roomid;
-            gameData[data.roomid]["audience"][socket.sessionid]=socket;
+            audienceSockets[socket.id]= data.roomid;
+            gameData[data.roomid]["audience"][socket.id]=socket;
             socket.emit("arenaInfo",
             {
                roomSpecs: arenalist[data.roomid]
@@ -175,13 +178,16 @@ audienceIO.sockets.on("connection",function(socket){
                     gameData[data.roomid]["audience"][s].emit("newChat",chatData);
                 }
             });
+            socket.on("sendVote",function(voteData){
+                gameData[data.roomid]["votes"][socket.id] = voteData.vote;
+            });
         }
     });
 
     socket.on("disconnect", function(data){
         try{
-            delete gameData[audienceSockets[socket.sessionid]]["audience"][socket.sessionid];
-            delete audienceSockets[socket.sessionid]
+            delete gameData[audienceSockets[socket.id]]["audience"][socket.id];
+            delete audienceSockets[socket.id]
         }
         catch(e){
         }
@@ -205,8 +211,7 @@ gameIO.sockets.on("connection",function(socket){
             gameSockets[socket.id]= data.roomid;
             gameData[data.roomid]["games"][data.secretKey]=socket;
             if(Object.keys(gameData[data.roomid]["games"]).length>3
-                && gameData[data.roomid]["started"]===false){
-                console.log("starting game");
+                &&gameData[data.roomid]["started"]===false){
                 startGame(data.roomid);
             }
         }else
@@ -214,14 +219,19 @@ gameIO.sockets.on("connection",function(socket){
     });
 
     socket.on("move",function(data){
-        console.log(socket.id);
-        console.log(gameData[data.roomid]["player1"]);
-        console.log(gameData[data.roomid]["player2"]);
         if(gameData[data.roomid]["player1"]===data.secretKey){
-            emitToAll(gameData[data.roomid]["games"],"msg",data);
+            emitToAll(gameData[data.roomid]["games"],"msg",
+                {
+                    moveData:data.moveData,
+                    player: 1
+                });
         }
         if(gameData[data.roomid]["player2"]===data.secretKey){
-            emitToAll(gameData[data.roomid]["games"],"msg",data);
+            emitToAll(gameData[data.roomid]["games"],"msg",
+                {
+                    moveData:data.moveData,
+                    player: 2
+                });
         }
     });
 
@@ -233,15 +243,14 @@ gameIO.sockets.on("connection",function(socket){
         catch(e){
         }
     });
-
 });
-
-
-
 
 
 function startGame(roomid){
     var arena = gameData[roomid];
+    if(Object.keys(arena["games"]).length<4){
+        return;
+    }
     if (!arena.player1){
         arena.player1 = randomSocket(arena.games);
         while(arena.player1===arena.player2){
@@ -251,12 +260,49 @@ function startGame(roomid){
     if (!arena.player2){
         arena.player2 = randomSocket(arena.games);
         while(arena.player1===arena.player2){
-            arena.player1= randomSocket(arena.games);
+            arena.player2= randomSocket(arena.games);
         }
     }
-    arena["games"][arena.player1].emit("newGame",{});
-    arena["games"][arena.player2].emit("newGame",{});
+    arena["votes"]= {};
+    arena["games"][arena.player1].emit("selectedAsPlayer",{});
+    arena["games"][arena.player2].emit("selectedAsPlayer",{});
     arena["started"]=true;
+    setTimeout(function(){
+        endGame(roomid);
+    },gamelength);
+}
+
+
+function endGame(roomid){
+    var arena = gameData[roomid];
+    var p1Votes = 0;
+    var p2Votes = 0;
+    var winner;
+    for (var voter in arena["votes"]){
+        if(arena["votes"][voter]===1){
+            p1Votes+=1;
+        } else if(arena["votes"][voter]===2){
+            p2Votes+=1;
+        }
+    }
+    if(p1Votes>p2Votes){
+        arena.player2 = null;
+        winner = 1;
+    }else if(p1Votes<p2Votes){
+        arena.player1 = null;
+        winner = 2;
+    }else{
+        winner = null;
+    }
+    emitToAll(arena["games"],"newGame",
+        {
+            winner:winner,
+            p1Votes: p1Votes,
+            p2Votes: p2Votes
+        });
+    setTimeout(function(){
+        startGame(roomid);
+    },3000);
 }
 
 function randomSocket(sockets){

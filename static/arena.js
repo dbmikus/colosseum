@@ -55,4 +55,16 @@ if(urlParams.id){
                  user: getLocal('usercookie').username});
     $("#chat-input").val("");
   }
+  function sendvote(choice){
+    socket.emit("sendVote",{vote:choice});
+  }
+  $("#player1Vote").click(function(){
+    sendvote(1);
+  });
+  $("#player2Vote").click(function(){
+    sendvote(2);
+  });
+
+
+
 }
