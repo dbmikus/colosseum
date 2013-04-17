@@ -10,7 +10,7 @@ var app = express();
 //REPLACE THE REQUIRE WITH "require('mongo-express-auth');" if installed as a node module
 var mongoExpressAuth = require('./mongo-express-auth/lib/mongoExpressAuth.js');
 
-//list containing all the rooms, used for displaying rooms in 
+//list containing all the rooms, used for displaying rooms in
 //the browse rooms view
 var arenalist = {};
 
@@ -25,14 +25,14 @@ var gameData  = {};
     // audience: player sockets
 // }
 
-var nextId =0;
+var nextId = 0;
 
 //===========================
 //  init
 //===========================
 
 mongoExpressAuth.init({
-    mongo: { 
+    mongo: {
         dbName: 'Colosseum',
         collectionName: 'accounts'
     }
@@ -63,7 +63,6 @@ app.get('/me', function(req, res){
                     res.send(err);
                 else 
                     res.send(result); 
-// NOTE: direct access to the database is a bad idea in a real app
             });
         }
     });
@@ -116,13 +115,14 @@ app.post('/arena', function(req, res){
         gameData[nextId] = 
         {
             name: name,
-            desc: desc, 
-            player1:  null, 
+            desc: desc,
+            started: false,
+            player1:  null,
             player2:  null,
             audience: {},
             games: {}
         }
-        nextId+= 1;
+        nextId += 1;
 
         res.send({success:true, arenalist:arenalist});
     }else{
@@ -179,12 +179,17 @@ audienceIO.sockets.on("connection",function(socket){
     });
 
     socket.on("disconnect", function(data){
-        delete gameData[audienceSockets[socket.sessionid]]["audience"][socket.sessionid];
-        delete audienceSockets[socket.sessionid]
+        try{
+            delete gameData[audienceSockets[socket.sessionid]]["audience"][socket.sessionid];
+            delete audienceSockets[socket.sessionid]
+        }
+        catch(e){
+        }
     });
 
     socket.emit("whatArena",{});
 });
+
 
 
 
@@ -199,7 +204,8 @@ gameIO.sockets.on("connection",function(socket){
         if(gameData[data.roomid]){
             gameSockets[socket.id]= data.roomid;
             gameData[data.roomid]["games"][data.secretKey]=socket;
-            if(Object.keys(gameData[data.roomid]["games"]).length>3){
+            if(Object.keys(gameData[data.roomid]["games"]).length>3
+                && gameData[data.roomid]["started"]===false){
                 console.log("starting game");
                 startGame(data.roomid);
             }
@@ -220,8 +226,12 @@ gameIO.sockets.on("connection",function(socket){
     });
 
     socket.on("disconnect", function(data){
-        delete gameData[gameSockets[socket.id]]["games"][socket.id];
-        delete gameSockets[socket.id]
+        try{
+            delete gameData[gameSockets[socket.id]]["games"][socket.id];
+            delete gameSockets[socket.id]
+        }
+        catch(e){
+        }
     });
 
 });
@@ -246,6 +256,7 @@ function startGame(roomid){
     }
     arena["games"][arena.player1].emit("newGame",{});
     arena["games"][arena.player2].emit("newGame",{});
+    arena["started"]=true;
 }
 
 function randomSocket(sockets){
