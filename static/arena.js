@@ -24,8 +24,8 @@ var secretKey="";
 ////////////////////////////////////////////////////////////
 
 if(urlParams.id){
-  var socket =  io.connect("http://http://calm-ocean-1220.herokuapp.com/");
-  
+  var socket =  io.connect("http://calm-ocean-1220.herokuapp.com/");
+
   // When asked what arena the client is a part of, the client responds with the
   // room id and with username
   socket.on("whatArena",function(data){
