@@ -55,7 +55,7 @@ if(urlParams.id){
   function sendchat(){
     socket.emit("sendChat",
                 {chat: $("#chat-input").val(),
-                 user: getLocal('usercookie').username});
+                 user: "someguy"});
     $("#chat-input").val("");
   }
   function sendvote(choice){
