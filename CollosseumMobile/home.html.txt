@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <link href="reset.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  </head>
+  <body>
+	<a href='./platformdetection.html'><div id = 'Platform' height='30' width = '30' > Platform</div></a><br>
+	<a href='./accelerometer.html' ><div id = "Accelerometer" height ="30" width = "30"> Accelerometer</div></a><br>
+	<a href='./geolocation.html'><div id = "Geolocation" height = '30' width ='30'> Geolocation</div></a><br>
+	<a href='./localStorage.html'><div id = 'Local Storage' height ='30' width ='30'>Local Storage</div></a><br>
+	<a href='./multiTouch.html'> <div id = 'Multi-Touch' height= '20%' width = '100%'>Multi-Touch </div> </a><br>
+	
+	<script src="main.js"></script>
+	<script src="jquery-1.9.0.js"></script>
+	</body>
+</html>
