@@ -44,9 +44,9 @@ var nextId = 0;
 //     app.listen(process.env.PORT || 3000);
 // });
 
-// app.use(express.bodyParser());
-// app.use(express.cookieParser());
-// app.use(express.session({ secret: 'racial slurs degrade society, white boy!' }));
+app.use(express.bodyParser());
+app.use(express.cookieParser());
+app.use(express.session({ secret: 'racial slurs degrade society, white boy!' }));
 
 //===========================
 //  routes
@@ -104,7 +104,6 @@ app.get('/arena',function(request,response){
 })
 
 app.post('/arena', function(req, res){
-    console.log(req.body);
     var name = req.body["name"];
     var desc = req.body["desc"];
 
