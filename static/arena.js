@@ -30,7 +30,7 @@ if(urlParams.id){
   // room id and with username
   socket.on("whatArena",function(data){
     socket.emit("thisArena", {roomid: urlParams.id,
-                              user: getLocal('usercookie').username});
+                              user: "somename"});
   });
 
   // Sent by server when a chat is received. Should be displayed by clients
