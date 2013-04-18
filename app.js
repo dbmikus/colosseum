@@ -51,7 +51,7 @@ app.use(express.session({ secret: 'racial slurs degrade society, white boy!' }))
 //===========================
 //  routes
 //===========================
-app.listen(process.env.PORT || 3000);
+//app.listen(process.env.PORT || 3000);
 
 app.get('/', function(req, res){
     res.sendfile('static/index.html');
@@ -160,11 +160,19 @@ var audienceSockets={};
 
 
 //socket server for audience
+var http = require("http");
+var server = http.createServer(app);
 
-var audienceIO = require('socket.io').listen(8888);
+var IO = require('socket.io').listen(server);
+IO.configure(function(){
+    IO.set('transports', ["xhr-polling"]);
+    IO.set('polling duration', 10);
+});
+
+server.listen(process.env.PORT || 3000);
 
 
-audienceIO.sockets.on("connection",function(socket){
+IO.sockets.on("connection",function(socket){
     socket.on("thisArena",function(data){
         if(gameData[data.roomid]){
             audienceSockets[socket.id]= data.roomid;
@@ -191,21 +199,16 @@ audienceIO.sockets.on("connection",function(socket){
         }
         catch(e){
         }
+        try{
+            delete gameData[gameSockets[socket.id]]["games"][socket.id];
+            delete gameSockets[socket.id]
+        }
+        catch(e){
+        }
+
     });
 
-    socket.emit("whatArena",{});
-});
-
-
-
-
-
-// socket server for gameplay
-
-var gameIO = require('socket.io').listen(8889);
-
-
-gameIO.sockets.on("connection",function(socket){
+    // game socket stuff
     socket.on("setUp",function(data){
         if(gameData[data.roomid]){
             gameSockets[socket.id]= data.roomid;
@@ -235,15 +238,10 @@ gameIO.sockets.on("connection",function(socket){
         }
     });
 
-    socket.on("disconnect", function(data){
-        try{
-            delete gameData[gameSockets[socket.id]]["games"][socket.id];
-            delete gameSockets[socket.id]
-        }
-        catch(e){
-        }
-    });
+
+    socket.emit("whatArena",{});
 });
+
 
 
 function startGame(roomid){

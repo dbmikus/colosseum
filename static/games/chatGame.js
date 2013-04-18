@@ -11,7 +11,7 @@
 })();
 
 
-var socket = io.connect("http://localhost:8889");
+var socket = io.connect("http://http://calm-ocean-1220.herokuapp.com/");
 
 socket.emit("setUp", {
   roomid: urlParams.id,
