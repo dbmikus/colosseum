@@ -15,7 +15,7 @@ var mongoExpressAuth = require('./mongo-express-auth/lib/mongoExpressAuth.js');
 var arenalist = {};
 
 // number of milliseconds for a game
-var gamelength = 10000;
+var gamelength = 30000;
 
 
 var gameData  = {};
@@ -164,10 +164,11 @@ var http = require("http");
 var server = http.createServer(app);
 
 var IO = require('socket.io').listen(server);
-IO.configure(function(){
-    IO.set('transports', ["xhr-polling"]);
-    IO.set('polling duration', 10);
-});
+// needed for heroku
+// IO.configure(function(){
+//     IO.set('transports', ["xhr-polling"]);
+//     IO.set('polling duration', 10);
+// });
 
 server.listen(process.env.PORT || 3000);
 
