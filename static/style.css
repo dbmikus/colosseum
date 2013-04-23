@@ -1,16 +1,20 @@
 /* Style code will go here */
 
+
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+
 #titlebar {
-    background-color: green;
+    background-color: #FF2C29;
 }
 
 #wrapper {
-    background-color: blue;
+    background-color: white;
     position: relative;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    width:980px;
+    margin-left: auto;
+    margin-right:auto;
 }
 
 #competitors {
@@ -18,18 +22,63 @@
     z-index: 3;
 }
 
-#spectators {
-    background-color: red;
+#game{
     position: absolute;
-    top: 0;
+    top:10px;
+    left: 10px;
+}
+
+#voting{
+    position:absolute;
+    top: 620px;
+    left:10px;
+    right: 370px;
+    text-align: center;
+}
+
+#voting button{
+    width: 45%;
+    height: 100px;
+    font-size: 30px;
+    background-color: #FF635F;
+}
+
+
+h2 {
+    text-align: center;
+}
+
+#spectators {
+    background-color: #FF8C89;
+    position: absolute;
+    top: 10px;
     right: 0;
     z-index: 2;
-
-    width: 400px;
+    height: 590px;
+    width: 350px;
+    padding: 5px;
 }
 
 #spec_controls {
-    background-color: rgba(242, 165, 165, 1);
+    position: absolute;
+    bottom:5px;
+    left: 5px;
+    right:8px;
+}
+
+#chat{
+    background-color: white;
+    height: 530px;
+    overflow: auto;
+    margin:5px 0px 5px 0px;
+}
+
+#chat-form{
+    width:100%;
+}
+
+#chat-input{
+    width: 100%;
 }
 
 #loginPane {
@@ -43,6 +92,12 @@
     border-width: 2px;
     border-color: black;
     border-style:solid;
+}
+
+.row_items{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .row_items li {

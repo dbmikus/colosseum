@@ -299,10 +299,17 @@ function endGame(roomid){
             p1Votes: p1Votes,
             p2Votes: p2Votes
         });
+    emitToAll(arena["audience"],"newGame",{});
     setTimeout(function(){
         startGame(roomid);
     },3000);
 }
+
+
+setInterval(function(){
+    console.log(IO.sockets);
+},5000);
+
 
 function randomSocket(sockets){
     var keys = Object.keys(sockets);

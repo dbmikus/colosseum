@@ -24,23 +24,23 @@
         
 
       </div>
+      <div id = "voting">
 
-      <button id="player1Vote">
-        Vote for Player 1
-      </button>
-      <button id="player2Vote">
-        Vote for Player 2
-      </button>
+        <button id="player1Vote">
+          Vote for Player 1
+        </button>
+        <button id="player2Vote">
+          Vote for Player 2
+        </button>
+      </div>
 
       <div id="spectators">
-        <h2>Spectators stuff</h2>
+        <h2>Audience Chat</h2>
 
-        <div id="chat-container">
-          <div id="chat">
-          </div>
+        <div id="chat">
         </div>
         <div id="spec_controls">
-          <form name="createForm" action="javascript:sendchat()">
+          <form id="chat-form" name="createForm" action="javascript:sendchat()">
             <input id="chat-input" name="chat" type="text" placeholder="send chats"/>
           </form>
         </div>

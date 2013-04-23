@@ -11,4 +11,5 @@ body{
 
 #chat-input{
   display: none;
+  margin-left: 50px;
 }

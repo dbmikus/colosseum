@@ -1,3 +1,7 @@
+// format page
+
+
+
 // from Andy E
 //http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values
 
@@ -37,6 +41,7 @@ if(urlParams.id){
   socket.on("newChat", function(data){
     var c = $("<div>").html(data.user + ": " + data.chat);
     $("#chat").append(c);
+    $("#chat").scrollTop($("#chat")[0].scrollHeight);
   });
 
   socket.on("arenaInfo",function(data){
@@ -48,6 +53,12 @@ if(urlParams.id){
     iframe.attr("id","gameIFrame");
 
     $("#game").append(iframe);
+  socket.on("newGame",function(data){
+    $("#player2Vote").css("background-color","#FF635F");
+    $("#player1Vote").css("background-color","#FF635F");
+
+  });
+
 
   });
 
@@ -63,9 +74,14 @@ if(urlParams.id){
   }
   $("#player1Vote").click(function(){
     sendvote(1);
+    $("#player1Vote").css("background-color","#A6110D");
+    $("#player2Vote").css("background-color","#FF635F");
   });
   $("#player2Vote").click(function(){
     sendvote(2);
+    $("#player2Vote").css("background-color","#A6110D");
+    $("#player1Vote").css("background-color","#FF635F");
+    
   });
 
 
