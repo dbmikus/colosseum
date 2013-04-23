@@ -28,7 +28,9 @@ var secretKey="";
 ////////////////////////////////////////////////////////////
 
 if(urlParams.id){
-  var socket =  io.connect("http://localhost:3000");
+  //change this to change between localhost and digital ocean
+  //  var socket =  io.connect("http://localhost:3000");
+  var socket =  io.connect("http://198.199.82.58:3000");
 
   // When asked what arena the client is a part of, the client responds with the
   // room id and with username
