@@ -36,8 +36,12 @@ socket.on("newGame", function(data){
 
 socket.on("movemade",function(data){
   var l= data.moveData.drawing.length;
-  ctx.linewidth = 3;
-  ctx.strokeStyle = "black";
+  ctx.linewidth = 5;
+  if (data.player === 1){
+    ctx.strokeStyle = "red";
+  }else{
+    ctx.strokeStyle = "blue";
+  }
   ctx.beginPath();
   moveTo(data.moveData.drawing[0][0],data.moveData.drawing[0][1]);
   for (var i = 1; i<l; i++){

@@ -13,3 +13,11 @@ body{
   display: none;
   margin-left: 50px;
 }
+
+.player1{
+  color: red;
+}
+
+.player2{
+  color: blue;
+}
