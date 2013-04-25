@@ -1,61 +1,45 @@
-<!DOCTYPE html>
-
 <html>
   <head>
-    <title>Colosseum</title>
+    <link href="reset.css" rel="stylesheet" type="text/css" />
+    <link href="mobile-style.css" rel="stylesheet" type="text/css" />
+    <link rel="apple-touch-icon-precomposed" href="/mobile/icon.png" />
 
-    <link rel="stylesheet" type="text/css" media="all" href="reset.css" />
-    <link rel="stylesheet" type="text/css" media="all" href="style.css" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="viewport" content="width=device-width, initial-scale=1,
+                                   maximum-scale=1, user-scalable=no" />
   </head>
 
   <body>
-    <div id="titlebar">
-      <ol class="row_items">
-        <li>Colosseum</li>
-        <li>Browse Rooms</li>
-        <li>Room Info</li>
-        <li>Search</li>
-        <li id="user_li"></li>
-      </ol>
-    </div>
+    <div id = "banner" class ="unselectable"> COLLOSSEUM
+      <div class = "button" > Profile </div>
 
-    <div id="createArena">
-        <form name="createForm" action="javascript:createRoom()">
-          Create an arena!
-          <div class="row">
-            <input id="name-input" name="Name" type="text" placeholder="Name of your arena"/>
-          </div>
-          <div class="row">
-            <input id="desc-input" name="Desc" type="text" placeholder="Describe what makes this arena special."/>
-          </div>
-          <div class="row right">
-            <input id="submitButton" name="Submit"  type="submit" value="Submit"/>
-          </div>
-        </form>
-    </div>
+      <div class= "greyBar" id ="browseBar">Browse</div>
+      <ul>
+        <li class ="staticEle"><p>All Arenas</p></li>
+	    <li class ="staticEle"><p>Competitive</p></li>
+	    <li class ="staticEle"> <p>Creative</p></li>
+      </ul>
 
-    <div id="wrapper">
-    </div>
+      <div class = "greyBar">Popular </div>
+      <!-- sample lists. Real entries will be generated automagically-->
+      <ul>
+        <li> Freestyle Fridays
+          <div class = "player1">
+            <p class = "name1">King</p> </div>
+          <div class = "player2">
+            <p class = "name2">Challenger</p> </div>
 
-    <!-- This is a centered div (fixed position) used for login.
-         It defaults to hidden, but unhides when login button is clicked. -->
-    <div id="loginPane">
-      <div id="usernameField"> username:
-        <input id="usernameInput" type="text" />
-      </div>
-      <div id="passwordField"> password:
-        <input id="passwordInput" type="password" />
-      </div>
-
-      <button id="loginButton"> login </button>
-      <button id="registerButton"> register </button>
+          <div class = "viewers"> X spectators</div>
+          <div class = "versus"> vs </div>
+        </li>
+	    <li>many</li>
+	    <li>things<li>
+      </ul>
     </div>
 
 
-    <script src="jquery-1.9.0.js"></script>
-    <script src="main.js"></script>
-    <script src="login.js"></script>
-    <!-- <script src="logout.js"></script> -->
-    <script src="findarena.js"></script>
+	<script src="main.js"></script>
+	<script src="jquery-1.9.0.js"></script>
   </body>
 </html>

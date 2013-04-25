@@ -3,6 +3,10 @@
 // dmikus
 // zim
 
+//================
+// File includes
+//================
+var pd = require('./platformDetection.js');
 
 var express = require("express");
 var app = express();
@@ -54,7 +58,13 @@ app.use(express.session({ secret: 'racial slurs degrade society, white boy!' }))
 //app.listen(process.env.PORT || 3000);
 
 app.get('/', function(req, res){
-    res.sendfile('www/index.html');
+    if(pd.isMobile(req)) {
+        // the mobile page
+        res.sendfile('www/index.html');
+    } else {
+        // The desktop page
+        res.sendfile('www/desktop-index.html');
+    }
 });
 
 app.get('/me', function(req, res){
@@ -96,11 +106,15 @@ app.post('/register', function(req, res){
 });
 
 app.get('/arenalist', function(req, res){
-    res.send( arenalist );
+    res.send(arenalist);
 });
 
-app.get('/arena',function(request,response){
-    response.sendfile("www/arena.html");
+app.get('/arena',function(req, res){
+    if (pd.isMobile(req)) {
+        res.sendfile('www/mobile-arena.html');
+    } else {
+        res.sendfile("www/desktop-arena.html");
+    }
 })
 
 app.post('/arena', function(req, res){
