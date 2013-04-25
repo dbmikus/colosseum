@@ -1,0 +1,31 @@
+== NOTICE ==
+Not separated by different users, since the user testing session involved
+multiple people at the same time.
+
+== User Notes ==
+
+Question about persistent rooms.
+
+Verification system / login. Can users spectate and chat without registering?
+How do you prevent users from spoofing being a competitor?
+(we actually ensure this doesn't happen)
+
+Should competitiors also be able to chat with spectators in the spectator
+channel?
+
+Navigation back to rooms with back button
+
+Archiving rooms
+
+Debate application sounds like a cool feature. Emphasize that feature.
+
+Need instructions for games and what the rules of games are.
+Needs a description of the use purpose of the app.
+
+Ability to control who plays in the games. Currently, the 3rd and 4th person to
+join are the competitors and then someone from the spectators gets subbed into
+the competition when someone loses.
+
+Better indication for who is the competitor.
+
+Need to implement user login and registration, which is a planned feature.
