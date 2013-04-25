@@ -13,15 +13,25 @@ function refreshList(){
 }
 
 function refreshDOM(){
-    $("#wrapper").html("");
-    for (var key in arenalist){
-        var arena = arenalist[key]
+    var arena_ul = $('#arenalist');
+    // Clear the HTML in the list so we can repopulate it
+    arena_ul.html('');
+
+    for (key in arenalist) {
+        console.log(key);
+
+        var arena = arenalist[key];
         var link = $("<a>")
         link.addClass("room-link");
         link.attr("href","/arena?id="+ arena.id);
         link.append(arena.name);
-        link.append("<br>");
-        $("#wrapper").prepend(link);
+
+        var li = $('<li>');
+        li.append(link);
+
+        // This makes the arenas appear sorted with the most recently created at
+        // the top
+        arena_ul.prepend(li);
     }
 }
 
