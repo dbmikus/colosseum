@@ -30,7 +30,7 @@ socket.on("selectedAsPlayer",function(data){
   $("#chat-input").show();
 })
 
-socket.on("msg", function(data){
+socket.on("movemade", function(data){
   $("#chatlog").append("<div> player "
     +data.player+": "+ data.moveData.msg +"</div>");
 });

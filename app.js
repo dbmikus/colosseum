@@ -23,9 +23,12 @@ var gameData  = {};
 // {
     // name: name,
     // desc: desc,
-    // player1: player socket,
-    // player2: player socket,
-    // audience: player sockets
+    // started: if it started or not
+    // player1: player secretKey,
+    // player2: player secretKey,
+    // audience: audience sockets
+    // games: game sockets,
+    // votes: votes
 // }
 
 var nextId = 0;
@@ -54,8 +57,16 @@ app.use(express.session({ secret: 'racial slurs degrade society, white boy!' }))
 //app.listen(process.env.PORT || 3000);
 
 app.get('/', function(req, res){
+    res.sendfile('static/splash.html');
+});
+app.get('/index', function(req, res){
     res.sendfile('static/index.html');
 });
+app.get('/create', function(req, res){
+    res.sendfile('static/create.html');
+});
+
+
 
 app.get('/me', function(req, res){
     mongoExpressAuth.checkLogin(req, res, function(err){
@@ -106,14 +117,14 @@ app.get('/arena',function(request,response){
 app.post('/arena', function(req, res){
     var name = req.body["name"];
     var desc = req.body["desc"];
-
+    var type = req.body["type"];
     if(name && desc){
         arenalist[nextId] =
             {
                 id:nextId,
                 name: name,
                 desc: desc,
-                type: "textGame"
+                type: type
             };
         gameData[nextId] =
         {
@@ -144,6 +155,7 @@ app.use(express.static(__dirname + '/static/'));
 // {
     // name: name,
     // desc: desc,
+    // started: if it started or not,
     // player1: player secretKey,
     // player2: player secretKey,
     // audience: audience sockets
@@ -195,24 +207,23 @@ IO.sockets.on("connection",function(socket){
 
     socket.on("disconnect", function(data){
         try{
-            delete gameData[audienceSockets[socket.id]]["audience"][socket.id];
-            delete audienceSockets[socket.id]
-        }
-        catch(e){
-        }
-        try{
             delete gameData[gameSockets[socket.id]]["games"][socket.id];
             delete gameSockets[socket.id]
         }
         catch(e){
         }
-
+        try{
+            delete gameData[audienceSockets[socket.id]]["audience"][socket.id];
+            delete audienceSockets[socket.id]
+        }
+        catch(e){
+        }
     });
 
     // game socket stuff
     socket.on("setUp",function(data){
         if(gameData[data.roomid]){
-            gameSockets[socket.id]= data.roomid;
+            gameSockets[data.secretKey]= data.roomid;
             gameData[data.roomid]["games"][data.secretKey]=socket;
             if(Object.keys(gameData[data.roomid]["games"]).length>3
                 &&gameData[data.roomid]["started"]===false){
@@ -224,14 +235,14 @@ IO.sockets.on("connection",function(socket){
 
     socket.on("move",function(data){
         if(gameData[data.roomid]["player1"]===data.secretKey){
-            emitToAll(gameData[data.roomid]["games"],"msg",
+            emitToAll(gameData[data.roomid]["games"],"movemade",
                 {
                     moveData:data.moveData,
                     player: 1
                 });
         }
         if(gameData[data.roomid]["player2"]===data.secretKey){
-            emitToAll(gameData[data.roomid]["games"],"msg",
+            emitToAll(gameData[data.roomid]["games"],"movemade",
                 {
                     moveData:data.moveData,
                     player: 2
@@ -248,6 +259,7 @@ IO.sockets.on("connection",function(socket){
 function startGame(roomid){
     var arena = gameData[roomid];
     if(Object.keys(arena["games"]).length<4){
+        arena["started"]= false;
         return;
     }
     if (!arena.player1){
@@ -305,10 +317,13 @@ function endGame(roomid){
     },3000);
 }
 
-
-setInterval(function(){
-    console.log(IO.sockets);
-},5000);
+// diagnostic purposes
+// setInterval(function(){
+//     console.log("current sockets: ");
+//     console.log(IO.sockets.sockets);
+//     console.log("current games: ");
+//     console.log(gameData);
+// },5000);
 
 
 function randomSocket(sockets){

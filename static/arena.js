@@ -48,32 +48,39 @@ if(urlParams.id){
 
   socket.on("arenaInfo",function(data){
     arenaInfo = data.roomSpecs;
-    var iframe = $("<iframe>");
-    iframe.attr("src","games/chatGame.html?id="+urlParams.id+"&s="+
-      socket.socket.sessionid);
-    iframe.attr("sandbox","allow-same-origin allow-scripts allow-popups allow-forms")
-    iframe.attr("id","gameIFrame");
-
+    var iframe = renderIFrame(arenaInfo);
     $("#game").append(iframe);
-  socket.on("newGame",function(data){
-    $("#player2Vote").css("background-color","#FF635F");
-    $("#player1Vote").css("background-color","#FF635F");
 
-  });
+    socket.on("newGame",function(data){
+      $("#player2Vote").css("background-color","#FF635F");
+      $("#player1Vote").css("background-color","#FF635F");
 
-
+    });
   });
 
   // Called when client sends a chat
   function sendchat(){
+    var username = $("#username-field").val();
+    var msg = $("#chat-input").val();
+    if(username.length < 3){
+      alert("make a better username");
+      return;
+    }
+    if(msg.length<1){
+      return;
+    }
     socket.emit("sendChat",
-                {chat: $("#chat-input").val(),
-                 user: "someguy"});
+                {chat: msg,
+                 user: username});
     $("#chat-input").val("");
   }
+
+
   function sendvote(choice){
     socket.emit("sendVote",{vote:choice});
   }
+
+  
   $("#player1Vote").click(function(){
     sendvote(1);
     $("#player1Vote").css("background-color","#A6110D");
@@ -88,4 +95,22 @@ if(urlParams.id){
 
 
 
+}
+
+
+
+
+function renderIFrame(arenaInfo){
+  var iframe = $("<iframe>");
+  if(arenaInfo.type === "chat"){
+    iframe.attr("src","games/chatGame.html?id="+arenaInfo.id+"&s="+
+        socket.socket.sessionid);
+  }
+  if(arenaInfo.type === "draw"){
+    iframe.attr("src","games/drawGame.html?id="+arenaInfo.id+"&s="+
+        socket.socket.sessionid);    
+  }
+  iframe.attr("sandbox","allow-same-origin allow-scripts allow-popups allow-forms")
+  iframe.attr("id","gameIFrame");
+  return iframe;
 }

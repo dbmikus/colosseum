@@ -1,27 +1,5 @@
 var arenalist = {};
 
-
-
-
-function createRoom(){
-    $.ajax({
-        type: "post",
-        data: {
-            name: $("#name-input").val(),
-            desc: $("#desc-input").val()
-        },
-        url: "/arena",
-        success: function(data) {
-            if(data.success){
-                refreshList();
-            }
-        }
-    });
-    $("#name-input").val("");
-    $("#desc-input").val("")
-}
-
-
 function refreshList(){
     $.ajax({
     type: "get",
