@@ -3,8 +3,6 @@ var canvas = document.getElementById("drawCanvas");
 var ctx = canvas.getContext("2d");
 
 
-
-
 (window.onpopstate = function () {
     var match,
         pl     = /\+/g,  // Regex for replacing addition symbol with a space
@@ -37,9 +35,15 @@ socket.on("newGame", function(data){
 
 
 socket.on("movemade",function(data){
-  data.moveData.drawing.forEach(function(ele){
-    drawCircle(ctx, ele, "black", 3);
-  });
+  var l= data.moveData.drawing.length;
+  ctx.linewidth = 3;
+  ctx.strokeStyle = "black";
+  ctx.beginPath();
+  moveTo(data.moveData.drawing[0][0],data.moveData.drawing[0][1]);
+  for (var i = 1; i<l; i++){
+    ctx.lineTo(data.moveData.drawing[i][0],data.moveData.drawing[i][1]);
+  }
+  ctx.stroke();
 });
 
 canvas.addEventListener("mousedown", canvasMouseDown, false);
@@ -48,6 +52,7 @@ canvas.addEventListener("mouseup", canvasMouseUp, false);
 
 var currentDrawing = [];
 var isDrawing= false;
+
 function canvasMouseDown(event){
   isDrawing = true;
   currentDrawing = [];
@@ -61,19 +66,22 @@ function canvasMouseMove(event){
 }
 
 function canvasMouseUp(event){
-  socket.on("move",{
-    moveData:{
-      drawing: currentDrawing
-    },
-    roomid: urlParams.id,
-    secretKey: urlParams.s
-  });
+  if(isDrawing){
+    socket.emit("move",{
+      moveData:{
+        drawing: currentDrawing
+      },
+      roomid: urlParams.id,
+      secretKey: urlParams.s
+    });
+    isDrawing = false;
+  }
 }
 
 function drawCircle(ctx, location, color, dimensions) {
   ctx.fillStyle = color;
   ctx.beginPath();
-  ctx.arc(location[0], location[1], dimensions[1], 0, 2 * Math.PI, false);
+  ctx.arc(location[0], location[1], dimensions, 0, 2 * Math.PI, false);
   ctx.fill();
 }
 

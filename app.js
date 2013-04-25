@@ -59,9 +59,11 @@ app.use(express.session({ secret: 'racial slurs degrade society, white boy!' }))
 app.get('/', function(req, res){
     res.sendfile('www/splash.html');
 });
+
 app.get('/index', function(req, res){
     res.sendfile('www/index.html');
 });
+
 app.get('/create', function(req, res){
     res.sendfile('www/create.html');
 });
@@ -234,6 +236,8 @@ IO.sockets.on("connection",function(socket){
     });
 
     socket.on("move",function(data){
+        console.log("");
+        console.log(data.moveData);
         if(gameData[data.roomid]["player1"]===data.secretKey){
             emitToAll(gameData[data.roomid]["games"],"movemade",
                 {
@@ -253,8 +257,6 @@ IO.sockets.on("connection",function(socket){
 
     socket.emit("whatArena",{});
 });
-
-
 
 function startGame(roomid){
     var arena = gameData[roomid];
