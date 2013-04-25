@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Colosseum</title>
+
+    <link rel="stylesheet" type="text/css" media="all" href="reset.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="style.css" />
+  </head>
+
+  <body>
+    <div id="titlebar">
+      <ol class="row_items">
+        <li><a href="/">Colosseum</a></li>
+        <li><a href="/findarena">Browse Arenas</a></li>
+        <li><a href="/create">Create Arenas</a></li>
+      </ol>
+    </div>
+
+    <div id="wrapper">
+      <div id="createArena">
+        Create an arena!
+        <br>
+        <input id="name-input" name="Name" type="text" placeholder="Name of your arena"/>
+        <br>
+        <input id="desc-input" name="Desc" type="text" placeholder="Describe what makes this arena special."/>
+        <br>
+        <label for ="game-type-chat">
+          <input id="game-type-chat" name="Type" type="radio" value="chat">Chat Battle
+        </label>
+        <br>
+        <label for ="game-type-draw">
+          <input id="game-type-draw" name="Type" type="radio" value="draw">Draw Battle
+        </label>
+        <br>
+        <input id="submitButton" name="Submit"  type="submit" value="Submit"/>
+      </div>
+    </div>
+
+    <script src="jquery-1.9.0.js"></script>
+    <script src="create.js"></script>
+  </body>
+</html>

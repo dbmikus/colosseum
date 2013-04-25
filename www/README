@@ -1,0 +1,9 @@
+Note about file names:
+  All desktop file names are prefixed with "desktop-"
+
+  All mobile file names except index.html are prefixed with "mobile-"
+  The main page for mobile must be named index.html since that is the file that
+  PhoneGap looks for.
+
+  Besides the index.html file, if a file has no "desktop-" or "mobile-" prefix,
+  then it is multi-platform and system independent.

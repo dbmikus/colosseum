@@ -5,40 +5,26 @@
     <title>Colosseum</title>
 
     <link rel="stylesheet" type="text/css" media="all" href="reset.css" />
-    <link rel="stylesheet" type="text/css" media="all" href="style.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="mobile-style.css" />
+    <link rel="apple-touch-icon-precomposed" href="/mobile/icon.png" />
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />>
+	<meta name="viewport" content="width=device-width, initial-scale=1,
+                                   maximum-scale=1, user-scalable=no" />
   </head>
 
   <body>
     <div id="titlebar">
       <ol class="row_items">
-        <li><a href = "../"> Colosseum</a></li>
-        <li><a href = "/index">Browse Arenas</a></li>
-        <li><a href = "/create">Create Arenas</a></li>
+        <li><a href="/"> Colosseum</a></li>
+        <li><a href="/findarena">Browse Arenas</a></li>
+        <li><a href="/create">Create Arenas</a></li>
       </ol>
     </div>
-
     <div id="wrapper">
+      zach should make this pretty.
+      This is on mobile.
     </div>
-
-    <!-- This is a centered div (fixed position) used for login.
-         It defaults to hidden, but unhides when login button is clicked. -->
-    <div id="loginPane">
-      <div id="usernameField"> username:
-        <input id="usernameInput" type="text" />
-      </div>
-      <div id="passwordField"> password:
-        <input id="passwordInput" type="password" />
-      </div>
-
-      <button id="loginButton"> login </button>
-      <button id="registerButton"> register </button>
-    </div>
-
-
-    <script src="jquery-1.9.0.js"></script>
-    <script src="main.js"></script>
-    <script src="login.js"></script>
-    <!-- <script src="logout.js"></script> -->
-    <script src="findarena.js"></script>
   </body>
 </html>
