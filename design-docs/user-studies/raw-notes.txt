@@ -1,0 +1,172 @@
+== NOTICE ==
+Not separated by different users, since the user testing session involved
+multiple people at the same time.
+
+=======================
+== dmikus User Notes ==
+=======================
+
+== Notes From User Tests ==
+
+Question about persistent rooms.
+
+Verification system / login. Can users spectate and chat without registering?
+How do you prevent users from spoofing being a competitor?
+(we actually ensure this doesn't happen)
+
+Should competitiors also be able to chat with spectators in the spectator
+channel?
+
+Navigation back to rooms with back button
+
+Archiving rooms
+
+Debate application sounds like a cool feature. Emphasize that feature.
+
+Need instructions for games and what the rules of games are.
+Needs a description of the use purpose of the app.
+
+Ability to control who plays in the games. Currently, the 3rd and 4th person to
+join are the competitors and then someone from the spectators gets subbed into
+the competition when someone loses.
+
+Better indication for who is the competitor.
+
+Need to implement user login and registration, which is a planned feature.
+
+
+== Observations and Conclusions ==
+
+Our product was quite unpolished when we hit user testing, so there was a lot of
+confusion over the purpose of the application and how to use it. I think that an
+important thing for us to work on is a description of what the site is and how
+to use it. If those two things are understood, you will not be able to get any
+users. After that, we need a clear interface that responds to user interaction
+indicating what the user has done and what their status is on the website and in
+an arena. For example, users could not easily tell when they were competitors or
+spectators, and users also wanted to be able to login to create accounts.
+Accounts have already been a planned feature, but people seemed to place more
+emphasis on them, so we might add features so that a user profile can become
+more of an identiy (include profile pictures, user statistics, etc.).
+
+Once people understood the idea, they liked it. We are basically creating a
+platform for competition and spectation, so there could be a lot of options for
+how users can use the application. We just need to express a convincing reason
+to use the application and also instructions that make it easy to set up arenas
+and to spectate them.
+
+People also wanted to see more user statistics about voting, potentially with a
+graph of how votes have changed. This kind of stuff falls under visual user
+feedback, which expresses information while letting the user know that the
+system has registered their actions.
+
+
+====================
+== zim User Notes ==
+====================
+== Notes From User Tests ==
+
+User 1
+
+more pompting for users (create your arena)
+just chatroom options
+room filters
+voting feedback (poll results)
+room host should have power (notifications and room rules)
+
+
+User 2
+
+tutorial (make the story clearer)
+more messages for the user
+give the user an image of what they are using (story boardish)
+Rounded corners
+subtlepatterns.com
+"tactile" feedback
+
+
+== Observations and Conclusions ==
+
+A key point of our app is user participation, and without clear instructions,
+even users who want to participate cannot. Nearly all of the users we tested
+with could use the basic functionality (the chat room), but felt lost as to what
+was going on. So, to make sure the user is able to participate and enjoy it, we
+need a splash screen that states the goal, and hints on the page that prompt the
+user to complete basic tasks and learn the basics of using the app.
+
+We plan on spending a considerable amount of time on the layout of our splash
+screen because of how vital it is to getting the user experience off the ground.
+For example, Facebook and Twitter's splash screens explain shortly what the app
+is for conceptually, and allows the user to register and get started. Both have
+subsequent tutorials, which we plan on making as well, based on further user
+testing. The steps covered in the basic tutorial will have to be fleshed out
+over an additional series of user tests. (dat iterative design doe)
+
+Also, some users stated that they felt as if their vote was not being counted.
+This can easily be solved by displaying a confirmation that the user's vote was
+received or a simple graph that represents the data collected from all users.
+In a live setting this could be as simple as a bar graph showing the totals for
+each competitor, but demographic data could also be collected to allow for more
+detailed analysis of statistics.
+
+
+=======================
+== nhamal User Notes ==
+======================
+
+== Notes From User Tests ==
+more notification of what is currently going on
+
+we had several different types of fonts on different pages, and some on the same
+pages. we need to just pick a font.
+
+button affordance on voting buttons
+
+the view of the arena page is too tall. It shouldn't need vertical scrolling on
+any modern browser.
+
+all components should have some sort of title. It makes it easier to understand
+what should be the focus of attention.
+
+user names should be used in both the chatroom and the game itself to prevent
+confusion about who is who.
+
+we had a few suggestions about how to do a phone layout, which they drew.
+Generally the idea was to try to be minimal, and only have the chat and keyboard
+be visible when the user wants to say something.
+
+many buttons and divs were not aligned in the best possible way.
+
+The biggest complaint was that it was hard to understand what was going on at
+any given time. Their are several different phases of the game, and our users
+didn't have a good idea of what stage they were on at each time.
+
+Lastly they also had a good idea about randomizing game type. So you could join
+a room and would switch between a chat battle, a drawing battle, a webcam
+battle, and whatever else we can come up with with our API.
+
+
+== Observations and Conclusions ==
+
+Several of the users that we tested with were design oriented people, which was
+a great coincidence for us since we have little to no design experience. Right
+off the bat there were several reasonably simple things that we just missed.
+These don't really need explanation so I will just list them:
+
+- Our fonts were not standard across the entire website. This was the result of
+  using IFrames that used different CSS files.
+
+- Inside of an arena, the view is too tall, and requires vertical scrolling.
+
+- Games should use the username of the different players to identify them rather
+  than anonymously call them player 1 and player 2.
+
+- Some buttons and elements were not correctly aligned.
+
+- The voting buttons had bad affordance. It was hard to tell which one was the
+  selected one since there were only two.
+
+Beyond that we had a few more broad suggestions.
+
+My users' biggest problem was understanding what they were supposed to be doing.
+We had very little information telling them how to interact with the app.
