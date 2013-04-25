@@ -115,6 +115,7 @@ detailed analysis of statistics.
 ======================
 
 == Notes From User Tests ==
+
 more notification of what is currently going on
 
 we had several different types of fonts on different pages, and some on the same
