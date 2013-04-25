@@ -41,14 +41,14 @@ var nextId = 0;
 //  init
 //===========================
 
-mongoExpressAuth.init({
-    mongo: {
-        dbName: 'Colosseum',
-        collectionName: 'accounts'
-    }
-}, function(){
-    console.log('mongo ready!');
-});
+// mongoExpressAuth.init({
+//     mongo: {
+//         dbName: 'Colosseum',
+//         collectionName: 'accounts'
+//     }
+// }, function(){
+//     console.log('mongo ready!');
+// });
 
 app.use(express.bodyParser());
 app.use(express.cookieParser());
