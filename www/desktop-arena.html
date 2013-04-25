@@ -11,11 +11,9 @@
   <body>
     <div id="titlebar">
       <ol class="row_items">
-        <li>Colosseum</li>
-        <li>Browse Rooms</li>
-        <li>Room Info</li>
-        <li>Search</li>
-        <li id="user_li"></li>
+        <li><a href = "../"> Colosseum</a></li>
+        <li><a href = "/index">Browse Arenas</a></li>
+        <li><a href = "/create">Create Arenas</a></li>
       </ol>
     </div>
 
@@ -40,6 +38,7 @@
         <div id="chat">
         </div>
         <div id="spec_controls">
+          <input id="username-field" type="text" placeholder="type your alias here"/>
           <form id="chat-form" name="createForm" action="javascript:sendchat()">
             <input id="chat-input" name="chat" type="text" placeholder="send chats"/>
           </form>

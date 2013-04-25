@@ -30,19 +30,20 @@ body {
 
 #voting{
     position:absolute;
-    top: 620px;
+    top: 420px;
     left:10px;
     right: 370px;
-    text-align: center;
 }
 
 #voting button{
-    width: 45%;
-    height: 100px;
+    width: 49%;
+    height: 50px;
     font-size: 30px;
     background-color: #FF635F;
 }
-
+#player2Vote{
+    float: right;
+}
 
 h2 {
     text-align: center;
@@ -114,5 +115,10 @@ h2 {
 
 #gameIFrame{
     width: 600px;
-    height: 600px;
+    height: 400px;
+}
+
+#gameIFrame html{
+    overflow: hidden;
+
 }
