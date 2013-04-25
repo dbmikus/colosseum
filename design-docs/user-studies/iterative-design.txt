@@ -1,0 +1,31 @@
+== Changes based on user studies ==
+
+Splash screen describing the application and illustrating its uses. Will also
+include a link to browse and spectate rooms and a link to register.
+
+Tutorial and prompts about how to interact with the application. Informative
+text to prompt users and tell them what is going on. We want the application
+to guide the user through the steps to create a room and instruct them on how to
+compete and spectate/vote in a room.
+
+Data vizualization of voting over time. Users wanted to see a visual response to
+their actions.
+
+Changing color scheme to fit competitive theme of the application.
+
+Some testers were interested in having some kind of persistent avatar for their
+account. People like a consistent presence and a sense of identity. We won't
+require that people actually identify their real-life selves, though.
+
+We need to make the transitions between game states very recognizable. Examples
+of game state changes are when a competitor loses and swaps places with a
+spectator. There should be animations for winners and losers, highlighting that
+a user has moved from the competitor section to the spectator section, or
+highlighting that the user has remained a competitor.
+
+Emphasize the avatars and personas for those competing. People like to form a
+connection with who they are spectating, so it is important for spectators to be
+able to instantly recognize who is competing.
+
+Have a game type that switches between different games (text chat game,
+sandboxed games, etc.).
