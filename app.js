@@ -57,13 +57,13 @@ app.use(express.session({ secret: 'racial slurs degrade society, white boy!' }))
 //app.listen(process.env.PORT || 3000);
 
 app.get('/', function(req, res){
-    res.sendfile('static/splash.html');
+    res.sendfile('www/splash.html');
 });
 app.get('/index', function(req, res){
-    res.sendfile('static/index.html');
+    res.sendfile('www/index.html');
 });
 app.get('/create', function(req, res){
-    res.sendfile('static/create.html');
+    res.sendfile('www/create.html');
 });
 
 
@@ -111,7 +111,7 @@ app.get('/arenalist', function(req, res){
 });
 
 app.get('/arena',function(request,response){
-    response.sendfile("static/arena.html");
+    response.sendfile("www/arena.html");
 })
 
 app.post('/arena', function(req, res){
@@ -148,7 +148,7 @@ app.post('/arena', function(req, res){
 
 
 
-app.use(express.static(__dirname + '/static/'));
+app.use(express.static(__dirname + '/www/'));
 
 
 //gameData[id]=
