@@ -9,7 +9,7 @@ function createRoom(){
         url: "/arena",
         success: function(data) {
             if(data.success){
-                window.location.href = "/index";
+                window.location.href = "/findarena";
             }
             else{
                 alert("Fill in all the fields, or may god have mercy on you soul.");
