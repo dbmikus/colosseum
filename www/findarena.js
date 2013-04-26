@@ -33,6 +33,10 @@ function refreshDOM(){
 }
 
 function makeArenaItem(id, player1, player2, name, numSpectators) {
+    if (numSpectators === undefined) {
+        numSpectators = 0;
+    }
+
     if (isMobile()) {
         return makeArenaItemMobile(id, player1, player2, name, numSpectators);
     } else {
@@ -53,6 +57,7 @@ function makeArenaItemMobile(id, player1, player2, name, numSpectators) {
     var vs = $('<div>');
     vs.append('vs');
 
+    li.append(name);
     li.append(p1);
     li.append(p2);
     li.append(viewers);
@@ -62,6 +67,14 @@ function makeArenaItemMobile(id, player1, player2, name, numSpectators) {
 }
 
 function makePlayerMobile(player, playerNum) {
+    if (player === undefined) {
+        if (playerNum === 1) {
+            player = King;
+        } else if (playerNum === 2) {
+            player = Challenger;
+        }
+    }
+
     var pdiv = $('<div>');
     pdiv.html('class', 'player' + String(playerNum));
     var ppar = $('<p>');
