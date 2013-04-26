@@ -51,7 +51,7 @@ function makeArenaItemMobile(id, player1, player2, name, numSpectators) {
     var p2 = makePlayerMobile(player2, 2);
 
     var viewers = $('<div>');
-    viewers.html('class', 'viewers');
+    viewers.attr('class', 'viewers');
     viewers.append(String(numSpectators) + ' spectators');
 
     var vs = $('<div>');
@@ -62,6 +62,9 @@ function makeArenaItemMobile(id, player1, player2, name, numSpectators) {
     li.append(p2);
     li.append(viewers);
     li.append(vs);
+    li.click(function () {
+        window.location.href = "/arena?id=" + String(id);
+    });
 
     return li;
 }
@@ -69,16 +72,17 @@ function makeArenaItemMobile(id, player1, player2, name, numSpectators) {
 function makePlayerMobile(player, playerNum) {
     if (player === undefined) {
         if (playerNum === 1) {
-            player = King;
+            player = 'King';
         } else if (playerNum === 2) {
-            player = Challenger;
+            player = 'Challenger';
         }
     }
 
     var pdiv = $('<div>');
-    pdiv.html('class', 'player' + String(playerNum));
+    pdiv.attr('class', 'player' + String(playerNum));
     var ppar = $('<p>');
-    ppar.html('class', 'name' + String(playerNum));
+    ppar.attr('class', 'name' + String(playerNum));
+    ppar.append(player);
     pdiv.append(ppar);
 
     return pdiv;
