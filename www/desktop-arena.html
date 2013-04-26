@@ -10,27 +10,35 @@
 
   <body>
     <div id="titlebar">
-      <ol class="row_items">
-        <li><a href="/"> Colosseum</a></li>
-        <li><a href="/findarena">Browse Arenas</a></li>
-        <li><a href="/create">Create Arenas</a></li>
-      </ol>
+      <div class="row_items" id = "logo"><a href="/"> Colosseum</a></div>
+			<div class="row_items"><a href="/create" class="unselectable">Sign Up</a></div>
+			<div class="row_items"><a href="/create" class="unselectable">Log In</a></div>
+			<a href="/create" class="unselectable"><div class="row_items">Create Arenas</div></a>
+			<a href="/findarena" class="unselectable"><div class="row_items">Browse Arenas</div></a>
     </div>
 
     <div id="wrapper">
-      <div id="game">
+		<div id= "gameBox"> 
+						
+			<div id ="player1" class ="player">
+				<div id ="player1Avatar" class = "avatar" > player1Avatar</div>
+				<div id ="redUser" class = "userName"> PoopDestroyer</div>
+				<button id="player1Vote"> Vote for Player 1</button>
+			</div>
+			<div id = "topMiddle"> 
+				<div id="timer">00:00</div>
+				<div id = "versus">  VS</div>
+			</div>
+			<div id ="player2" class="player"> PLayer 2
+				<button id="player2Vote"> Vote for Player 2 </button>
+			</div>
+			
+			
+		
+		
+			<div id="game"></div>
+		</div>
 
-
-      </div>
-      <div id = "voting">
-
-        <button id="player1Vote">
-          Vote for Player 1
-        </button>
-        <button id="player2Vote">
-          Vote for Player 2
-        </button>
-      </div>
 
       <div id="spectators">
         <h2>Audience Chat</h2>
