@@ -48,7 +48,6 @@ var nextId = 0;
 //     }
 // }, function(){
 //     console.log('mongo ready!');
-//     app.listen(process.env.PORT || 3000);
 // });
 
 app.use(express.bodyParser());
@@ -154,6 +153,7 @@ app.post('/arena', function(req, res){
             name: name,
             desc: desc,
             started: false,
+            inPlay: false,
             player1:  null,
             player2:  null,
             audience: {},
@@ -257,21 +257,21 @@ IO.sockets.on("connection",function(socket){
     });
 
     socket.on("move",function(data){
-        console.log("");
-        console.log(data.moveData);
-        if(gameData[data.roomid]["player1"]===data.secretKey){
-            emitToAll(gameData[data.roomid]["games"],"movemade",
-                {
-                    moveData:data.moveData,
-                    player: 1
-                });
-        }
-        if(gameData[data.roomid]["player2"]===data.secretKey){
-            emitToAll(gameData[data.roomid]["games"],"movemade",
-                {
-                    moveData:data.moveData,
-                    player: 2
-                });
+        if(gameData[data.roomid]["inPlay"]===true){
+            if(gameData[data.roomid]["player1"]===data.secretKey){
+                emitToAll(gameData[data.roomid]["games"],"movemade",
+                    {
+                        moveData:data.moveData,
+                        player: 1
+                    });
+            }
+            if(gameData[data.roomid]["player2"]===data.secretKey){
+                emitToAll(gameData[data.roomid]["games"],"movemade",
+                    {
+                        moveData:data.moveData,
+                        player: 2
+                    });
+            }
         }
     });
 
@@ -285,13 +285,13 @@ function startGame(roomid){
         arena["started"]= false;
         return;
     }
-    if (!arena.player1){
+    if (!arena.player1 || arena["games"][arena.player1] ===undefined){
         arena.player1 = randomSocket(arena.games);
         while(arena.player1===arena.player2){
             arena.player1= randomSocket(arena.games);
         }
     }
-    if (!arena.player2){
+    if (!arena.player2 || arena["games"][arena.player2]=== undefined ){
         arena.player2 = randomSocket(arena.games);
         while(arena.player1===arena.player2){
             arena.player2= randomSocket(arena.games);
@@ -301,6 +301,7 @@ function startGame(roomid){
     arena["games"][arena.player1].emit("selectedAsPlayer",{});
     arena["games"][arena.player2].emit("selectedAsPlayer",{});
     arena["started"]=true;
+    arena["inPlay"]=true;
     setTimeout(function(){
         endGame(roomid);
     },gamelength);
@@ -335,6 +336,7 @@ function endGame(roomid){
             p2Votes: p2Votes
         });
     emitToAll(arena["audience"],"newGame",{});
+    arena["inPlay"]=false;
     setTimeout(function(){
         startGame(roomid);
     },3000);

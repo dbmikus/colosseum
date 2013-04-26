@@ -31,8 +31,8 @@ socket.on("selectedAsPlayer",function(data){
 })
 
 socket.on("movemade", function(data){
-  $("#chatlog").append("<div> player "
-    +data.player+": "+ data.moveData.msg +"</div>");
+  $("#chatlog").append("<div class='player"+data.player+
+    "'>"+ data.moveData.msg +"</div>");
 });
 
 
@@ -45,5 +45,6 @@ function sendchat(){
   roomid: urlParams.id,
   secretKey: urlParams.s
   });
+  $("#chat-input").val("");
 }
 
