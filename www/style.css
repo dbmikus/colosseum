@@ -25,6 +25,7 @@ li{
 }
 
 #gameBox{
+	background:#ffffff url('Temporarybackground.jpg') no-repeat right top;
 	border: 1px solid #000000;
 	width:600px;
 	height:600px;
@@ -32,17 +33,28 @@ li{
 }
 
 #topMiddle{
+	display:inline-block;	
 	position:relative;
 	border: 1px dashed #888888;
-	width:98px;
+	width:90px;
 	height:100px;
-	float:left;
-	
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+}
+
+#trapezoid{
+	height:0;
+	border-top: 50px solid white;
+	border-left: 25px solid transparent;
+	border-right: 25x solid transparent;
+	width: 100px;
 }
 #timer{
-	height:30px;
-	width:90px;
-	top:0;
+	background: #000000;
+	color: green;	
+	height:20px;
+	width:60px;
 	margin-left:auto;
 	margin-right:auto;
 	margin-top:2px;
@@ -54,10 +66,9 @@ li{
 	display: inline-block; 
 	position:absolute;
 	bottom:0;
-	left:0;
 	border: 1px dashed #000000;
-	width:98px;
-	float:left;
+	margin-left:auto;
+	margin-right:auto;
 }
 
 #player1{
@@ -69,20 +80,40 @@ li{
 	display: inline-block;
 	position: absolute;
 	bottom:0;
-	float:right;
+	right:5px;
 }
 
 #player1Avatar{
 	float:left;
 }
 
-#player2{
+#player2Avatar{
 	float:right;
 }
 
+#player2{
+	float:right;
+	text-align:right;
+	position:relative;
+}
+
+#player2Vote{
+	display: inline-block;
+	position:absolute;
+	bottom:0;
+	left:5px;
+}
 
 #redUser{
 	color: red;
+}
+
+#blueUser{
+	color:blue;
+}
+
+.userName{
+	display:inline-block;
 	margin-top: 1px;
 	height: 15px;
 }
@@ -228,8 +259,8 @@ li{
 
 #game{
     position: absolute;
-    top:10px;
-    left: 10px;
+    bottom: 10px;
+    left: 0px;
 }
 
 #player2Vote{
