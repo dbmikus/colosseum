@@ -334,7 +334,8 @@ h2 {
 	height:400px;
 	margin-top: 10px;
 	display: inline-block;
-	background: #F45E3D;
+		background:#ffffff url('BWSplash.jpg') no-repeat right top;
+
 }
 
 .room-link {
