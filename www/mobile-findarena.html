@@ -11,35 +11,42 @@
   </head>
 
   <body>
-    <div id = "banner" class ="unselectable"> COLLOSSEUM
-      <div class = "button" > Profile </div>
+    <div id="banner" class="unselectable"> COLLOSSEUM
+      <div class="button" > Profile </div>
 
-      <div class= "greyBar" id ="browseBar">Browse</div>
+      <div class="greyBar" id="browseBar">Browse</div>
       <ul>
-        <li class ="staticEle"><p>All Arenas</p></li>
-	    <li class ="staticEle"><p>Competitive</p></li>
-	    <li class ="staticEle"> <p>Creative</p></li>
+        <li class="staticEle"><p>All Arenas</p></li>
+	    <li class="staticEle"><p>Competitive</p></li>
+	    <li class="staticEle"> <p>Creative</p></li>
       </ul>
 
-      <div class = "greyBar">Popular </div>
+      <div class="greyBar">Popular</div>
       <!-- sample lists. Real entries will be generated automagically-->
-      <ul>
+      <ul id="arenalist">
         <li> Freestyle Fridays
-          <div class = "player1">
-            <p class = "name1">King</p> </div>
-          <div class = "player2">
-            <p class = "name2">Challenger</p> </div>
+          <div class="player1">
+            <p class="name1">King</p>
+          </div>
+          <div class="player2">
+            <p class="name2">Challenger</p>
+          </div>
 
-          <div class = "viewers"> X spectators</div>
-          <div class = "versus"> vs </div>
+          <div class="viewers">
+            X spectators
+          </div>
+          <div class="versus">
+            vs
+          </div>
         </li>
-	    <li>many</li>
-	    <li>things<li>
       </ul>
     </div>
 
 
-	<script src="main.js"></script>
-	<script src="jquery-1.9.0.js"></script>
+    <script src="jquery-1.9.0.js"></script>
+    <script src="platformDetection.js"></script>
+    <script src="main.js"></script>
+    <!-- <script src="logout.js"></script> -->
+    <script src="findarena.js"></script>
   </body>
 </html>
