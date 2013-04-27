@@ -6,13 +6,13 @@ body {
 	background: #F2E9E9;
 }
 
-ol{
+ol {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	color: #F2E9E9;
 
 }
 
-a{
+a {
 	text-decoration: none;
 	color: #F2E9E9;
 }
@@ -50,6 +50,7 @@ li{
 	border-right: 25x solid transparent;
 	width: 100px;
 }
+
 #timer{
 	background: #000000;
 	color: green;
@@ -59,7 +60,6 @@ li{
 	margin-right:auto;
 	margin-top:2px;
 	border: 1px solid #ff0000;
-
 }
 
 #versus{

@@ -69,7 +69,7 @@ if(urlParams.id){
   });
 
   // Called when client sends a chat
-  function sendchat(){
+  function sendchat() {
     var username = $("#username-field").val();
     var msg = $("#chat-input").val();
     if(username.length < 3){
@@ -83,6 +83,9 @@ if(urlParams.id){
                 {chat: msg,
                  user: username});
     $("#chat-input").val("");
+
+    // re-select the text field
+    $('#chat-input').focus();
   }
 
 
@@ -102,10 +105,8 @@ if(urlParams.id){
     $("#player1Vote").css("background-color","#FF635F");
 
   });
-
-
-
 }
+
 
 function renderIFrame(arenaInfo){
   var iframe = $("<iframe>");
