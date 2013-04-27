@@ -17,7 +17,8 @@ var ctx = canvas.getContext("2d");
 
 //change this to change between local and digital ocean
 //var socket = io.connect("http://localhost:3000");
-var socket = io.connect("http://198.199.82.58:3000");
+// var socket = io.connect("http://198.199.82.58:3000");
+var socket =  io.connect("http://198.199.85.62:3000");
 
 socket.emit("setUp", {
   roomid: urlParams.id,
@@ -93,7 +94,3 @@ function reset(){
     ctx.fillStyle= "white";
     ctx.fillRect(0,0, canvas.width, canvas.height);
 }
-
-
-
-

@@ -1,6 +1,6 @@
-// format page
-
-
+////////////////////////
+// Dynamic Formatting //
+////////////////////////
 
 // from Andy E
 //http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values
@@ -25,12 +25,24 @@ var secretKey="";
     console.log(urlParams);
 })();
 
+$(document).ready(function () {
+    if (isMobile()) {
+        // So chat is not obscured by the banner
+        var mobileBannerHeight = $('#banner').height();
+        $('#chat').css('padding-top', String(mobileBannerHeight) + 'px');
+    }
+});
+
+////////////////////////////////////////////////////////////
+//                     Socket stuff                       //
 ////////////////////////////////////////////////////////////
 
 if(urlParams.id){
   //change this to change between localhost and digital ocean
   //  var socket =  io.connect("http://localhost:3000");
-  var socket =  io.connect("http://198.199.82.58:3000");
+  // var socket =  io.connect("http://198.199.82.58:3000");
+    var socket =  io.connect("http://198.199.85.62:3000");
+    var socket = io.connect(%settings.host%);
 
   // When asked what arena the client is a part of, the client responds with the
   // room id and with username
@@ -42,6 +54,7 @@ if(urlParams.id){
   // Sent by server when a chat is received. Should be displayed by clients
   socket.on("newChat", function(data){
     var c = $("<div>").html(data.user + ": " + data.chat);
+    c.attr('class', 'specChatMsg');
     $("#chat").append(c);
     $("#chat").scrollTop($("#chat")[0].scrollHeight);
   });
@@ -80,7 +93,7 @@ if(urlParams.id){
     socket.emit("sendVote",{vote:choice});
   }
 
-  
+
   $("#player1Vote").click(function(){
     sendvote(1);
     $("#player1Vote").css("background-color","#A6110D");
@@ -90,15 +103,12 @@ if(urlParams.id){
     sendvote(2);
     $("#player2Vote").css("background-color","#A6110D");
     $("#player1Vote").css("background-color","#FF635F");
-    
+
   });
 
 
 
 }
-
-
-
 
 function renderIFrame(arenaInfo){
   var iframe = $("<iframe>");
@@ -108,7 +118,7 @@ function renderIFrame(arenaInfo){
   }
   if(arenaInfo.type === "draw"){
     iframe.attr("src","games/drawGame.html?id="+arenaInfo.id+"&s="+
-        socket.socket.sessionid);    
+        socket.socket.sessionid);
   }
   iframe.attr("sandbox","allow-same-origin allow-scripts allow-popups allow-forms")
   iframe.attr("id","gameIFrame");
