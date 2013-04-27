@@ -62,10 +62,20 @@ function renderTemplates(templateDir, buildDir) {
 
 // Renders and individual file and overwrites it with the results
 function renderFile(view, fileData, fileName) {
-    var data = fileData.toString();
-    var output = mustache.render(data, view);
+    var render_filetypes = ['html', 'css', 'js'];
 
-    fs.writeFileSync(fileName, output);
+    if (render_filetypes.indexOf(getExtension(fileName)) >= 0) {
+        var data = fileData.toString();
+        var output = mustache.render(data, view);
+
+        fs.writeFileSync(fileName, output);
+    }
+}
+
+function getExtension(filename) {
+    var ext = path.extname(filename || '').split('.');
+    return ext[ext.length - 1];
 }
 
 module.exports.renderTemplates = renderTemplates;
+module.exports.getExtension = getExtension;

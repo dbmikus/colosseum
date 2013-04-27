@@ -7,9 +7,9 @@ body {
 }
 
 ol{
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	color: #F2E9E9;
-	
+
 }
 
 a{
@@ -33,7 +33,7 @@ li{
 }
 
 #topMiddle{
-	display:inline-block;	
+	display:inline-block;
 	position:relative;
 	border: 1px dashed #888888;
 	width:90px;
@@ -52,18 +52,18 @@ li{
 }
 #timer{
 	background: #000000;
-	color: green;	
+	color: green;
 	height:20px;
 	width:60px;
 	margin-left:auto;
 	margin-right:auto;
 	margin-top:2px;
 	border: 1px solid #ff0000;
-	
+
 }
 
 #versus{
-	display: inline-block; 
+	display: inline-block;
 	position:absolute;
 	bottom:0;
 	border: 1px dashed #000000;
@@ -76,7 +76,7 @@ li{
 	position:relative;
 }
 
-#player1Vote{ 
+#player1Vote{
 	display: inline-block;
 	position: absolute;
 	bottom:0;
@@ -124,7 +124,7 @@ li{
 	height: 100px;
 	width:245px;
 	text-align:left;
-	
+
 }
 
 .avatar{
@@ -155,10 +155,10 @@ li{
 	-moz-box-shadow: 0 0 4px 3px #888;
 	-webkit-box-shadow: 0 0 4px 3px #888;
 	box-shadow: 0 0 4px 3px #888;
-	
+
 	border: 1px solid #000000;
 	border-radius: 5px;
-	
+
 	background: rgb(169,3,41); /* Old browsers */
 	background: -moz-linear-gradient(top,  rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(169,3,41,1)), color-stop(44%,rgba(143,2,34,1)), color-stop(100%,rgba(109,0,25,1))); /* Chrome,Safari4+ */
@@ -186,7 +186,7 @@ li{
 	float:right;
 	text-align:center;
 	display: inline-block;
-	padding:6px; 
+	padding:6px;
     width: auto;
     margin-left: 15px;
     margin-right: 15px;
@@ -320,7 +320,7 @@ h2 {
 #logo{
 	text-align:center;
 	float:left;
-	width: 75px; 
+	width: 75px;
 }
 
 #tagLine{
@@ -334,7 +334,7 @@ h2 {
 	height:400px;
 	margin-top: 10px;
 	display: inline-block;
-	background:#f00fff url('BWSplash.jpg') no-repeat right top;
+    background:#ffffff url('BWSplash.jpg') no-repeat right top;
 
 }
 
