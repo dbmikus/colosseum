@@ -20,7 +20,7 @@ def replace_host(host):
 def process_settings():
     json_data = open('./settings.json')
     data = json.load(json_data)
-    host_sub = replace_host(data.host)
+    host_sub = replace_host(data['host'])
 
     walk_replace('./www', '%settings.host%', host_sub)
 
@@ -42,10 +42,11 @@ def replace(file_path, pattern, subst):
     move(abs_path, file_path)
 
 def walk_replace(start_path, pattern, subst):
-    for root, dirs, files in os.walk(path):
+    for root, dirs, files in os.walk(start_path):
         for name in files:
             if name.endswith((".html", ".js")):
-                replace(name, pattern, subst)
+                file_name = root + '/' + name
+                replace(file_name, pattern, subst)
 
 
 def main():
