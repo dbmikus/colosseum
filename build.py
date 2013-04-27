@@ -6,6 +6,8 @@ import os, os.path
 from os import remove, close
 import json
 from pprint import pprint
+from distutils import dir_util
+import shutil
 
 def replace_host(host):
     if (host == 'local'):
@@ -22,7 +24,7 @@ def process_settings():
     data = json.load(json_data)
     host_sub = replace_host(data['host'])
 
-    walk_replace('./www', '%settings.host%', host_sub)
+    walk_replace('./www-src', './www', '%settings.host%', host_sub)
 
 def replace(file_path, pattern, subst):
     # Create temp file
@@ -41,12 +43,25 @@ def replace(file_path, pattern, subst):
     # Move new file
     move(abs_path, file_path)
 
-def walk_replace(start_path, pattern, subst):
-    for root, dirs, files in os.walk(start_path):
+def walk_replace(start_path, to_path, pattern, subst):
+    # If the directory exists, remove it to prevent issues with moving of
+    # src files to build files
+    if (os.path.exists(to_path)):
+        shutil.rmtree(to_path)
+
+    # Copy the source files to the built file directory
+    dir_util.copy_tree(start_path, to_path)
+
+    # We perform all replacements in the built directory so the source contains
+    # the variables still
+    for root, dirs, files in os.walk(to_path):
         for name in files:
+            # If you have other files where you want to replace variables,
+            # then add their filetype here
             if name.endswith((".html", ".js")):
                 file_name = root + '/' + name
                 replace(file_name, pattern, subst)
+
 
 
 def main():
