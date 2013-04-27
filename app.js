@@ -3,6 +3,12 @@
 // dmikus
 // zim
 
+/////////////////////////////////////////////////////////////
+// Building static source directory using source templates //
+/////////////////////////////////////////////////////////////
+var build = require('./build.js');
+build.renderTemplates('./www-src', './www');
+
 //================
 // File includes
 //================

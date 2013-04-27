@@ -15,8 +15,8 @@ var ctx = canvas.getContext("2d");
        urlParams[decode(match[1])] = decode(match[2]);
 })();
 
-// This line is modified by build.py
-var socket = io.connect(%settings.host%);
+// This line is modified by Mustache
+var socket = io.connect("{{{host}}}");
 
 socket.emit("setUp", {
   roomid: urlParams.id,

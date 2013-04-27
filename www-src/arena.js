@@ -38,8 +38,8 @@ $(document).ready(function () {
 ////////////////////////////////////////////////////////////
 
 if(urlParams.id){
-    // This line is modified by build.py
-    var socket = io.connect(%settings.host%);
+    // This line is modified by Mustache
+    var socket = io.connect("{{{host}}}");
 
   // When asked what arena the client is a part of, the client responds with the
   // room id and with username
