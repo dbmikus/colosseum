@@ -45,10 +45,8 @@
     <script src="d3.v3.js"></script>
     <script src="adapter.js"></script>
     <script src="platformDetection.js"></script>
-    <!-- change this to change between localhost and digital ocean -->
-    <!-- <script src="http://localhost:3000/socket.io/socket.io.js"></script>  -->
-    <!-- <script src="http://198.199.82.58:3000/socket.io/socket.io.js"></script> -->
-    <script src="http://198.199.85.62:3000/socket.io/socket.io.js"></script>
+    <!-- This line is modified by build.py -->
+    <script src="%settings.host%/socket.io/socket.io.js"></script>
     <script src="main.js"></script>
     <!-- <script src="login.js"></script> -->
     <script src="arena.js"></script>

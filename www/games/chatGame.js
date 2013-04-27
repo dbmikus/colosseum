@@ -10,10 +10,8 @@
        urlParams[decode(match[1])] = decode(match[2]);
 })();
 
-//change this to change between local and digital ocean
-//var socket = io.connect("http://localhost:3000");
-// var socket = io.connect("http://198.199.82.58:3000");
-var socket =  io.connect("http://198.199.85.62:3000");
+// This line is modified by build.py
+var socket = io.connect(%settings.host%);
 
 socket.emit("setUp", {
   roomid: urlParams.id,

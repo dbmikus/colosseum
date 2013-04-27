@@ -38,10 +38,7 @@ $(document).ready(function () {
 ////////////////////////////////////////////////////////////
 
 if(urlParams.id){
-  //change this to change between localhost and digital ocean
-  //  var socket =  io.connect("http://localhost:3000");
-  // var socket =  io.connect("http://198.199.82.58:3000");
-    var socket =  io.connect("http://198.199.85.62:3000");
+    // This line is modified by build.py
     var socket = io.connect(%settings.host%);
 
   // When asked what arena the client is a part of, the client responds with the

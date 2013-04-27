@@ -13,11 +13,8 @@
     </canvas>
 
     <script src="../jquery-1.9.0.js"></script>
-    <!-- change this to change between local and digital ocean -->
-    <!--     <script src="http://localhost:3000/socket.io/socket.io.js"></script>
-    -->
-    <!-- <script src="http://198.199.82.58:3000/socket.io/socket.io.js"></script> -->
-    <script src="http://198.199.85.62:3000/socket.io/socket.io.js"></script>
+    <!-- This line is modified by build.py -->
+    <script src="%settings.host%/socket.io/socket.io.js"></script>
     <script src="drawGame.js"></script>
   </body>
 </html>
