@@ -161,7 +161,7 @@ body{
 	width: 75%;
 }
 
-#submitButton{
+#submitButton {
     position: relative;
 	bottom: 0;
 	right:0;
@@ -171,6 +171,7 @@ body{
 	border: 1px solid #ACA6A6;
 	border-radius:3px;
 }
+
 #submitButton:active {
 	position: absolute;
 	bottom: 0;
