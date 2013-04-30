@@ -17,50 +17,6 @@ var socket = io.connect("{{{host}}}");
 
 // API requirements //
 
-var isStreaming = false;
-
-socket.emit('setUp', {
-  roomid: urlParams.id,
-  secretKey: urlParams.s
-});
-
-socket.on('selectedAsPlayer', function (data) {
-  console.log('You are selected as a player');
-  console.log(data);
-  if (!isStreaming && data.player === 1) {
-    isStreaming = true;
-    startCall(true);
-  }
-});
-
-socket.on('newGame', function (data) {
-});
-
-socket.on('movemade', function (data) {
-  console.log("made a move, but we don't do anything.");
-});
-
-
-// TODO change this to actually work
-function sendchat(){
-  socket.emit("move",
-              {
-                moveData:{
-                  msg: $("#chat-input").val()
-                },
-                roomid: urlParams.id,
-                secretKey: urlParams.s
-              });
-  $("#chat-input").val("");
-}
-
-// end API requirements //
-
-
-/////////////////////////////////////
-// This is the actual webrtc stuff //
-/////////////////////////////////////
-
 // Making sure WebRTC stuff is consistent in namespace regardless of browser
 if (navigator.getUserMedia === undefined) {
   navigator.getUserMedia = (navigator.webkitGetUserMedia ||
@@ -92,6 +48,50 @@ if (window.RTCPeerConnection === undefined) {
       window.msRTCPeerConnection
   );
 }
+
+var playerNum;
+var isPlayer = false;
+var isStreaming = false;
+
+socket.emit('setUp', {
+  roomid: urlParams.id,
+  secretKey: urlParams.s
+});
+
+socket.on('selectedAsPlayer', function (data) {
+  playerNum = data.player;
+  console.log('You are selected as a player');
+  console.log(data);
+  isPlayer = true;
+  if (!isStreaming && data.player === 1) {
+    isStreaming = true;
+    startCall(true, true);
+  }
+});
+
+socket.on('newGame', function (data) {
+});
+
+
+// Holds a record of stream types and which clients they coorespond to
+var streamTypes = {};
+// Receives moveData from move emits
+socket.on('movemade', function (data) {
+  var moveData = data.moveData;
+  if (moveData.type === 'streamType') {
+    var streamid = moveData.data.id;
+    var clientType = moveData.data.clientType;
+
+    streamTypes[streamid] = {type: clientType, player: data.player};
+  }
+});
+
+// end API requirements //
+
+
+/////////////////////////////////////
+// This is the actual webrtc stuff //
+/////////////////////////////////////
 
 
 // Some documentation about how the process works.
@@ -128,6 +128,9 @@ if (window.RTCPeerConnection === undefined) {
 //    description with `setRemoteDescription`
 
 var pc;
+var videoStream;
+// stream id is used to identify clients based on their streams
+var streamID;
 var video1 = document.getElementById('video1');
 var video2 = document.getElementById('video2');
 var callButton = document.getElementById('callButton');
@@ -139,7 +142,7 @@ var callButton = document.getElementById('callButton');
 var configuration = { 'iceServers': [{'url': 'stun:stun.l.google.com:19302'}] };
 
 // run startCall(true) to initiate a call
-function startCall(isCaller) {
+function startCall(isCaller, displayStream) {
   pc = new RTCPeerConnection(configuration);
 
   // send any ice candidates to the other peer
@@ -155,40 +158,70 @@ function startCall(isCaller) {
 
   // once remote stream arrives, show it in the remote video element
   pc.onaddstream = function (evt) {
-    video2.src = URL.createObjectURL(evt.stream);
+    console.log('EEVVEEEEENT in addstream');
+    console.log(evt);
+    // the stream id in event
+    var sid = evt.stream.id;
+    // client type can either be a competitor or spectator
+    if (streamTypes[sid].type === 'competitor') {
+      video2.src = URL.createObjectURL(evt.stream);
+    }
   };
 
+
+  // Peers need to ascertain and exchange local and remote audio and
+  // video media information. This is done by exchanging an "offer"
+  // and an "answer" using Session Description Protocol (SDP)
+  function gotDescription (desc) {
+    pc.setLocalDescription(desc);
+    // The line below uses generic signaling channel
+    //   signalingChannel.send(JSON.stringify({ "sdp": desc }));
+    socket.emit('webrtcMessage', { "sdp": desc });
+  }
+
   // get the local stream, show it in the local video element, and send it
-  navigator.getUserMedia(
-    { "audio": true, "video": true },
-    // success on getting user media stream
-    function (stream) {
-      video1.src = URL.createObjectURL(stream);
-      pc.addStream(stream);
+  if (videoStream === undefined) {
+    console.log('starting to make a video stream');
+    navigator.getUserMedia(
+      { "audio": false, "video": true },
+      // success on getting user media stream
+      function (stream) {
+        videoStream = stream;
+        console.log('STREEEEAAAAAM');
+        console.log(videoStream);
+        streamID = videoStream.id;
+        // start repeatedly emitting signal type
+        streamIDSignal();
 
-      if (isCaller) {
-        // create SDP offer and send it over signaling channel
-        pc.createOffer(gotDescription);
-      } else {
-        // create an answer and send it over the signaling channel
-        pc.createAnswer(gotDescription);
-      }
+        if (displayStream) {
+          video1.src = URL.createObjectURL(stream);
+        }
+        pc.addStream(stream);
 
-      // Peers need to ascertain and exchange local and remote audio and
-      // video media information. This is done by exchanging an "offer"
-      // and an "answer" using Session Description Protocol (SDP)
-      function gotDescription (desc) {
-        pc.setLocalDescription(desc);
-        // The line below uses generic signaling channel
-        //   signalingChannel.send(JSON.stringify({ "sdp": desc }));
-        socket.emit('webrtcMessage', { "sdp": desc });
+        if (isCaller) {
+          // create SDP offer and send it over signaling channel
+          pc.createOffer(gotDescription);
+        } else {
+          // create an answer and send it over the signaling channel
+          pc.createAnswer(gotDescription);
+        }
+      },
+      // error on getting user media stream
+      function (error) {
+        console.log("Error getting user media: ", error);
       }
-    },
-    // error on getting user media stream
-    function (error) {
-      console.log("Error getting user media: ", error);
+    );
+  } else {
+    pc.addStream(videoStream);
+
+    if (isCaller) {
+      // create SDP offer and send it over signaling channel
+      pc.createOffer(gotDescription);
+    } else {
+      // create an answer and send it over the signaling channel
+      pc.createAnswer(gotDescription);
     }
-  );
+  }
 }
 
 // When peer receives ICE candidate message sent from onicecandidate handler,
@@ -196,18 +229,18 @@ function startCall(isCaller) {
 // The line below uses generic signaling channel
 //   signalingChannel.onmessage = function (evt) {
 socket.on('webrtcMessage', function (evt) {
-  console.log('Received a webrtc message');
+  // console.log('Received a webrtc message');
 
   // If we recieve the message and have not yet initialized pc, then we are
   // the receiver of a call
   if (!pc) {
-    startCall(false);
+    startCall(false, isPlayer);
   }
 
   // Socket.io automatically stringifies and parses JSON for us
   // var signal = JSON.parse(evt.data);
   var signal = evt;
-  console.log('signal: ', signal);
+  // console.log('signal: ', signal);
   // If we received an "sdp" message
   if (signal.sdp !== undefined && signal.sdp !== null) {
     pc.setRemoteDescription(new RTCSessionDescription(signal.sdp));
@@ -219,3 +252,30 @@ socket.on('webrtcMessage', function (evt) {
     console.log('Neither sdp or candidate object defined in channel message.');
   }
 });
+
+
+// Repeatedly send the client stream ID and client type so other users can
+// respond to the video type
+function streamIDSignal () {
+  if (streamID !== undefined) {
+    var ctype;
+    if (isPlayer) {
+      ctype = 'competitor';
+    } else {
+      ctype = 'spectator';
+    }
+
+    socket.emit('move', {
+      moveData: {
+        type: 'streamType',
+        data: {
+          id: streamID,
+          clientType: ctype
+        }
+      },
+      roomid: urlParams.id,
+      secretKey: urlParams.s
+    });
+  }
+  setTimeout(streamIDSignal, 2000);
+}
