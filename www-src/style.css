@@ -201,13 +201,6 @@ h2 {
     padding: 5px;
 }
 
-#spec_controls {
-    position: absolute;
-    bottom:5px;
-    left: 5px;
-    right:8px;
-}
-
 #loginPane {
     visibility: hidden;
     position: fixed;

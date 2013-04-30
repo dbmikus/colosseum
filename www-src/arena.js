@@ -7,8 +7,8 @@
 
 // Stuff for formatting based on URL parameters
 var urlParams;
+var players = ["",""];
 var userName = prompt("What would you like to go by for this game?");
-var userURL  = prompt("What imageURL would you like to be your logo?");
 while (userName=== null){
   userName = prompt("You need a username.");
 }
@@ -17,6 +17,7 @@ if(userName===null){
   throw "you didn't pick a username ='(";
 }
 
+var timer = 0;
 
 var arenaInfo={};
 var secretKey="";
@@ -56,7 +57,6 @@ if(urlParams.id){
   socket.on("whatArena",function(data){
     socket.emit("thisArena", {roomid: urlParams.id,
                               user: userName,
-                              URL: userURL
                             });
   });
 
@@ -77,12 +77,27 @@ if(urlParams.id){
   socket.on("newGame",function(data){
     $("#player2Vote").css("background-color","#FF635F");
     $("#player1Vote").css("background-color","#FF635F");
+    if(data.winner === null){
+      $("#notifications").html("Game Over, and we have a tie. Time for round 2!");
+    }else{
+      $("#notifications").html("Game Over. "+players[data.winner-1]+" wins!")
+    }
   });
 
 
   socket.on("newPlayers", function(data){
+    players[1] = data.p2;
+    players[0] = data.p1;
     $("#redUser").html(data.p1);
     $("#blueUser").html(data.p2);
+    $("#notifications").html("");
+    if(data.p1 === userName
+      || data.p2 === userName){
+      $("#notifications").html("A new game has started, and you are playing!");      
+    }else{
+      $("#notifications").html("A new game has started!");            
+    }
+    beginTimer();
   });
 
 
@@ -155,3 +170,18 @@ function renderIFrame(arenaInfo){
   iframe.attr("id","gameIFrame");
   return iframe;
 }
+
+
+
+function beginTimer(){
+  timer = 30;
+}
+
+setInterval(function(){
+  if(timer===0){
+    $("#timer").html("waiting");
+  }else{
+    $("#timer").html(timer);    
+    timer-=1;
+  }
+},1000);

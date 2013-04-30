@@ -21,13 +21,13 @@
 	  <div id="gameBox">
 
 			<div id ="player1" class ="player">
+
 				<div id ="player1Avatar" class = "avatar" ><p id ="redUser" class = "userName"> TESTTEXT</p></div>
-				
 				<button id="player1Vote"> Vote for red! </button>
 			</div>
 			<div id = "topMiddle">
-				<div id="timer">00:00</div>
-				<div id = "versus">  VS</div>
+				<div id="timer">waiting</div>
+				<div id = "versus">VS</div>
 			</div>
 			<div id ="player2" class="player">
 				
@@ -35,10 +35,12 @@
 				<p id ="blueUser" class ="userName"> TESTTEXT </p>
 				</div>
 			<button id="player2Vote"> Vote for Blue! </button>
-				
 
 
 			</div>
+      <div id="notifications">
+      </div>
+
 
 			<div id="game"></div>
 		</div>
@@ -51,7 +53,6 @@
         </div>
         <div id="specControls">
           <form id="chat-form" name="createForm" action="javascript:sendchat()">
-			<input id="submitButton" name="Submit" type="submit" value="Send"/>
             <input id="chat-input" name="chat" type="text" placeholder="send chat"/>
           </form>
         </div>

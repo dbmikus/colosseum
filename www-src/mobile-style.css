@@ -291,8 +291,8 @@ textarea{
 	font-weight: bold;
 }
 
-.text {
-
+.scrollable {
+    overflow: auto;
 }
 
 #bottom{

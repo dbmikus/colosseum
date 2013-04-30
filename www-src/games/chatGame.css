@@ -6,12 +6,17 @@
 
 body{
   background-color: grey;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+               "Helvetica Neue", Helvetica, Arial, "Lucida Grande",
+               sans-serif;
 }
 
 
 #chat-input{
   display: none;
-  margin-left: 50px;
+  width:80%;
+  margin-left: 8%;
+  margin-right: 8%;
 }
 
 .player1{

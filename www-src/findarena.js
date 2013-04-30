@@ -17,7 +17,7 @@ function refreshDOM(){
     // Clear the HTML in the list so we can repopulate it
     arena_ul.html('');
 
-    for (key in arenalist) {
+    for (var key in arenalist) {
         // TODO this is how the server should store data in each arenalist
         // element
         var arena = arenalist[key];
@@ -90,8 +90,6 @@ function makePlayerMobile(player, playerNum) {
 
 function makeArenaItemDesktop(id, player1, player2, name, numSpectators) {
 
-    console.log("NAME: ", name);
-
     var li = $('<li>');
 
     var link = $("<a>");
@@ -101,7 +99,7 @@ function makeArenaItemDesktop(id, player1, player2, name, numSpectators) {
 	li.html(name);
     var user1 = $('<div>').addClass('listPlayer1');
 	var user2 = $('<div>').addClass('listPlayer2');
-	var player1Name = $('<p>').html(player);
+	var player1Name = $('<p>').html(player1);
 	player1Name.addClass('listName1')
 	var player2Name	= $('<p>').html(player2);
 	player2Name.addClass('listName2')
@@ -109,10 +107,10 @@ function makeArenaItemDesktop(id, player1, player2, name, numSpectators) {
 	user2.append (player2Name);
 	li.append(user1);
 	li.append(user2);
-	var viewers = li.append($('<div>').html(numSpectators));
-	viewers.addClass('listViewers');
-	var versus = li.append($('<div>').html('vs'));
-	versus.addClass('listVersus');
+    var versus = $('<div>').addClass('listVersus');
+    li.append(versus.html('vs'));
+	var viewers = $('<div>').addClass('listViewers');
+	li.append(viewers.html(numSpectators+" participants"));
 
 
     return link;

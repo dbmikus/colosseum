@@ -18,14 +18,15 @@ var ctx = canvas.getContext("2d");
 // This line is modified by Mustache
 var socket = io.connect("{{{host}}}");
 
+reset();
+
 socket.emit("setUp", {
   roomid: urlParams.id,
   secretKey: urlParams.s
 });
 
 socket.on("selectedAsPlayer", function(data){
-  console.log("selected");
-  drawCircle(ctx,[20,20],"green",50);
+
 });
 
 socket.on("newGame", function(data){
@@ -91,4 +92,6 @@ function drawCircle(ctx, location, color, dimensions) {
 function reset(){
     ctx.fillStyle= "white";
     ctx.fillRect(0,0, canvas.width, canvas.height);
+    ctx.fillStyle="black";
+    ctx.fillText("draw on me!",0,0);
 }

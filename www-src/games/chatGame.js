@@ -22,17 +22,16 @@ socket.emit("setUp", {
 
 socket.on("newGame", function(data){
   $("#chatlog").html("");
-  $("#chatlog").append("<div>Player "+data.winner+ " won the last game!</div>");
   $("#chat-input").hide();
 });
 
 socket.on("selectedAsPlayer",function(data){
   $("#chat-input").show();
-})
+});
 
 socket.on("movemade", function(data){
-  $("#chatlog").append("<div class='player"+data.player+
-    "'>"+ data.moveData.msg +"</div>");
+  $("#chatlog").append("<div class='player" + data.player +
+                       "'>" + data.moveData.msg + "</div>");
 });
 
 
@@ -46,4 +45,23 @@ function sendchat(){
   secretKey: urlParams.s
   });
   $("#chat-input").val("");
+}
+
+// Does all of the styling and DOM stuff that is through JS
+function renderView() {
+  var chatlog = $('#chatlog');
+  var chatinput = $('#chat-input');
+
+  if (isMobile()) {
+    chatlog.css('margin', '10px');
+    chatlog.css('height', '100%');
+    chatlog.css('width', '100%');
+    // hide the chat input form since mobile cannot participate
+    $('form[name="' + 'chatForm' + '"]').css('visibility', 'hidden');
+  } else {
+    // desktop
+    chatlog.css('margin', '10px');
+    chatlog.css('height', '300px');
+    chatinput.css('margin-left', '50px');
+  }
 }
