@@ -1,0 +1,22 @@
+#videos {
+    text-align: center;
+}
+
+video {
+    border: 5px solid black;
+    width: 270px;
+    height: 300px;
+    margin: 5px;
+}
+
+button {
+    font: 18px sans-serif;
+    padding: 8px;
+}
+
+textarea {
+    font-family: monospace;
+    margin: 2px;
+    width: 480px;
+    height: 640px;
+}

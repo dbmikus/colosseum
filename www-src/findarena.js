@@ -24,6 +24,8 @@ function refreshDOM(){
 
         // This makes the arenas appear sorted with the most recently created at
         // the top
+      console.log('AAAAREEENAANAAAAAANA!');
+      console.log(arena);
         arena_ul.prepend(makeArenaItem(arena.id,
                                        arena.p1,
                                        arena.p2,

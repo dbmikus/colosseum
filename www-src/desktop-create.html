@@ -23,15 +23,23 @@
         <input id="name-input" name="Name" type="text" placeholder="Name of your arena"/>
         <br>
         <input id="desc-input" name="Desc" type="text" placeholder="Describe what makes this arena special."/>
-        <br>
-        <label for ="game-type-chat">
-          <input id="game-type-chat" name="Type" type="radio" value="chat">Chat Battle
-        </label>
-        <br>
-        <label for ="game-type-draw">
-          <input id="game-type-draw" name="Type" type="radio" value="draw">Draw Battle
-        </label>
-        <br>
+        <ul>
+          <li>
+            <label for="game-type-chat">
+              <input id="game-type-chat" name="Type" type="radio" value="chat">Chat Battle
+            </label>
+          </li>
+          <li>
+            <label for="game-type-draw">
+              <input id="game-type-draw" name="Type" type="radio" value="draw">Draw Battle
+            </label>
+          </li>
+          <li>
+            <label for="game-type-video">
+              <input id="game-type-video" name="Type" type="radio" value="video">Video Battle
+            </label>
+          </li>
+        </ul>
         <input id="submitButton" name="Submit"  type="submit" value="Submit"/>
       </div>
     </div>

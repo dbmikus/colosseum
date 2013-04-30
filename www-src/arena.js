@@ -99,9 +99,9 @@ if(urlParams.id){
     $("#notifications").html("");
     if(data.p1 === userName
       || data.p2 === userName){
-      $("#notifications").html("A new game has started, and you are playing!");      
+      $("#notifications").html("A new game has started, and you are playing!");
     }else{
-      $("#notifications").html("A new game has started!");            
+      $("#notifications").html("A new game has started!");
     }
   });
 
@@ -177,9 +177,15 @@ function renderIFrame(arenaInfo){
     iframe.attr("src","games/chatGame.html?id="+arenaInfo.id+"&s="+
                 socket.socket.sessionid);
   }
-  if(arenaInfo.type === "draw"){
+  else if(arenaInfo.type === "draw"){
     iframe.attr("src","games/drawGame.html?id="+arenaInfo.id+"&s="+
                 socket.socket.sessionid);
+  }
+  else if(arenaInfo.type === 'video') {
+    iframe.attr('src',
+                'games/videoGame.html?id=' + arenaInfo.id
+                + '&s=' + socket.socket.sessionid);
+
   }
 
   iframe.attr("sandbox","allow-same-origin allow-scripts allow-popups allow-forms");
