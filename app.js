@@ -94,6 +94,16 @@ app.get('/arena',function(req, res){
     }
 });
 
+app.get('/faq',function(req, res){
+    if (pd.isMobile(req)) {
+        res.sendfile('www/mobile-faq.html');
+    } else {
+        res.sendfile("www/desktop-faq.html");
+    }
+});
+
+
+
 app.get('/register',function(req, res){
     if (pd.isMobile(req)) {
         res.sendfile('www/mobile-register.html');
