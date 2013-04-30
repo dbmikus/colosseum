@@ -181,7 +181,7 @@ var server = http.createServer(app);
 
 var IO = require('socket.io').listen(server);
 var webrtc = require('./webrtc.js');
-webrtc.setup(IO);
+webrtc.setup(app, IO);
 
 server.listen(process.env.PORT || 3000);
 

@@ -59,6 +59,19 @@ socket.emit('setUp', {
 });
 
 socket.on('selectedAsPlayer', function (data) {
+  // client notifies webrtc handshake server that a player has been selected
+  // the webrtc server will send a message back when there are two players
+  $.ajax({
+    type: 'post',
+    url: '/webrtcPlayerSelect',
+    data: {player: data.player},
+    error: function (jqXHR, textStatus, errorThrown) {
+      console.log('Server threw error ' + errorThrown);
+    }
+  });
+
+  // The player starts a call to other clients.
+  // TODO This may be subject to change based on webrtc server changes
   playerNum = data.player;
   console.log('You are selected as a player');
   console.log(data);
@@ -67,6 +80,19 @@ socket.on('selectedAsPlayer', function (data) {
     isStreaming = true;
     startCall(true, true);
   }
+});
+
+
+// The webrtc server has requested client types to build peer graph
+socket.on('webrtcRequestTypes', function (data) {
+  var ctype;
+  if (isPlayer) ctype = 'competitor';
+  else ctype = 'spectator';
+
+  socket.emit('webrtcSendType', {
+    clientType: ctype,
+    clientID: socket.id
+  });
 });
 
 socket.on('newGame', function (data) {
