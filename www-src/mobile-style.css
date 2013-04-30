@@ -305,6 +305,17 @@ textarea{
     overflow: auto;
 }
 
+#helpButt{
+	float:right;
+	display:inline-block;
+	padding-left: 2px;
+	padding-right: 2px;
+	width:30%;
+	height:50px;
+	border-right: 1px solid #000000;
+	border-left: 1px solid #000000;
+}
+
 #bottom{
 	text-align:center;
 	position: fixed;
