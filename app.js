@@ -135,6 +135,12 @@ app.post('/arena', function(req, res){
             games: {},
             votes: {}
         }
+
+        setTimeout(function(){
+            delete arenalist[nextId];
+            delete gameData[nextId];
+        },1000*10);
+
         nextId += 1;
 
         res.send({success:true, arenalist:arenalist});
@@ -236,14 +242,14 @@ IO.sockets.on("connection",function(socket){
         // Not all clients in a room are game participants, but try anyways
         try{
             delete gameData[gameSockets[socket.id]]["games"][socket.id];
-            delete gameSockets[socket.id]
+            delete gameSockets[socket.id];
         }
         catch(e){
         }
         // Try to delete the client socket from being an audience member
         try{
             delete gameData[audienceSockets[socket.id]]["audience"][socket.id];
-            delete audienceSockets[socket.id]
+            delete audienceSockets[socket.id];
         }
         catch(e){
         }
@@ -255,7 +261,7 @@ IO.sockets.on("connection",function(socket){
             gameSockets[data.secretKey]= data.roomid;
             gameData[data.roomid]["games"][data.secretKey]=socket;
             socket.username = gameData[data.roomid]["audience"][data.secretKey].username;
-            if(Object.keys(gameData[data.roomid]["games"]).length>3
+            if(Object.keys(gameData[data.roomid]["games"]).length>1
                 &&gameData[data.roomid]["started"]===false){
                 startGame(data.roomid);
             }
@@ -292,7 +298,7 @@ IO.sockets.on("connection",function(socket){
 
 function startGame(roomid){
     var arena = gameData[roomid];
-    if(Object.keys(arena["games"]).length<4){
+    if(Object.keys(arena["games"]).length<2){
         arena["started"]= false;
         return;
     }
@@ -354,19 +360,23 @@ function endGame(roomid){
             p1Votes: p1Votes,
             p2Votes: p2Votes
         });
-    emitToAll(arena["audience"],"newGame",{});
+    emitToAll(arena["audience"],"newGame",
+        {
+            winner:winner,
+            p1Votes: p1Votes,
+            p2Votes: p2Votes
+        });
     arena["inPlay"]=false;
     setTimeout(function(){
         startGame(roomid);
-    },3000);
+    },7000);
 }
 
-// diagnostic purposes
+
+
 // setInterval(function(){
-//     console.log("current sockets: ");
-//     console.log(IO.sockets.sockets);
-//     console.log("current games: ");
-//     console.log(gameData);
+//     console.log("arenalist ");
+//     console.log(arenalist);
 // },5000);
 
 
