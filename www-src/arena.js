@@ -125,19 +125,19 @@ if(urlParams.id){
   }
 
 
+
+
+  //voting bindings
+
   $("#player1Vote").click(function(){
     sendvote(1);
-    $("#player1Vote").css("background-color","#669966");
-	$("#player1Vote").css("box-shadow", "0 0 20px #00bb00");
-    $("#player2Vote").css("background-color","#555555");
-	$("#player2Vote").css("box-shadow", "none");
+  	$("#player1Vote").css("box-shadow", "0 0px 5px 5px #660000");
+  	$("#player2Vote").css("box-shadow", "none");
   });
   $("#player2Vote").click(function(){
     sendvote(2);
-    $("#player2Vote").css("background-color","#555555");
-	$("#player2Vote").css("box-shadow", "0 0 20px #00bb00");
-    $("#player1Vote").css("background-color","#669966");
-	$("#player1Vote").css("box-shadow", "none");
+    $("#player2Vote").css("box-shadow", "0 0px 5px 5px #000099");
+    $("#player1Vote").css("box-shadow", "none");
   });
 
   // On mobile, if text input is focused, hide the competitor part since the
