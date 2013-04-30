@@ -181,7 +181,6 @@ var server = http.createServer(app);
 
 var IO = require('socket.io').listen(server);
 var webrtc = require('./webrtc.js');
-webrtc.setup(app, IO);
 
 server.listen(process.env.PORT || 3000);
 
@@ -243,6 +242,7 @@ IO.sockets.on("connection", function(socket){
         // try to delete the client from being listed as a game participant.
         // Not all clients in a room are game participants, but try anyways
         try{
+            gameData[gameSockets[socket.id]].webrtc.deleteSocket(socket.id);
             delete gameData[gameSockets[socket.id]]["games"][socket.id];
             delete gameSockets[socket.id];
         }
@@ -260,11 +260,16 @@ IO.sockets.on("connection", function(socket){
     // game socket stuff
     socket.on("setUp",function(data){
         if(gameData[data.roomid]){
+            // adding the socket to the webrtc object for the room
+            if (arenalist[data.roomid] === 'video') {
+                gameData[data.roomid].webrtc.addSocket(socket.id, socket);
+            }
+
             gameSockets[data.secretKey]= data.roomid;
             gameData[data.roomid]["games"][data.secretKey]=socket;
             socket.username = gameData[data.roomid]["audience"][data.secretKey].username;
             if(Object.keys(gameData[data.roomid]["games"]).length>1
-                &&gameData[data.roomid]["started"]===false){
+                && gameData[data.roomid]["started"]===false){
                 startGame(data.roomid);
             }
         }else
@@ -301,16 +306,16 @@ IO.sockets.on("connection", function(socket){
 function startGame(roomid){
     var arena = gameData[roomid];
     if(Object.keys(arena["games"]).length<2){
-        arena["started"]= false;
+        arena["started"] = false;
         return;
     }
-    if (!arena.player1 || arena["games"][arena.player1] ===undefined){
+    if (!arena.player1 || arena["games"][arena.player1] === undefined){
         arena.player1 = randomSocket(arena.games);
         while(arena.player1===arena.player2){
             arena.player1= randomSocket(arena.games);
         }
     }
-    if (!arena.player2 || arena["games"][arena.player2]=== undefined ){
+    if (!arena.player2 || arena["games"][arena.player2] === undefined){
         arena.player2 = randomSocket(arena.games);
         while(arena.player1===arena.player2){
             arena.player2= randomSocket(arena.games);
@@ -328,6 +333,10 @@ function startGame(roomid){
     arenalist[roomid].p1 = arena["audience"][arena.player1].username;
     arenalist[roomid].p2 = arena["audience"][arena.player2].username;
     arena["started"]=true;
+    if (arenalist[roomid].type === 'video') {
+      // Creates a webrtc object to handle a room with webrtc
+      arena.webrtc = webrtc.setup(app, IO, arena.games);
+    }
     arena["inPlay"]=true;
     setTimeout(function(){
         endGame(roomid);

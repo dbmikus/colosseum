@@ -58,6 +58,7 @@ socket.emit('setUp', {
   secretKey: urlParams.s
 });
 
+
 socket.on('selectedAsPlayer', function (data) {
   // client notifies webrtc handshake server that a player has been selected
   // the webrtc server will send a message back when there are two players
@@ -85,6 +86,7 @@ socket.on('selectedAsPlayer', function (data) {
 
 // The webrtc server has requested client types to build peer graph
 socket.on('webrtcRequestTypes', function (data) {
+  console.log('REQUESTING TYPES!');
   var ctype;
   if (isPlayer) ctype = 'competitor';
   else ctype = 'spectator';
@@ -96,6 +98,14 @@ socket.on('webrtcRequestTypes', function (data) {
 });
 
 socket.on('newGame', function (data) {
+});
+
+socket.on('webrtcCall', function (data) {
+  console.log('handling webrtcCall');
+  var fromID = data.fromID;
+  var toID = data.toID;
+  var isCaller = data.isCaller;
+  var displayStream = data.displayStream;
 });
 
 
