@@ -376,20 +376,22 @@ function endGame(roomid){
 }
 
 
-
+//diagnostic purposes
 setInterval(function(){
     console.log("arenalist ");
     console.log(arenalist);
 },5000);
 
 
+
+//picks a random socket from a table of them
 function randomSocket(sockets){
     var keys = Object.keys(sockets);
     return keys[Math.floor(keys.length * Math.random())];
 }
 
 
-
+//emits a messave to a table of sockets
 function emitToAll(sockets, msg, data){
     for (var s in sockets){
         sockets[s].emit(msg, data);
