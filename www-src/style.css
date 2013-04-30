@@ -1,124 +1,59 @@
-/* Style code will go here */
-
+/* Platform agnostic styling */
 
 body {
+<<<<<<< HEAD
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	background: #F2E9E9 url('white_brick_wall.png') right top;
+=======
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+                 "Helvetica Neue", Helvetica, Arial, "Lucida Grande",
+                 sans-serif;
 	background: #F2E9E9;
+>>>>>>> 1d08ae077c0706cb3b3cd12bd6e537e57307fbb9
 }
 
-ol{
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+ol {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+                 Helvetica, Arial, "Lucida Grande", sans-serif;
 	color: #F2E9E9;
-	
 }
 
-a{
+a {
 	text-decoration: none;
 	color: #F2E9E9;
 }
 
 li{
-	width: auto;
-	line-height: 100%;
-	border-right: 1px solid #000000;
-	border-left: 1px solid #000000;
-}
-
-#gameBox{
-	background:#ffffff url('Temporarybackground.jpg') no-repeat right top;
 	position:relative;
-	border: 1px solid #000000;
-	width:610px;
-	height:600px;
-	text-align:center;
+	width: 225 px;
+	height: 180 px;
 	margin: 10px;
 }
 
-#topMiddle{
-	display:inline-block;	
-	position:relative;
-	border: 1px dashed #888888;
-	width:90px;
-	height:100px;
-	margin-left:auto;
-	margin-right:auto;
-	text-align:center;
-}
-
-#trapezoid{
-	height:0;
-	border-top: 50px solid white;
-	border-left: 25px solid transparent;
-	border-right: 25x solid transparent;
-	width: 100px;
-}
 #timer{
-	background: #000000;
-	color: green;	
-	height:20px;
-	width:60px;
-	margin-left:auto;
-	margin-right:auto;
-	margin-top:2px;
-	border: 1px solid #ff0000;
-	
+	background: #444444;
+	color: green;
 }
 
 #versus{
-	display: inline-block; 
-	position:absolute;
-	bottom:0;
+	display: inline-block;
 	border: 1px dashed #000000;
+	color: #aaaaaa;
+	font: 18px Arial; 
+	font-weight: bold;
+
 	margin-left:auto;
 	margin-right:auto;
 }
 
-#player1{
-	position:absolute;
-	top:0;
-	left:0;
-}
-
-#player1Vote{ 
-	display: inline-block;
-	position: absolute;
-	bottom:0;
-	right:5px;
-}
-
-#player1Vote:active{
-	background: ;
-}
-
-#player1Avatar{
-	float:left;
-}
-
-#player2Avatar{
-	float:right;
-}
-
-#player2{
-	
-	text-align:right;
-	position:absolute;
-	top:0;
-	right:0;
-}
-
-#player2Vote{
-	display: inline-block;
-	position:absolute;
-	bottom:0;
-	left:5px;
-}
-
 #redUser{
-	color: red;
+	color: black;
+	box-shadow:0px 0px 8px 1px red inset;
 }
 
 #blueUser{
-	color:blue;
+	color:black;
+	box-shadow:0px 0px 8px 1px blue inset;
 }
 
 .userName{
@@ -129,6 +64,7 @@ li{
 	box-shadow:0px 0px 8px 1px #2b2b2b inset;
 	font: 15px/1.5  Arial, sans-serif;
 	font-weight:bold;
+	background: #777777
 }
 
 .player{
@@ -137,8 +73,6 @@ li{
 	height: 100px;
 	width:245px;
 	text-align:left;
-	
-	
 }
 
 .avatar{
@@ -170,19 +104,18 @@ li{
 	-moz-box-shadow: 0 0 4px 3px #888;
 	-webkit-box-shadow: 0 0 4px 3px #888;
 	box-shadow: 0 0 4px 3px #888;
-	
+
 	border: 1px solid #000000;
 	border-radius: 5px;
-	
-	background: rgb(255,64,64); /* Old browsers */
-	background: -moz-linear-gradient(top,  rgba(255,64,64,1) 0%, rgba(223,72,51,1) 47%, rgba(189,55,48,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,64,64,1)), color-stop(47%,rgba(223,72,51,1)), color-stop(100%,rgba(189,55,48,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(255,64,64,1) 0%,rgba(223,72,51,1) 47%,rgba(189,55,48,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(255,64,64,1) 0%,rgba(223,72,51,1) 47%,rgba(189,55,48,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(255,64,64,1) 0%,rgba(223,72,51,1) 47%,rgba(189,55,48,1) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(255,64,64,1) 0%,rgba(223,72,51,1) 47%,rgba(189,55,48,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff4040', endColorstr='#bd3730',GradientType=0 ); /* IE6-9 */
 
+	background: rgb(169,3,41); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(169,3,41,1)), color-stop(44%,rgba(143,2,34,1)), color-stop(100%,rgba(109,0,25,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 */
 }
 
 .buttons:active{
@@ -201,7 +134,7 @@ li{
 	float:right;
 	text-align:center;
 	display: inline-block;
-	padding:6px; 
+	padding:6px;
     width: auto;
     margin-left: 15px;
     margin-right: 15px;
@@ -273,9 +206,12 @@ li{
 }
 
 #game{
-    position: absolute;
-    bottom: 10px;
-    left: 0px;
+	position: absolute;
+    width: 600px;
+    height: 400px;
+	left: 5px;
+	bottom: 20px;
+	box-shadow:0px 1px 8px 1px #2b2b2b inset;
 }
 
 
@@ -284,13 +220,13 @@ h2 {
 }
 
 #spectators {
-    background-color: #FF8C89;
+	background: #FF8C89 url('grey_wash_wall.png') /*no-repeat*/ right top;
     position: absolute;
-    top: 10px;
+    top: 0px;
     right: 0;
     z-index: 2;
     height: 590px;
-    width: 350px;
+    width: 335px;
     padding: 5px;
 }
 
@@ -303,7 +239,7 @@ h2 {
 
 #chat{
     background-color: white;
-    height: 530px;
+    height: 510px;
     overflow: auto;
     margin:5px 0px 5px 0px;
 }
@@ -332,7 +268,7 @@ h2 {
 #logo{
 	text-align:center;
 	float:left;
-	width: 75px; 
+	width: 75px;
 }
 
 #tagLine{
@@ -346,7 +282,7 @@ h2 {
 	height:400px;
 	margin-top: 10px;
 	display: inline-block;
-	background:#f00fff url('BWSplash.jpg') no-repeat right top;
+    background:#ffffff url('BWSplash.jpg') no-repeat right top;
 
 }
 
@@ -359,6 +295,7 @@ h2 {
 #gameIFrame{
     width: 600px;
     height: 400px;
+	box-shadow:0px 1px 8px 1px #2b2b2b inset;
 }
 
 #gameIFrame html{
