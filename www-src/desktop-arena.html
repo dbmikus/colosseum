@@ -12,11 +12,9 @@
 
   <body>
     <div id="titlebar">
-      <div class="row_items" id = "logo"><a href="/"> Colosseum</a></div>
-			<div class="row_items"><a href="/create" class="unselectable">Sign Up</a></div>
-			<div class="row_items"><a href="/create" class="unselectable">Log In</a></div>
-			<a href="/create" class="unselectable"><div class="row_items">Create Arenas</div></a>
-			<a href="/findarena" class="unselectable"><div class="row_items">Browse Arenas</div></a>
+    <a href="/" class ="unselectable"><div class="row_items" id = "logo"> Colosseum</div></a>
+    <a href="/create" class="unselectable"><div class="row_items">Create Arenas</div></a>
+    <a href="/findarena" class="unselectable"><div class="row_items">Browse Arenas</div></a>
     </div>
 
     <div id="wrapper">
@@ -24,17 +22,17 @@
 
 			<div id ="player1" class ="player">
 				<div id ="player1Avatar" class = "avatar" > player1Avatar</div>
-				<div id ="redUser" class = "userName"> PoopDestroyer</div>
-				<button id="player1Vote"> Vote for Player 1</button>
+				<div id ="redUser" class = "userName"> </div>
+				<button id="player1Vote"> Vote for red! </button>
 			</div>
 			<div id = "topMiddle">
 				<div id="timer">00:00</div>
 				<div id = "versus">  VS</div>
 			</div>
 			<div id ="player2" class="player">
-				<div id ="blueUser" class ="userName"> En Hamawl </div>
+				<div id ="blueUser" class ="userName">  </div>
 
-				<button id="player2Vote"> Vote for Player 2 </button>
+				<button id="player2Vote"> Vote for Blue! </button>
 				<div id=" player2Avatar" class ="avatar"> player2Avatar</div>
 
 
@@ -50,7 +48,6 @@
         <div id="chat">
         </div>
         <div id="specControls">
-          <input id="username-field" type="text" placeholder="type your alias here"/>
           <form id="chat-form" name="createForm" action="javascript:sendchat()">
 			<input id="submitButton" name="Submit" type="submit" value="Send"/>
             <input id="chat-input" name="chat" type="text" placeholder="send chat"/>
@@ -61,29 +58,11 @@
       </div>
     </div>
 
-    <!-- This is a centered div (fixed position) used for login.
-      It defaults to hidden, but unhides when login button is clicked. -->
-    <div id="loginPane">
-      <div id="usernameField"> username:
-        <input id="usernameInput" type="text" />
-      </div>
-      <div id="passwordField"> password:
-        <input id="passwordInput" type="password" />
-      </div>
-
-      <button id="loginButton"> login </button>
-      <button id="registerButton"> register </button>
-    </div>
-
-
     <script src="jquery-1.9.0.js"></script>
     <script src="d3.v3.js"></script>
-    <script src="adapter.js"></script>
     <script src="platformDetection.js"></script>
     <!-- This line is modified by Mustache -->
     <script src="{{{host}}}/socket.io/socket.io.js"></script>
-    <script src="main.js"></script>
-    <script src="login.js"></script>
     <script src="arena.js"></script>
   </body>
 </html>

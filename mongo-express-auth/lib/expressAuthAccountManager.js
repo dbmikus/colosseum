@@ -108,8 +108,8 @@ exports.login = function(req, res, done){
 exports.register = function(req, done){
     var username = req.body.username;
     var password = req.body.password;
-    var favBit   = req.body.favBit
-    g.accountManager.createAccount(username, password, favBit, function(err, account){
+    var imgURL   = req.body.imgURL
+    g.accountManager.createAccount(username, password, imgURL, function(err, account){
         if (err && typeof err === 'string')
             done(err);
         else if (err)

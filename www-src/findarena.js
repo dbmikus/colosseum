@@ -25,10 +25,10 @@ function refreshDOM(){
         // This makes the arenas appear sorted with the most recently created at
         // the top
         arena_ul.prepend(makeArenaItem(arena.id,
-                                       arena.player1,
-                                       arena.player2,
+                                       arena.p1,
+                                       arena.p2,
                                        arena.name,
-                                       arena.spectators));
+                                       arena.population));
     }
 }
 
@@ -89,9 +89,6 @@ function makePlayerMobile(player, playerNum) {
 }
 
 function makeArenaItemDesktop(id, player1, player2, name, numSpectators) {
-    // var p1 = players[0];
-    // var p2 = players[1];
-    // var num_viewers = spectators.length;
 
     console.log("NAME: ", name);
 
@@ -102,15 +99,17 @@ function makeArenaItemDesktop(id, player1, player2, name, numSpectators) {
     link.attr("href", "/arena?id=" + id);
     link.append(li);
 	li.html(name);
-    var player1 = $('<div>').addClass('listPlayer1');
-	var player2 = $('<div>').addClass('listPlayer2');
-	var player1Name = $('<p>').html(p1);
+    var user1 = $('<div>').addClass('listPlayer1');
+	var user2 = $('<div>').addClass('listPlayer2');
+	var player1Name = $('<p>').html(player);
 	player1Name.addClass('listName1')
-	var player2Name	= $('<p>').html(p2);
+	var player2Name	= $('<p>').html(player2);
 	player2Name.addClass('listName2')
-	player1.append(player1Name);
-	player2.append (player2Name);
-	var viewers = li.append($('<div>').html(num_viewers));
+	user1.append(player1Name);
+	user2.append (player2Name);
+	li.append(user1);
+	li.append(user2);
+	var viewers = li.append($('<div>').html(numSpectators));
 	viewers.addClass('listViewers');
 	var versus = li.append($('<div>').html('vs'));
 	versus.addClass('listVersus');

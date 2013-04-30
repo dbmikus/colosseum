@@ -12,16 +12,25 @@
 
   <body>
     <div id="titlebar">
-	  <a href="/" class="unselectable"><div class="row_items" id="logo"> Colosseum</div></a>
-	  <a href="/create" class="unselectable"><div class="row_items">Sign Up</div></a>
-	  <a href="/create" class="unselectable"><div class="row_items">Log In</div></a>
-	  <a href="/create" class="unselectable"><div class="row_items">Create Arenas</div></a>
-	  <a href="/findarena" class="unselectable"><div class="row_items">Browse Arenas</div></a>
+    <a href="/" class ="unselectable"><div class="row_items" id = "logo"> Colosseum</div></a>
+    <a href="/create" class="unselectable"><div class="row_items">Create Arenas</div></a>
+    <a href="/findarena" class="unselectable"><div class="row_items">Browse Arenas</div></a>
     </div>
 
     <div id="wrapper">
       <ul id="arenalist">
 		<!-- sample lists. Real entries will be generated automagically-->
+		<li> Room Name
+			<div class ='listPlayer1'> Red
+				<div class = 'listName1'> Challenger</div>
+			</div>
+			<div class ='listPlayer2'> Blue
+				<div class = 'listName2'> King</div>
+			</div>
+			<div class='listVersus'> VS </div>
+			<div class='listViewers'> x viewers</div>
+			
+		</li>
       </ul>
     </div>
 
@@ -43,7 +52,6 @@
     <script src="jquery-1.9.0.js"></script>
     <script src="platformDetection.js"></script>
     <script src="main.js"></script>
-    <script src="login.js"></script>
     <!-- <script src="logout.js"></script> -->
     <script src="findarena.js"></script>
   </body>
