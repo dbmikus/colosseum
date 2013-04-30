@@ -13,7 +13,7 @@ while (userName=== null){
   userName = prompt("You need a username.");
 }
 
-if(username===null){
+if(userName===null){
   throw "you didn't pick a username ='(";
 }
 

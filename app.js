@@ -197,7 +197,7 @@ IO.sockets.on("connection",function(socket){
 
             socket.username = data.user;
             socket.imgURL = data.URL;
-            arenalist[roomid].population+=1;
+            arenalist[data.roomid].population+=1;
 
 
             // sends metadata about the room the client connected to back over
