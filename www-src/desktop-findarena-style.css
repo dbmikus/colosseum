@@ -7,22 +7,22 @@
 }
 
 .listPlayer1{
-	position:relative;
+	position:absolute;
 	margin: 5px;
-	background: yellow;
-	float:left;
-	height:36px;
-	width:36px;
+	background: #880000;
+	left: 0;
+	height:50px;
+	width:50px;
 	border: 1px solid #000000;
 }
 
 .listPlayer2{
 	position: relative;
 	margin: 5px;
-	background: yellow;
+	background: #0000aa;
 	float:right;
-	height: 36px;
-	width:36px;
+	height: 50px;
+	width:50px;
 	border: 1px solid #000000;
 }
 .listName1{

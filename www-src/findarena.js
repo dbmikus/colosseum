@@ -89,9 +89,9 @@ function makePlayerMobile(player, playerNum) {
 }
 
 function makeArenaItemDesktop(id, player1, player2, name, numSpectators) {
-    // var p1 = players[0];
-    // var p2 = players[1];
-    // var num_viewers = spectators.length;
+    var p1 = players[0];
+    var p2 = players[1];
+    var num_viewers = spectators.length;
 
     console.log("NAME: ", name);
 
