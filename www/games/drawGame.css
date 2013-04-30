@@ -1,0 +1,10 @@
+html{
+  overflow: hidden;
+}
+
+body{
+  overflow: hidden;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+               "Helvetica Neue", Helvetica, Arial, "Lucida Grande",
+               sans-serif;
+}
