@@ -215,26 +215,11 @@ h2 {
     border-style:solid;
 }
 
-#logo{
-	text-align:center;
-	float:left;
-	width: 75px;
-}
-
 #tagLine{
 	margin:20px;
 	font-size: 28px;
 }
 
-
-#splashPicture{
-	width:980px;
-	height:400px;
-	margin-top: 10px;
-	display: inline-block;
-    background:#ffffff url('BWSplash.jpg') no-repeat right top;
-
-}
 
 .room-link {
     color:blue;
