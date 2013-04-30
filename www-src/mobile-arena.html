@@ -24,23 +24,25 @@
 	    <div class="player" id="player1Vote">Player 1</div>
 	  </div>
 
-      <div id="gameBox">
-        <div id="timer">00:00</div>
-        <div id="game"></div>
-      </div>
-
-	  <div id="spectators">
-        <div id="chat">
+      <div id="underbar">
+        <div id="gameBox">
+          <div id="timer">00:00</div>
+          <div id="game" class="scrollable"></div>
         </div>
 
-        <div id="specControls">
-          <input id="username-field" type="text" placeholder="type your alias here"/>
-          <form id="chat-form" name="createForm" action="javascript:sendchat()">
-		    <input id="chat-input" name="chat" type="text" placeholder="send chat"/>
-		    <input id="submitButton" name="Submit" type="submit" value="Send"/>
-	    </form>
-	  </div>
-    </div>
+	    <div id="spectators">
+          <div id="chat" class="scrollable">
+          </div>
+
+          <div id="specControls">
+            <input id="username-field" type="text" placeholder="type your alias here"/>
+            <form id="chat-form" name="createForm" action="javascript:sendchat()">
+		      <input id="chat-input" name="chat" type="text" placeholder="send chat"/>
+		      <input id="submitButton" name="Submit" type="submit" value="Send"/>
+	        </form>
+	      </div>
+        </div>
+      </div>
 
 
     <div id="landscapeLayout">

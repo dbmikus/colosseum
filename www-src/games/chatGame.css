@@ -1,7 +1,5 @@
 #chatlog {
   background: white;
-  margin: 10px;
-  height: 300px;
 }
 
 body{
@@ -11,7 +9,6 @@ body{
 
 #chat-input{
   display: none;
-  margin-left: 50px;
 }
 
 .player1{
