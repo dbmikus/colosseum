@@ -196,8 +196,8 @@ app.use(express.static(__dirname + '/www/'));
 // we have to keep track of which sockets are in which rooms
 // not just the other way around
 
-var gameSockets ={};
-var audienceSockets={};
+var gameSockets = {};
+var audienceSockets = {};
 
 
 //socket server for audience
@@ -215,32 +215,58 @@ server.listen(process.env.PORT || 3000);
 
 
 IO.sockets.on("connection",function(socket){
+    // Receives message from client detailing what arena client is in.
+    // This occurs when a client first connects to a room
+    // Receives object:
+    // { roomid : int,
+    //   user   : string }
     socket.on("thisArena",function(data){
+        // If the room already exists in gameData...
         if(gameData[data.roomid]){
-            audienceSockets[socket.id]= data.roomid;
-            gameData[data.roomid]["audience"][socket.id]=socket;
-            socket.emit("arenaInfo",
-            {
-               roomSpecs: arenalist[data.roomid]
+            // create a key-value pair mapping socket identifier to the room the
+            // socket exists in
+            audienceSockets[socket.id] = data.roomid;
+            // add the socket to the server's knowledge of the audience for the
+            // given room id the socket sent over
+            gameData[data.roomid]["audience"][socket.id] = socket;
+
+            // sends metadata about the room the client connected to back over
+            // to the client
+            socket.emit("arenaInfo", {
+                roomSpecs: arenalist[data.roomid]
             });
+
+            // Set up handler for when the client sends a chat message to the
+            // room.
+            // This just sends the message back to all clients in the room so
+            // they can update their chat display
             socket.on("sendChat",function(chatData){
                 for(var s in gameData[data.roomid]["audience"]){
                     gameData[data.roomid]["audience"][s].emit("newChat",chatData);
                 }
             });
+
+            // simply updates the vote count for the room
             socket.on("sendVote",function(voteData){
                 gameData[data.roomid]["votes"][socket.id] = voteData.vote;
             });
         }
+
+        // We do nothing if the client says it is part of a room that does not
+        // exist
     });
 
+    // Sent when a client leaves a room
     socket.on("disconnect", function(data){
+        // try to delete the client from being listed as a game participant.
+        // Not all clients in a room are game participants, but try anyways
         try{
             delete gameData[gameSockets[socket.id]]["games"][socket.id];
             delete gameSockets[socket.id]
         }
         catch(e){
         }
+        // Try to delete the client socket from being an audience member
         try{
             delete gameData[audienceSockets[socket.id]]["audience"][socket.id];
             delete audienceSockets[socket.id]
@@ -282,7 +308,11 @@ IO.sockets.on("connection",function(socket){
     });
 
 
-    socket.emit("whatArena",{});
+    // Ask the client socket what arena it belongs to.
+    // The client will respond with "thisArena" with the following object:
+    // { roomid: int,
+    //   user: string }
+    socket.emit("whatArena", {});
 });
 
 function startGame(roomid){

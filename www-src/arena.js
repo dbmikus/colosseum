@@ -105,6 +105,25 @@ if(urlParams.id){
     $("#player1Vote").css("background-color","#FF635F");
 
   });
+
+  // On mobile, if text input is focused, hide the competitor part since the
+  // user will be chatting and will only have space to view chat
+  if (isMobile()) {
+    $('#chat-input').focus(function () {
+      $('#spectators').css('height', '100%');
+      $('#gameBox').css('height', '0');
+      $('#gameBox').css('visibility', 'hidden');
+      $('#gameBox').css('display', 'none');
+    });
+
+    // chat not selected, show everything again
+    $('#chat-input').blur(function () {
+      $('#spectators').css('height', '50%');
+      $('#gameBox').css('height', '50%');
+      $('#gameBox').css('visibility', 'visible');
+      $('#gameBox').css('display', '');
+    });
+  }
 }
 
 

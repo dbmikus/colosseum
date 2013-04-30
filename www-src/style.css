@@ -25,7 +25,7 @@ li{
 	border-left: 1px solid #000000;
 }
 
-#timer {
+#timer{
 	background: #000000;
 	color: green;
 	margin-left:auto;
@@ -38,4 +38,9 @@ li{
 
 #blueUser{
 	color:blue;
+}
+
+#gameIFrame html{
+    overflow: hidden;
+
 }

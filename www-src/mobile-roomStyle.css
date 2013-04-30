@@ -139,10 +139,15 @@ body{
 	border-bottom: 1px solid #000000;
 }
 
+#gameBox {
+    width: 100%;
+    height: 50%;
+}
+
 #spectators {
     position: absolute;
-    height: 100%;
-    width:100%;
+    height: 50%;
+    width: 100%;
 }
 
 #specControls {
