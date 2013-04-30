@@ -361,13 +361,10 @@ function endGame(roomid){
     },3000);
 }
 
-// diagnostic purposes
-// setInterval(function(){
-//     console.log("current sockets: ");
-//     console.log(IO.sockets.sockets);
-//     console.log("current games: ");
-//     console.log(gameData);
-// },5000);
+setInterval(function(){
+    console.log("arenalist ");
+    console.log(arenalist);
+},5000);
 
 
 function randomSocket(sockets){

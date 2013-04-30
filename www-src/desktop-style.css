@@ -20,6 +20,10 @@
 }
 
 
+h1{
+  font-size: 32px;
+}
+
 #versus{
 	display: inline;
 	border: 1px dashed #000000;

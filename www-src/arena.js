@@ -8,7 +8,6 @@
 // Stuff for formatting based on URL parameters
 var urlParams;
 var userName = prompt("What would you like to go by for this game?");
-var userURL  = prompt("What imageURL would you like to be your logo?");
 while (userName=== null){
   userName = prompt("You need a username.");
 }
@@ -56,7 +55,6 @@ if(urlParams.id){
   socket.on("whatArena",function(data){
     socket.emit("thisArena", {roomid: urlParams.id,
                               user: userName,
-                              URL: userURL
                             });
   });
 
