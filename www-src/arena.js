@@ -75,8 +75,10 @@ if(urlParams.id){
   });
 
   socket.on("newGame",function(data){
-    $("#player2Vote").css("background-color","#FF635F");
-    $("#player1Vote").css("background-color","#FF635F");
+    $("#player2Vote").css("background-color","#666666");
+    $("#player1Vote").css("background-color","#666666");
+	$("#player2Vote").css("box-shadow", "none");
+	$("#player1Vote").css("box-shadow", "none");
     if(data.winner === null){
       $("#notifications").html("Game Over, and we have a tie. Time for round 2!");
     }else{
@@ -125,14 +127,17 @@ if(urlParams.id){
 
   $("#player1Vote").click(function(){
     sendvote(1);
-    $("#player1Vote").css("background-color","#A6110D");
-    $("#player2Vote").css("background-color","#FF635F");
+    $("#player1Vote").css("background-color","#669966");
+	$("#player1Vote").css("box-shadow", "0 0 20px #00bb00");
+    $("#player2Vote").css("background-color","#555555");
+	$("#player2Vote").css("box-shadow", "none");
   });
   $("#player2Vote").click(function(){
     sendvote(2);
-    $("#player2Vote").css("background-color","#A6110D");
-    $("#player1Vote").css("background-color","#FF635F");
-
+    $("#player2Vote").css("background-color","#555555");
+	$("#player2Vote").css("box-shadow", "0 0 20px #00bb00");
+    $("#player1Vote").css("background-color","#669966");
+	$("#player1Vote").css("box-shadow", "none");
   });
 
   // On mobile, if text input is focused, hide the competitor part since the
