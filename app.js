@@ -174,11 +174,13 @@ var http = require("http");
 var server = http.createServer(app);
 
 var IO = require('socket.io').listen(server);
+var webrtc = require('./webrtc.js');
+webrtc.setup(IO);
 
 server.listen(process.env.PORT || 3000);
 
 
-IO.sockets.on("connection",function(socket){
+IO.sockets.on("connection", function(socket){
     // Receives message from client detailing what arena client is in.
     // This occurs when a client first connects to a room
     // Receives object:
