@@ -7,7 +7,9 @@
     <link rel="stylesheet" type="text/css" media="all" href="reset.css" />
     <link rel="stylesheet" type="text/css" media="all" href="style.css" />
     <link rel="stylesheet" type="text/css" media="all" href="desktop-style.css" />
-  </head>
+    <link rel="stylesheet" type="text/css" media="all" href="desktop-create-style.css" />
+
+	</head>
 
   <body>
     <div id="titlebar">
@@ -17,22 +19,22 @@
     </div>
 
     <div id="wrapper">
+	<div id = "spacer"> Create your arena!</div>
       <div id="createArena">
-        Create an arena!
-        <br>
         <input id="name-input" name="Name" type="text" placeholder="Name of your arena"/>
         <br>
-        <input id="desc-input" name="Desc" type="text" placeholder="Describe what makes this arena special."/>
-        <br>
-        <label for ="game-type-chat">
-          <input id="game-type-chat" name="Type" type="radio" value="chat">Chat Battle
+		  <textarea id="desc-input" name="Desc" type="text" placeholder="Describe what makes this arena special."></textarea>
+		<div  id="fakeText">
+		<div id ="radioContainer">
+        <label class="radio" for ="game-type-chat">
+          <input id="game-type-chat"  name="Type" type="radio" value="chat">Chat Battle
         </label>
-        <br>
-        <label for ="game-type-draw">
-          <input id="game-type-draw" name="Type" type="radio" value="draw">Draw Battle
+        <label class="radio" for ="game-type-draw">
+          <input id="game-type-draw"  name="Type" type="radio" value="draw">Draw Battle
         </label>
-        <br>
-        <input id="submitButton" name="Submit"  type="submit" value="Submit"/>
+		<input id="submitButton" name="Submit"  type="submit" value="Submit"/>
+		</div>
+		</div>
       </div>
     </div>
 
