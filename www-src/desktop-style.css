@@ -44,9 +44,6 @@ h1{
 	border-radius: 5px;
 }
 
-#player1Vote:active{
-	box-shadow: 0 0 20px #00bb00;
-}
 
 #player1Avatar{
 	top:20px;
@@ -78,9 +75,6 @@ h1{
 	border-radius:5px;
 }
 
-#player2Vote:active{
-	box-shadow: 0 0 20px #00bb00;
-}
 
 #timer{
 	background: #444444;
