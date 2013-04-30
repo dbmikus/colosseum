@@ -29,6 +29,8 @@ var gamelength = 30000;
 
 
 var gameData  = {};
+var chat
+
 //gameData[id]=
 // {
     // name: name,
@@ -46,15 +48,6 @@ var nextId = 0;
 //===========================
 //  init
 //===========================
-
-// mongoExpressAuth.init({
-//     mongo: {
-//         dbName: 'Colosseum',
-//         collectionName: 'accounts'
-//     }
-// }, function(){
-//     console.log('mongo ready!');
-// });
 
 app.use(express.bodyParser());
 app.use(express.cookieParser());
@@ -99,44 +92,17 @@ app.get('/arena',function(req, res){
     }
 });
 
-
-app.get('/me', function(req, res){
-    mongoExpressAuth.checkLogin(req, res, function(err){
-        if (err)
-            res.send(err);
-        else {
-            mongoExpressAuth.getAccount(req, function(err, result){
-                if (err)
-                    res.send(err);
-                else
-                    res.send(result);
-            });
-        }
-    });
+app.get('/register',function(req, res){
+    if (pd.isMobile(req)) {
+        res.sendfile('www/mobile-register.html');
+    } else {
+        res.sendfile("www/desktop-register.html");
+    }
 });
 
-app.post('/login', function(req, res){
-    mongoExpressAuth.login(req, res, function(err){
-        if (err)
-            res.send(err);
-        else
-            res.send('ok');
-    });
-});
 
-app.post('/logout', function(req, res){
-    mongoExpressAuth.logout(req, res);
-    res.send('ok');
-});
 
-app.post('/register', function(req, res){
-    mongoExpressAuth.register(req, function(err){
-        if (err)
-            res.send(err);
-        else
-            res.send('ok');
-    });
-});
+
 
 app.get('/arenalist', function(req, res){
     res.send(arenalist);
@@ -152,7 +118,10 @@ app.post('/arena', function(req, res){
                 id:nextId,
                 name: name,
                 desc: desc,
-                type: type
+                type: type,
+                population:0,
+                p1: null,
+                p2: null
             };
         gameData[nextId] =
         {
@@ -205,11 +174,6 @@ var http = require("http");
 var server = http.createServer(app);
 
 var IO = require('socket.io').listen(server);
-// needed for heroku
-// IO.configure(function(){
-//     IO.set('transports', ["xhr-polling"]);
-//     IO.set('polling duration', 10);
-// });
 
 server.listen(process.env.PORT || 3000);
 
@@ -219,13 +183,19 @@ IO.sockets.on("connection",function(socket){
         if(gameData[data.roomid]){
             audienceSockets[socket.id]= data.roomid;
             gameData[data.roomid]["audience"][socket.id]=socket;
+            socket.username = data.user;
+            socket.imgURL = data.URL;
+            arenalist[roomid].population+=1;
             socket.emit("arenaInfo",
             {
                roomSpecs: arenalist[data.roomid]
             });
             socket.on("sendChat",function(chatData){
                 for(var s in gameData[data.roomid]["audience"]){
-                    gameData[data.roomid]["audience"][s].emit("newChat",chatData);
+                    gameData[data.roomid]["audience"][s].emit("newChat",{
+                            chat:chatData.chat,
+                            user: socket.username
+                        });
                 }
             });
             socket.on("sendVote",function(voteData){
@@ -235,6 +205,7 @@ IO.sockets.on("connection",function(socket){
     });
 
     socket.on("disconnect", function(data){
+        arenalist[gameSockets[socket.id]]-=1;
         try{
             delete gameData[gameSockets[socket.id]]["games"][socket.id];
             delete gameSockets[socket.id]
@@ -254,6 +225,7 @@ IO.sockets.on("connection",function(socket){
         if(gameData[data.roomid]){
             gameSockets[data.secretKey]= data.roomid;
             gameData[data.roomid]["games"][data.secretKey]=socket;
+            socket.username = gameData[data.roomid]["audience"][data.secretKey].username;
             if(Object.keys(gameData[data.roomid]["games"]).length>3
                 &&gameData[data.roomid]["started"]===false){
                 startGame(data.roomid);
@@ -306,6 +278,14 @@ function startGame(roomid){
     arena["votes"]= {};
     arena["games"][arena.player1].emit("selectedAsPlayer",{});
     arena["games"][arena.player2].emit("selectedAsPlayer",{});
+    emitToAll(arena["audience"],"newPlayers",{
+        p1: arena["audience"][arena.player1].username,
+        p1URL: arena["audience"][arena.player1].imgURL,
+        p2: arena["audience"][arena.player2].username,
+        p2URL: arena["audience"][arena.player2].imgURL
+    });
+    arenalist[roomid].p1 = arena["audience"][arena.player1].username;
+    arenalist[roomid].p2 = arena["audience"][arena.player2].username;
     arena["started"]=true;
     arena["inPlay"]=true;
     setTimeout(function(){

@@ -7,6 +7,16 @@
 
 // Stuff for formatting based on URL parameters
 var urlParams;
+var userName = prompt("What would you like to go by for this game?");
+var userURL  = prompt("What imageURL would you like to be your logo?");
+while (userName=== null){
+  userName = prompt("You need a username.");
+}
+
+if(username===null){
+  throw "you didn't pick a username ='(";
+}
+
 
 var arenaInfo={};
 var secretKey="";
@@ -38,14 +48,16 @@ $(document).ready(function () {
 ////////////////////////////////////////////////////////////
 
 if(urlParams.id){
-    // This line is modified by Mustache
-    var socket = io.connect("{{{host}}}");
+  // This line is modified by Mustache
+  var socket = io.connect("{{{host}}}");
 
   // When asked what arena the client is a part of, the client responds with the
   // room id and with username
   socket.on("whatArena",function(data){
     socket.emit("thisArena", {roomid: urlParams.id,
-                              user: "somename"});
+                              user: userName,
+                              URL: userURL
+                            });
   });
 
   // Sent by server when a chat is received. Should be displayed by clients
@@ -60,28 +72,30 @@ if(urlParams.id){
     arenaInfo = data.roomSpecs;
     var iframe = renderIFrame(arenaInfo);
     $("#game").append(iframe);
-
-    socket.on("newGame",function(data){
-      $("#player2Vote").css("background-color","#FF635F");
-      $("#player1Vote").css("background-color","#FF635F");
-
-    });
   });
+
+  socket.on("newGame",function(data){
+    $("#player2Vote").css("background-color","#FF635F");
+    $("#player1Vote").css("background-color","#FF635F");
+  });
+
+
+  socket.on("newPlayers", function(data){
+    $("#redUser").html(data.p1);
+    $("#blueUser").html(data.p2);
+  });
+
 
   // Called when client sends a chat
   function sendchat(){
-    var username = $("#username-field").val();
     var msg = $("#chat-input").val();
-    if(username.length < 3){
-      alert("make a better username");
-      return;
-    }
     if(msg.length<1){
       return;
     }
     socket.emit("sendChat",
-                {chat: msg,
-                 user: username});
+                {
+                  chat: msg
+                });
     $("#chat-input").val("");
   }
 

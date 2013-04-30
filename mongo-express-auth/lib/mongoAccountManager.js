@@ -43,12 +43,12 @@ exports.getAccount = function(username, password, done){
     );
 }
 
-exports.createAccount = function(username, password,favBit, done){
+exports.createAccount = function(username, password,imgURL, done){
     g.mongoCollection.insert(
         { 
             username: username, 
             hashedPassword: passwordTools.saltAndHash(password),
-            favBit: favBit
+            imgURL: imgURL
         }, 
         function(err, result){
             if (err && err.err.indexOf('duplicate key error') !== -1)
