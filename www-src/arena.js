@@ -17,6 +17,7 @@ if(userName===null){
   throw "you didn't pick a username ='(";
 }
 
+var timer = 0;
 
 var arenaInfo={};
 var secretKey="";
@@ -35,20 +36,13 @@ var secretKey="";
     console.log(urlParams);
 })();
 
-// Position the wrapper below the bar at the top
 $(document).ready(function () {
     if (isMobile()) {
-      resizeUnderbar();
+        // So chat is not obscured by the banner
+        var mobileBannerHeight = $('#banner').height();
+        $('#chat').css('padding-top', String(mobileBannerHeight) + 'px');
     }
 });
-
-function resizeUnderbar() {
-  // So chat is not obscured by the banner
-  var underbar = $('#underbar');
-  var barheight = $('#banner').outerHeight();
-  underbar.css('top', barheight);
-  underbar.css('height', String($(window).height() - barheight) + 'px');
-}
 
 ////////////////////////////////////////////////////////////
 //                     Socket stuff                       //
@@ -103,6 +97,7 @@ if(urlParams.id){
     }else{
       $("#notifications").html("A new game has started!");            
     }
+    beginTimer();
   });
 
 
@@ -143,47 +138,50 @@ if(urlParams.id){
   // On mobile, if text input is focused, hide the competitor part since the
   // user will be chatting and will only have space to view chat
   if (isMobile()) {
-    $('#chat-input').focus(verticalCollapse);
-    $('#username-field').focus(verticalCollapse);
+    $('#chat-input').focus(function () {
+      $('#spectators').css('height', '100%');
+      $('#gameBox').css('height', '0');
+      $('#gameBox').css('visibility', 'hidden');
+      $('#gameBox').css('display', 'none');
+    });
 
     // chat not selected, show everything again
-    $('#chat-input').blur(verticalExpand);
-    $('#username-field').blur(verticalExpand);
+    $('#chat-input').blur(function () {
+      $('#spectators').css('height', '50%');
+      $('#gameBox').css('height', '50%');
+      $('#gameBox').css('visibility', 'visible');
+      $('#gameBox').css('display', '');
+    });
   }
 }
 
-function verticalCollapse() {
-  console.log('collapse');
-  resizeUnderbar();
-  $('#gameBox').css('height', '0');
-  $('#spectators').css('height', '100%');
-  $('#gameBox').css('visibility', 'hidden');
-  $('#gameBox').css('display', 'none');
-}
-
-function verticalExpand() {
-  console.log('expand');
-  resizeUnderbar();
-  $('#spectators').css('height', '50%');
-  $('#gameBox').css('height', '50%');
-  $('#gameBox').css('visibility', 'visible');
-  $('#gameBox').css('display', '');
-}
 
 function renderIFrame(arenaInfo){
   var iframe = $("<iframe>");
-
   if(arenaInfo.type === "chat"){
     iframe.attr("src","games/chatGame.html?id="+arenaInfo.id+"&s="+
-                socket.socket.sessionid);
+        socket.socket.sessionid);
   }
   if(arenaInfo.type === "draw"){
     iframe.attr("src","games/drawGame.html?id="+arenaInfo.id+"&s="+
-                socket.socket.sessionid);
+        socket.socket.sessionid);
   }
-
-  iframe.attr("sandbox","allow-same-origin allow-scripts allow-popups allow-forms");
-  iframe.attr("id", "gameIFrame");
-
+  iframe.attr("sandbox","allow-same-origin allow-scripts allow-popups allow-forms")
+  iframe.attr("id","gameIFrame");
   return iframe;
 }
+
+
+
+function beginTimer(){
+  timer = 30;
+}
+
+setInterval(function(){
+  if(timer===0){
+    $("#timer").html("waiting");
+  }else{
+    $("#timer").html(timer);    
+    timer-=1;
+  }
+},1000);

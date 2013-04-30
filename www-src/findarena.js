@@ -90,8 +90,6 @@ function makePlayerMobile(player, playerNum) {
 
 function makeArenaItemDesktop(id, player1, player2, name, numSpectators) {
 
-    console.log("NAME: ", name);
-
     var li = $('<li>');
 
     var link = $("<a>");
