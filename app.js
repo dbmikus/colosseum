@@ -317,8 +317,8 @@ function startGame(roomid){
         }
     }
     arena["votes"]= {};
-    arena["games"][arena.player1].emit("selectedAsPlayer",{});
-    arena["games"][arena.player2].emit("selectedAsPlayer",{});
+    arena["games"][arena.player1].emit("selectedAsPlayer", {player: 1});
+    arena["games"][arena.player2].emit("selectedAsPlayer",{player: 2});
     emitToAll(arena["audience"],"newPlayers",{
         p1: arena["audience"][arena.player1].username,
         p1URL: arena["audience"][arena.player1].imgURL,

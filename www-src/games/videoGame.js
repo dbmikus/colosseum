@@ -1,14 +1,14 @@
 (window.onpopstate = function () {
-    var match,
-        pl     = /\+/g,  // Regex for replacing addition symbol with a space
-        search = /([^&=]+)=?([^&]*)/g,
-        decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
-        query  = window.location.search.substring(1);
+  var match,
+  pl     = /\+/g,  // Regex for replacing addition symbol with a space
+  search = /([^&=]+)=?([^&]*)/g,
+  decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+  query  = window.location.search.substring(1);
 
-    urlParams = {};
-    while (match = search.exec(query)) {
-       urlParams[decode(match[1])] = decode(match[2]);
-    }
+  urlParams = {};
+  while (match = search.exec(query)) {
+    urlParams[decode(match[1])] = decode(match[2]);
+  }
 })();
 
 // This line is modified by Mustache
@@ -17,13 +17,20 @@ var socket = io.connect("{{{host}}}");
 
 // API requirements //
 
+var isStreaming = false;
+
 socket.emit('setUp', {
   roomid: urlParams.id,
   secretKey: urlParams.s
 });
 
 socket.on('selectedAsPlayer', function (data) {
-  startCall(true);
+  console.log('You are selected as a player');
+  console.log(data);
+  if (!isStreaming && data.player === 1) {
+    isStreaming = true;
+    startCall(true);
+  }
 });
 
 socket.on('newGame', function (data) {
@@ -37,13 +44,13 @@ socket.on('movemade', function (data) {
 // TODO change this to actually work
 function sendchat(){
   socket.emit("move",
-  {
-    moveData:{
-      msg: $("#chat-input").val()
-    },
-  roomid: urlParams.id,
-  secretKey: urlParams.s
-  });
+              {
+                moveData:{
+                  msg: $("#chat-input").val()
+                },
+                roomid: urlParams.id,
+                secretKey: urlParams.s
+              });
   $("#chat-input").val("");
 }
 
@@ -56,34 +63,34 @@ function sendchat(){
 
 // Making sure WebRTC stuff is consistent in namespace regardless of browser
 if (navigator.getUserMedia === undefined) {
-    navigator.getUserMedia = (navigator.webkitGetUserMedia ||
-                              navigator.mozGetUserMedia ||
-                              navigator.msGetUserMedia);
+  navigator.getUserMedia = (navigator.webkitGetUserMedia ||
+                            navigator.mozGetUserMedia ||
+                            navigator.msGetUserMedia);
 }
 
 if (window.AudioContext === undefined) {
-    window.AudioContext = (window.webkitAudioContext ||
-                           window.webkitAudioContext);
+  window.AudioContext = (window.webkitAudioContext ||
+                         window.webkitAudioContext);
 }
 
 if (window.requestAnimationFrame === undefined) {
-    window.requestAnimationFrame = (
-            window.webkitRequestAnimationFrame ||
-            window.mozRequestAnimationFrame ||
-            window.oRequestAnimationFrame ||
-            window.msRequestAnimationFrame ||
-            function (callback) {
-                window.setTimeout(callback, 1000 / 60);
-            });
+  window.requestAnimationFrame = (
+    window.webkitRequestAnimationFrame ||
+      window.mozRequestAnimationFrame ||
+      window.oRequestAnimationFrame ||
+      window.msRequestAnimationFrame ||
+      function (callback) {
+        window.setTimeout(callback, 1000 / 60);
+      });
 }
 
 if (window.RTCPeerConnection === undefined) {
-    window.RTCPeerConnection = (
-            window.webkitRTCPeerConnection ||
-            window.mozRTCPeerConnection ||
-            window.oRTCPeerConnection ||
-            window.msRTCPeerConnection
-    );
+  window.RTCPeerConnection = (
+    window.webkitRTCPeerConnection ||
+      window.mozRTCPeerConnection ||
+      window.oRTCPeerConnection ||
+      window.msRTCPeerConnection
+  );
 }
 
 
@@ -121,8 +128,8 @@ if (window.RTCPeerConnection === undefined) {
 //    description with `setRemoteDescription`
 
 var pc;
-var selfView = document.getElementById('selfView');
-var remoteView = document.getElementById('remoteView');
+var video1 = document.getElementById('video1');
+var video2 = document.getElementById('video2');
 var callButton = document.getElementById('callButton');
 
 
@@ -133,55 +140,55 @@ var configuration = { 'iceServers': [{'url': 'stun:stun.l.google.com:19302'}] };
 
 // run startCall(true) to initiate a call
 function startCall(isCaller) {
-    pc = new RTCPeerConnection(configuration);
+  pc = new RTCPeerConnection(configuration);
 
-    // send any ice candidates to the other peer
-    // run when network candidates become available
-    pc.onicecandidate = function (evt) {
-        // send candidate data to peer via communication method
-        // (WebSocket, Socket.io, etc.)
-        // When peer receives this message, he calls addIceCandidate
+  // send any ice candidates to the other peer
+  // run when network candidates become available
+  pc.onicecandidate = function (evt) {
+    // send candidate data to peer via communication method
+    // (WebSocket, Socket.io, etc.)
+    // When peer receives this message, he calls addIceCandidate
+    // The line below uses generic signaling channel
+    //   signalingChannel.send(JSON.stringify({ "candidate": evt.candidate }));
+    socket.emit('webrtcMessage', { "candidate": evt.candidate });
+  };
+
+  // once remote stream arrives, show it in the remote video element
+  pc.onaddstream = function (evt) {
+    video2.src = URL.createObjectURL(evt.stream);
+  };
+
+  // get the local stream, show it in the local video element, and send it
+  navigator.getUserMedia(
+    { "audio": true, "video": true },
+    // success on getting user media stream
+    function (stream) {
+      video1.src = URL.createObjectURL(stream);
+      pc.addStream(stream);
+
+      if (isCaller) {
+        // create SDP offer and send it over signaling channel
+        pc.createOffer(gotDescription);
+      } else {
+        // create an answer and send it over the signaling channel
+        pc.createAnswer(gotDescription);
+      }
+
+      // Peers need to ascertain and exchange local and remote audio and
+      // video media information. This is done by exchanging an "offer"
+      // and an "answer" using Session Description Protocol (SDP)
+      function gotDescription (desc) {
+        pc.setLocalDescription(desc);
         // The line below uses generic signaling channel
-        //   signalingChannel.send(JSON.stringify({ "candidate": evt.candidate }));
-        socket.emit('webrtcMessage', { "candidate": evt.candidate });
-    };
-
-    // once remote stream arrives, show it in the remote video element
-    pc.onaddstream = function (evt) {
-        remoteView.src = URL.createObjectURL(evt.stream);
-    };
-
-    // get the local stream, show it in the local video element, and send it
-    navigator.getUserMedia(
-        { "audio": true, "video": true },
-        // success on getting user media stream
-        function (stream) {
-            selfView.src = URL.createObjectURL(stream);
-            pc.addStream(stream);
-
-            if (isCaller) {
-                // create SDP offer and send it over signaling channel
-                pc.createOffer(gotDescription);
-            } else {
-                // create an answer and send it over the signaling channel
-                pc.createAnswer(gotDescription);
-            }
-
-            // Peers need to ascertain and exchange local and remote audio and
-            // video media information. This is done by exchanging an "offer"
-            // and an "answer" using Session Description Protocol (SDP)
-            function gotDescription (desc) {
-                pc.setLocalDescription(desc);
-                // The line below uses generic signaling channel
-                //   signalingChannel.send(JSON.stringify({ "sdp": desc }));
-                socket.emit('webrtcMessage', { "sdp": desc });
-            }
-        },
-        // error on getting user media stream
-        function (error) {
-            console.log("Error getting user media: ", error);
-        }
-    );
+        //   signalingChannel.send(JSON.stringify({ "sdp": desc }));
+        socket.emit('webrtcMessage', { "sdp": desc });
+      }
+    },
+    // error on getting user media stream
+    function (error) {
+      console.log("Error getting user media: ", error);
+    }
+  );
 }
 
 // When peer receives ICE candidate message sent from onicecandidate handler,
@@ -189,24 +196,26 @@ function startCall(isCaller) {
 // The line below uses generic signaling channel
 //   signalingChannel.onmessage = function (evt) {
 socket.on('webrtcMessage', function (evt) {
-    // If we recieve the message and have not yet initialized pc, then we are
-    // the receiver of a call
-    if (!pc) {
-        startCall(false);
-    }
+  console.log('Received a webrtc message');
 
-    // Socket.io automatically stringifies and parses JSON for us
-    // var signal = JSON.parse(evt.data);
-    var signal = evt;
-    console.log('signal: ', signal);
-    // If we received an "sdp" message
-    if (signal.sdp !== undefined && signal.sdp !== null) {
-        pc.setRemoteDescription(new RTCSessionDescription(signal.sdp));
-    }
-    // Otherwise, we received a "candidate" message for ICE
-    else if (signal.candidate !== undefined && signal.candidate !== null) {
-        pc.addIceCandidate(new RTCIceCandidate(signal.candidate));
-    } else {
-        console.log('Neither sdp or candidate object defined in channel message.');
-    }
+  // If we recieve the message and have not yet initialized pc, then we are
+  // the receiver of a call
+  if (!pc) {
+    startCall(false);
+  }
+
+  // Socket.io automatically stringifies and parses JSON for us
+  // var signal = JSON.parse(evt.data);
+  var signal = evt;
+  console.log('signal: ', signal);
+  // If we received an "sdp" message
+  if (signal.sdp !== undefined && signal.sdp !== null) {
+    pc.setRemoteDescription(new RTCSessionDescription(signal.sdp));
+  }
+  // Otherwise, we received a "candidate" message for ICE
+  else if (signal.candidate !== undefined && signal.candidate !== null) {
+    pc.addIceCandidate(new RTCIceCandidate(signal.candidate));
+  } else {
+    console.log('Neither sdp or candidate object defined in channel message.');
+  }
 });
