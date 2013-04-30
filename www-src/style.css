@@ -1,15 +1,10 @@
 /* Platform agnostic styling */
 
 body {
-<<<<<<< HEAD
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	background: #F2E9E9 url('white_brick_wall.png') right top;
-=======
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
                  "Helvetica Neue", Helvetica, Arial, "Lucida Grande",
                  sans-serif;
-	background: #F2E9E9;
->>>>>>> 1d08ae077c0706cb3b3cd12bd6e537e57307fbb9
+	background: #F2E9E9 url('white_brick_wall.png') right top;
 }
 
 ol {
@@ -39,7 +34,7 @@ li{
 	display: inline-block;
 	border: 1px dashed #000000;
 	color: #aaaaaa;
-	font: 18px Arial; 
+	font: 18px Arial;
 	font-weight: bold;
 
 	margin-left:auto;
@@ -81,7 +76,7 @@ li{
 	height:94px;
 	width: 94px;
 	border: 1px solid #00FF00;
-	box-shadow:1px 0px 8px 1px #2b2b2b inset; 
+	box-shadow:1px 0px 8px 1px #2b2b2b inset;
 }
 
 .unselectable{
