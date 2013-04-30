@@ -46,10 +46,13 @@
 
 #player1Avatar{
 	float:left;
+	background: #880000;
 }
 
 #player2Avatar{
 	float:right;
+	background: #000088;
+	color: #555555;
 }
 
 #player2{
