@@ -50,7 +50,9 @@ $(document).ready(function () {
 
 if(urlParams.id){
   // This line is modified by Mustache
-  var socket = io.connect("{{{host}}}");
+  var socket = io.connect("http://198.199.82.58:3000");
+
+  console.log("JIEJFOIJWOFJEIO");
 
   // When asked what arena the client is a part of, the client responds with the
   // room id and with username
@@ -77,8 +79,8 @@ if(urlParams.id){
   socket.on("newGame",function(data){
     $("#player2Vote").css("background-color","#666666");
     $("#player1Vote").css("background-color","#666666");
-	$("#player2Vote").css("box-shadow", "none");
-	$("#player1Vote").css("box-shadow", "none");
+  $("#player2Vote").css("box-shadow", "none");
+  $("#player1Vote").css("box-shadow", "none");
     if(data.winner === null){
       $("#notifications").html("Game Over, and we have a tie. Time for round 2!");
     }else{
@@ -131,8 +133,8 @@ if(urlParams.id){
 
   $("#player1Vote").click(function(){
     sendvote(1);
-  	$("#player1Vote").css("box-shadow", "0 0px 5px 5px #660000");
-  	$("#player2Vote").css("box-shadow", "none");
+    $("#player1Vote").css("box-shadow", "0 0px 5px 5px #660000");
+    $("#player2Vote").css("box-shadow", "none");
   });
   $("#player2Vote").click(function(){
     sendvote(2);
@@ -160,7 +162,7 @@ if(urlParams.id){
   }
 }
 
-
+//creates an iframe from the given arena info
 function renderIFrame(arenaInfo){
   var iframe = $("<iframe>");
   if(arenaInfo.type === "chat"){
@@ -169,6 +171,11 @@ function renderIFrame(arenaInfo){
   }
   if(arenaInfo.type === "draw"){
     iframe.attr("src","games/drawGame.html?id="+arenaInfo.id+"&s="+
+        socket.socket.sessionid);
+  }
+  if(arenaInfo.type!=="draw" && arenaInfo.type !=="chat"){
+
+    iframe.attr("src",""+arenaInfo.type+"?id="+arenaInfo.id+"&s="+
         socket.socket.sessionid);
   }
   iframe.attr("sandbox","allow-same-origin allow-scripts allow-popups allow-forms")

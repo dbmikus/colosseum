@@ -32,10 +32,15 @@
         <label class="radio" for ="game-type-draw">
           <input id="game-type-draw"  name="Type" type="radio" value="draw">Draw Battle
         </label>
-		<input id="submitButton" name="Submit"  type="submit" value="Submit"/>
+        <label class="radio" for ="game-type-custom">
+          <input id="game-type-custom"  name="Type" type="radio" value="custom">Custom
+          <input id="custom-game-input" name="Name" type="text" placeholder="url of your game!"/>
+        </label>
 		</div>
 		</div>
-      </div>
+    </div>
+    <div css="width:100%;"></div>
+    <input id="createButton" name="Submit"  type="submit" value="Submit"/>
     </div>
 
     <script src="jquery-1.9.0.js"></script>

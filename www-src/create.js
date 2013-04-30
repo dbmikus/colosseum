@@ -1,10 +1,14 @@
 function createRoom(){
+    var type = $('input:radio[name=Type]:checked').val();
+    if (type ==="custom"){
+        type = $("#custom-game-input").val();
+    } 
     $.ajax({
         type: "post",
         data: {
             name: $("#name-input").val(),
             desc: $("#desc-input").val(),
-            type: $('input:radio[name=Type]:checked').val()
+            type: type
         },
         url: "/arena",
         success: function(data) {
@@ -21,4 +25,4 @@ function createRoom(){
 }
 
 
-$("#submitButton").click(createRoom);
+$("#createButton").click(createRoom);
