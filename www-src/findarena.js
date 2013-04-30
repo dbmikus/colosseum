@@ -100,10 +100,23 @@ function makeArenaItemDesktop(id, player1, player2, name, numSpectators) {
     var link = $("<a>");
     link.addClass("room-link");
     link.attr("href", "/arena?id=" + id);
-    link.append(name);
-    li.append(link);
+    link.append(li);
+	li.html(name);
+    var player1 = $('<div>').addClass('listPlayer1');
+	var player2 = $('<div>').addClass('listPlayer2');
+	var player1Name = $('<p>').html(p1);
+	player1Name.addClass('listName1')
+	var player2Name	= $('<p>').html(p2);
+	player2Name.addClass('listName2')
+	player1.append(player1Name);
+	player2.append (player2Name);
+	var viewers = li.append($('<div>').html(num_viewers));
+	viewers.addClass('listViewers');
+	var versus = li.append($('<div>').html('vs'));
+	versus.addClass('listVersus');
 
-    return li;
+
+    return link;
 }
 
 

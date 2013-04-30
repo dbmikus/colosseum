@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" type="text/css" media="all" href="reset.css" />
     <link rel="stylesheet" type="text/css" media="all" href="style.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="desktop-style.css" />
     <link rel="stylesheet" type="text/css" media="all" href="arena-style.css" />
   </head>
 
@@ -42,12 +43,13 @@
 
 
       <div id="spectators">
-        <h2>Audience Chat</h2>
+        <h2>Room Name</h2>
 
         <div id="chat">
         </div>
         <div id="specControls">
           <form id="chat-form" name="createForm" action="javascript:sendchat()">
+			<input id="submitButton" name="Submit" type="submit" value="Send"/>
             <input id="chat-input" name="chat" type="text" placeholder="send chat"/>
           </form>
         </div>

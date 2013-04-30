@@ -97,6 +97,9 @@ if(urlParams.id){
                   chat: msg
                 });
     $("#chat-input").val("");
+
+    // re-select the text field
+    $('#chat-input').focus();
   }
 
 
@@ -117,9 +120,26 @@ if(urlParams.id){
 
   });
 
+  // On mobile, if text input is focused, hide the competitor part since the
+  // user will be chatting and will only have space to view chat
+  if (isMobile()) {
+    $('#chat-input').focus(function () {
+      $('#spectators').css('height', '100%');
+      $('#gameBox').css('height', '0');
+      $('#gameBox').css('visibility', 'hidden');
+      $('#gameBox').css('display', 'none');
+    });
 
-
+    // chat not selected, show everything again
+    $('#chat-input').blur(function () {
+      $('#spectators').css('height', '50%');
+      $('#gameBox').css('height', '50%');
+      $('#gameBox').css('visibility', 'visible');
+      $('#gameBox').css('display', '');
+    });
+  }
 }
+
 
 function renderIFrame(arenaInfo){
   var iframe = $("<iframe>");
