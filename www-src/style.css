@@ -1,15 +1,8 @@
 /* Platform agnostic styling */
 
 body {
-<<<<<<< HEAD
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	background: #F2E9E9 url('white_brick_wall.png') right top;
-=======
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
-                 "Helvetica Neue", Helvetica, Arial, "Lucida Grande",
-                 sans-serif;
-	background: #F2E9E9;
->>>>>>> 1d08ae077c0706cb3b3cd12bd6e537e57307fbb9
 }
 
 ol {
@@ -235,21 +228,6 @@ h2 {
     bottom:5px;
     left: 5px;
     right:8px;
-}
-
-#chat{
-    background-color: white;
-    height: 510px;
-    overflow: auto;
-    margin:5px 0px 5px 0px;
-}
-
-#chat-form{
-    width:100%;
-}
-
-#chat-input{
-    width: 100%;
 }
 
 #loginPane {

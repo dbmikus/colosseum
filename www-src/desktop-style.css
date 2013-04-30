@@ -19,18 +19,9 @@
 	text-align:center;
 }
 
-#trapezoid{
-	height:0;
-	border-top: 50px solid white;
-	border-left: 25px solid transparent;
-	border-right: 25x solid transparent;
-	width: 100px;
-}
 
 #versus{
-	display: inline-block;
-	position:absolute;
-	bottom:0;
+	display: inline;
 	border: 1px dashed #000000;
 	margin-left:auto;
 	margin-right:auto;
@@ -77,6 +68,7 @@
 }
 
 #timer{
+	background: #444444;
 	height:20px;
 	width:60px;
 	margin-left:auto;
@@ -89,7 +81,7 @@
 .userName{
 	display:inline-block;
 	margin-top: 1px;
-	height: 15px;
+	height: 20px;
 	text-shadow: 0px 2px 3px #666;
 	box-shadow:0px 0px 8px 1px #2b2b2b inset;
 	font: 15px/1.5  Arial, sans-serif;
@@ -319,8 +311,8 @@
 
 #game{
     position: absolute;
-    bottom: 10px;
-    left: 0px;
+    bottom: 25px;
+    left: 5px;
 }
 
 h2 {
@@ -347,7 +339,7 @@ h2 {
 
 #chat {
     background-color: white;
-    height: 520px;
+    height: 500px;
     overflow: auto;
     margin:5px 0px 5px 0px;
 }
@@ -357,7 +349,23 @@ h2 {
 }
 
 #chat-input {
-    width: 100%;
+	position: absolute;
+	bottom: 0;
+	left:0;
+	width:100%;
+	margin: 5px;
+	
+}
+
+#username-field{
+	display:block;
+	position:absolute;
+	left:0;
+}
+	
+#submitButton{
+	position:absolute;
+	right: 0;
 }
 
 #loginPane {
