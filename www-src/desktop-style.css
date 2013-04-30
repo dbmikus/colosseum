@@ -323,6 +323,7 @@ h2 {
 #logo{
 	text-align:center;
 	float:left;
+	width: 75px;
 }
 
 #tagLine{
@@ -331,8 +332,11 @@ h2 {
 }
 
 #splashPicture{
+	width:980px;
+	height:400px;
 	margin-top: 10px;
 	display: inline-block;
+    background:#ffffff url('BWSplash.jpg') no-repeat right top;
 }
 
 .room-link {
@@ -349,6 +353,22 @@ h2 {
 #notifications{
   width:100%;
   text-align: center;
-  font-size: 24px;
+  font-size: 16px;
   color: #aaaaaa;
+  margin-top: 40px;
+  margin-left: 110px;
+  width: 370px;
+}
+
+#stats{
+  font-size: 16px;
+  color: #aaaaaa;
+  position: absolute;
+  left:160px;
+  top: 230px;
+}
+
+.slice{
+  margin-left: auto;
+  margin-right: auto;
 }
