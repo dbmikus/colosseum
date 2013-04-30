@@ -50,9 +50,17 @@ socket.on("movemade",function(data){
   ctx.stroke();
 });
 
-canvas.addEventListener("mousedown", canvasMouseDown, false);
-canvas.addEventListener("mousemove", canvasMouseMove, false);
-canvas.addEventListener("mouseup", canvasMouseUp, false);
+
+if (getPlatform==="Android" ||
+    getPlatform==="iOS"){
+  canvas.addEventListener("touchstart", canvasTouchDown, false);
+  canvas.addEventListener("touchmove", canvasTouchMove, false);
+  canvas.addEventListener("touchend", canvasTouchUp, false);
+}else{
+  canvas.addEventListener("mousedown", canvasMouseDown, false);
+  canvas.addEventListener("mousemove", canvasMouseMove, false);
+  canvas.addEventListener("mouseup", canvasMouseUp, false);
+}
 
 var currentDrawing = [];
 var isDrawing= false;
@@ -82,6 +90,38 @@ function canvasMouseUp(event){
   }
 }
 
+function canvasTouchDown(event){
+  isDrawing = true;
+  currentDrawing = [];
+  currentDrawing.push([event.changedTouches[0].pageX,
+    event.changedTouches[0].pageY]);
+}
+
+function canvasTouchMove(event){
+  if(isDrawing){
+    currentDrawing.push([event.targetTouches[0].pageX,
+      event.targetTouches[0].pageY]);
+  }
+}
+
+function canvasTouchUp(event){
+  if(isDrawing){
+    socket.emit("move",{
+      moveData:{
+        drawing: currentDrawing
+      },
+      roomid: urlParams.id,
+      secretKey: urlParams.s
+    });
+    isDrawing = false;
+  }
+}
+
+
+
+
+
+
 function drawCircle(ctx, location, color, dimensions) {
   ctx.fillStyle = color;
   ctx.beginPath();
@@ -94,4 +134,24 @@ function reset(){
     ctx.fillRect(0,0, canvas.width, canvas.height);
     ctx.fillStyle="black";
     ctx.fillText("draw on me!",0,0);
+}
+
+
+
+function getPlatform(){
+  if (navigator.userAgent.indexOf("Android") !== -1){
+    return "Android";
+  }
+  else if (!!(navigator.userAgent.match(/iPhone/i) ||
+           navigator.userAgent.match(/iPod/i) ||
+           navigator.userAgent.match(/iPad/i))){
+    return "iOS";
+  }
+  else if(navigator.platform.indexOf("Linux") !== -1 ){
+    return "Linux";
+  }
+  else if(navigator.platform.indexOf("Win") !== -1){
+    return "Windows";
+  }
+  return "Other";
 }
