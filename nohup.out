@@ -1,0 +1,4313 @@
+path.existsSync is now called `fs.existsSync`.
+Done rendering templates from ./www-src to ./www
+info: socket.io started
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: client authorized
+info: handshake authorized tLBoxmzI0To4DdeG9s9-
+debug: setting request GET /socket.io/1/websocket/tLBoxmzI0To4DdeG9s9-
+debug: set heartbeat interval for client tLBoxmzI0To4DdeG9s9-
+debug: client authorized for 
+debug: websocket writing 1::
+debug: websocket writing 5:::{"name":"whatArena","args":[{}]}
+arenalist 
+{}
+debug: client authorized
+info: handshake authorized 6yryZR1wdG8qMzUw9s9_
+debug: client authorized
+info: handshake authorized otNSS4Rp3zGuzS-z9s-A
+debug: setting request GET /socket.io/1/websocket/6yryZR1wdG8qMzUw9s9_
+debug: set heartbeat interval for client 6yryZR1wdG8qMzUw9s9_
+debug: client authorized for 
+debug: websocket writing 1::
+debug: websocket writing 5:::{"name":"whatArena","args":[{}]}
+debug: setting request GET /socket.io/1/websocket/otNSS4Rp3zGuzS-z9s-A
+debug: set heartbeat interval for client otNSS4Rp3zGuzS-z9s-A
+debug: client authorized for 
+debug: websocket writing 1::
+debug: websocket writing 5:::{"name":"whatArena","args":[{}]}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client tLBoxmzI0To4DdeG9s9-
+debug: websocket writing 2::
+debug: set heartbeat timeout for client tLBoxmzI0To4DdeG9s9-
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client tLBoxmzI0To4DdeG9s9-
+debug: set heartbeat interval for client tLBoxmzI0To4DdeG9s9-
+arenalist 
+{}
+debug: emitting heartbeat for client 6yryZR1wdG8qMzUw9s9_
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 6yryZR1wdG8qMzUw9s9_
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 6yryZR1wdG8qMzUw9s9_
+debug: set heartbeat interval for client 6yryZR1wdG8qMzUw9s9_
+debug: emitting heartbeat for client otNSS4Rp3zGuzS-z9s-A
+debug: websocket writing 2::
+debug: set heartbeat timeout for client otNSS4Rp3zGuzS-z9s-A
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client otNSS4Rp3zGuzS-z9s-A
+debug: set heartbeat interval for client otNSS4Rp3zGuzS-z9s-A
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client tLBoxmzI0To4DdeG9s9-
+debug: websocket writing 2::
+debug: set heartbeat timeout for client tLBoxmzI0To4DdeG9s9-
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client tLBoxmzI0To4DdeG9s9-
+debug: set heartbeat interval for client tLBoxmzI0To4DdeG9s9-
+arenalist 
+{}
+debug: emitting heartbeat for client 6yryZR1wdG8qMzUw9s9_
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 6yryZR1wdG8qMzUw9s9_
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 6yryZR1wdG8qMzUw9s9_
+debug: set heartbeat interval for client 6yryZR1wdG8qMzUw9s9_
+debug: emitting heartbeat for client otNSS4Rp3zGuzS-z9s-A
+debug: websocket writing 2::
+debug: set heartbeat timeout for client otNSS4Rp3zGuzS-z9s-A
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client otNSS4Rp3zGuzS-z9s-A
+debug: set heartbeat interval for client otNSS4Rp3zGuzS-z9s-A
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client tLBoxmzI0To4DdeG9s9-
+debug: websocket writing 2::
+debug: set heartbeat timeout for client tLBoxmzI0To4DdeG9s9-
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client tLBoxmzI0To4DdeG9s9-
+debug: set heartbeat interval for client tLBoxmzI0To4DdeG9s9-
+arenalist 
+{}
+debug: emitting heartbeat for client 6yryZR1wdG8qMzUw9s9_
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 6yryZR1wdG8qMzUw9s9_
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 6yryZR1wdG8qMzUw9s9_
+debug: set heartbeat interval for client 6yryZR1wdG8qMzUw9s9_
+debug: emitting heartbeat for client otNSS4Rp3zGuzS-z9s-A
+debug: websocket writing 2::
+debug: set heartbeat timeout for client otNSS4Rp3zGuzS-z9s-A
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client otNSS4Rp3zGuzS-z9s-A
+debug: set heartbeat interval for client otNSS4Rp3zGuzS-z9s-A
+path.existsSync is now called `fs.existsSync`.
+Done rendering templates from ./www-src to ./www
+info: socket.io started
+arenalist 
+{}
+debug: client authorized
+info: handshake authorized FdRdeQ406Za4Yky--bkq
+debug: client authorized
+info: handshake authorized k8W0WuTtTPHHfKk6-bkr
+debug: client authorized
+info: handshake authorized MCTfxAS35tk5A-pS-bks
+debug: setting request GET /socket.io/1/websocket/FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: client authorized for 
+debug: websocket writing 1::
+debug: websocket writing 5:::{"name":"whatArena","args":[{}]}
+debug: setting request GET /socket.io/1/websocket/MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+debug: client authorized for 
+debug: websocket writing 1::
+debug: websocket writing 5:::{"name":"whatArena","args":[{}]}
+debug: setting request GET /socket.io/1/websocket/k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: client authorized for 
+debug: websocket writing 1::
+debug: websocket writing 5:::{"name":"whatArena","args":[{}]}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+arenalist 
+{}
+debug: client authorized
+info: handshake authorized N7LKvAjIukwl7jrs-bkt
+debug: setting request GET /socket.io/1/websocket/N7LKvAjIukwl7jrs-bkt
+debug: set heartbeat interval for client N7LKvAjIukwl7jrs-bkt
+debug: client authorized for 
+debug: websocket writing 1::
+debug: websocket writing 5:::{"name":"whatArena","args":[{}]}
+debug: client authorized
+info: handshake authorized RkPszdo1Ezx8-c3d-bku
+debug: setting request GET /socket.io/1/websocket/RkPszdo1Ezx8-c3d-bku
+debug: set heartbeat interval for client RkPszdo1Ezx8-c3d-bku
+debug: client authorized for 
+debug: websocket writing 1::
+debug: websocket writing 5:::{"name":"whatArena","args":[{}]}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+arenalist 
+{}
+debug: emitting heartbeat for client N7LKvAjIukwl7jrs-bkt
+debug: websocket writing 2::
+debug: set heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: set heartbeat interval for client N7LKvAjIukwl7jrs-bkt
+debug: emitting heartbeat for client RkPszdo1Ezx8-c3d-bku
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+debug: set heartbeat interval for client RkPszdo1Ezx8-c3d-bku
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+debug: emitting heartbeat for client N7LKvAjIukwl7jrs-bkt
+debug: websocket writing 2::
+debug: set heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: set heartbeat interval for client N7LKvAjIukwl7jrs-bkt
+debug: emitting heartbeat for client RkPszdo1Ezx8-c3d-bku
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+debug: set heartbeat interval for client RkPszdo1Ezx8-c3d-bku
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+debug: emitting heartbeat for client N7LKvAjIukwl7jrs-bkt
+debug: websocket writing 2::
+debug: set heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: set heartbeat interval for client N7LKvAjIukwl7jrs-bkt
+debug: emitting heartbeat for client RkPszdo1Ezx8-c3d-bku
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+debug: set heartbeat interval for client RkPszdo1Ezx8-c3d-bku
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+debug: emitting heartbeat for client N7LKvAjIukwl7jrs-bkt
+debug: websocket writing 2::
+debug: set heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: set heartbeat interval for client N7LKvAjIukwl7jrs-bkt
+debug: emitting heartbeat for client RkPszdo1Ezx8-c3d-bku
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+debug: set heartbeat interval for client RkPszdo1Ezx8-c3d-bku
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+debug: emitting heartbeat for client N7LKvAjIukwl7jrs-bkt
+debug: websocket writing 2::
+debug: set heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: set heartbeat interval for client N7LKvAjIukwl7jrs-bkt
+debug: emitting heartbeat for client RkPszdo1Ezx8-c3d-bku
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+debug: set heartbeat interval for client RkPszdo1Ezx8-c3d-bku
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+debug: emitting heartbeat for client N7LKvAjIukwl7jrs-bkt
+debug: websocket writing 2::
+debug: set heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: set heartbeat interval for client N7LKvAjIukwl7jrs-bkt
+debug: emitting heartbeat for client RkPszdo1Ezx8-c3d-bku
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+debug: set heartbeat interval for client RkPszdo1Ezx8-c3d-bku
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+debug: emitting heartbeat for client N7LKvAjIukwl7jrs-bkt
+debug: websocket writing 2::
+debug: set heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: set heartbeat interval for client N7LKvAjIukwl7jrs-bkt
+debug: emitting heartbeat for client RkPszdo1Ezx8-c3d-bku
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+debug: set heartbeat interval for client RkPszdo1Ezx8-c3d-bku
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+debug: emitting heartbeat for client N7LKvAjIukwl7jrs-bkt
+debug: websocket writing 2::
+debug: set heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: set heartbeat interval for client N7LKvAjIukwl7jrs-bkt
+debug: emitting heartbeat for client RkPszdo1Ezx8-c3d-bku
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+debug: set heartbeat interval for client RkPszdo1Ezx8-c3d-bku
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+debug: emitting heartbeat for client N7LKvAjIukwl7jrs-bkt
+debug: websocket writing 2::
+debug: set heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: set heartbeat interval for client N7LKvAjIukwl7jrs-bkt
+debug: emitting heartbeat for client RkPszdo1Ezx8-c3d-bku
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+debug: set heartbeat interval for client RkPszdo1Ezx8-c3d-bku
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+debug: emitting heartbeat for client N7LKvAjIukwl7jrs-bkt
+debug: websocket writing 2::
+debug: set heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: set heartbeat interval for client N7LKvAjIukwl7jrs-bkt
+debug: emitting heartbeat for client RkPszdo1Ezx8-c3d-bku
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+debug: set heartbeat interval for client RkPszdo1Ezx8-c3d-bku
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+debug: emitting heartbeat for client N7LKvAjIukwl7jrs-bkt
+debug: websocket writing 2::
+debug: set heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: set heartbeat interval for client N7LKvAjIukwl7jrs-bkt
+debug: emitting heartbeat for client RkPszdo1Ezx8-c3d-bku
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+debug: set heartbeat interval for client RkPszdo1Ezx8-c3d-bku
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+debug: emitting heartbeat for client N7LKvAjIukwl7jrs-bkt
+debug: websocket writing 2::
+debug: set heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: set heartbeat interval for client N7LKvAjIukwl7jrs-bkt
+debug: emitting heartbeat for client RkPszdo1Ezx8-c3d-bku
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+debug: set heartbeat interval for client RkPszdo1Ezx8-c3d-bku
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+debug: emitting heartbeat for client N7LKvAjIukwl7jrs-bkt
+debug: websocket writing 2::
+debug: set heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: set heartbeat interval for client N7LKvAjIukwl7jrs-bkt
+debug: emitting heartbeat for client RkPszdo1Ezx8-c3d-bku
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+debug: set heartbeat interval for client RkPszdo1Ezx8-c3d-bku
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+debug: emitting heartbeat for client N7LKvAjIukwl7jrs-bkt
+debug: websocket writing 2::
+debug: set heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: set heartbeat interval for client N7LKvAjIukwl7jrs-bkt
+debug: emitting heartbeat for client RkPszdo1Ezx8-c3d-bku
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+debug: set heartbeat interval for client RkPszdo1Ezx8-c3d-bku
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+debug: emitting heartbeat for client N7LKvAjIukwl7jrs-bkt
+debug: websocket writing 2::
+debug: set heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: set heartbeat interval for client N7LKvAjIukwl7jrs-bkt
+debug: emitting heartbeat for client RkPszdo1Ezx8-c3d-bku
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+debug: set heartbeat interval for client RkPszdo1Ezx8-c3d-bku
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+debug: emitting heartbeat for client N7LKvAjIukwl7jrs-bkt
+debug: websocket writing 2::
+debug: set heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: emitting heartbeat for client RkPszdo1Ezx8-c3d-bku
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+info: transport end (undefined)
+debug: set close timeout for client RkPszdo1Ezx8-c3d-bku
+debug: cleared close timeout for client RkPszdo1Ezx8-c3d-bku
+debug: cleared heartbeat timeout for client RkPszdo1Ezx8-c3d-bku
+debug: discarding transport
+debug: client authorized
+info: handshake authorized zA5eXeLlcETlC3pd-bkv
+debug: setting request GET /socket.io/1/websocket/zA5eXeLlcETlC3pd-bkv
+debug: set heartbeat interval for client zA5eXeLlcETlC3pd-bkv
+debug: client authorized for 
+debug: websocket writing 1::
+debug: websocket writing 5:::{"name":"whatArena","args":[{}]}
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client N7LKvAjIukwl7jrs-bkt
+debug: set heartbeat interval for client N7LKvAjIukwl7jrs-bkt
+arenalist 
+{}
+info: transport end (undefined)
+debug: set close timeout for client zA5eXeLlcETlC3pd-bkv
+debug: cleared close timeout for client zA5eXeLlcETlC3pd-bkv
+debug: cleared heartbeat interval for client zA5eXeLlcETlC3pd-bkv
+debug: discarding transport
+debug: client authorized
+info: handshake authorized RCxrUCjs9OZqXKPJ-bkw
+debug: setting request GET /socket.io/1/websocket/RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: client authorized for 
+debug: websocket writing 1::
+debug: websocket writing 5:::{"name":"whatArena","args":[{}]}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+info: transport end (undefined)
+debug: set close timeout for client N7LKvAjIukwl7jrs-bkt
+debug: cleared close timeout for client N7LKvAjIukwl7jrs-bkt
+debug: cleared heartbeat interval for client N7LKvAjIukwl7jrs-bkt
+debug: discarding transport
+debug: client authorized
+info: handshake authorized y-k2Yv1TLWfysk6C-bkx
+debug: setting request GET /socket.io/1/websocket/y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+debug: client authorized for 
+debug: websocket writing 1::
+debug: websocket writing 5:::{"name":"whatArena","args":[{}]}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+arenalist 
+{}
+debug: emitting heartbeat for client RCxrUCjs9OZqXKPJ-bkw
+debug: websocket writing 2::
+debug: set heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: set heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client y-k2Yv1TLWfysk6C-bkx
+debug: websocket writing 2::
+debug: set heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: set heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+info: transport end (socket end)
+debug: set close timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: cleared close timeout for client RCxrUCjs9OZqXKPJ-bkw
+debug: cleared heartbeat interval for client RCxrUCjs9OZqXKPJ-bkw
+debug: discarding transport
+arenalist 
+{}
+info: transport end (socket end)
+debug: set close timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: cleared close timeout for client y-k2Yv1TLWfysk6C-bkx
+debug: cleared heartbeat interval for client y-k2Yv1TLWfysk6C-bkx
+debug: discarding transport
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: served static content /socket.io.js
+arenalist 
+{}
+debug: client authorized
+info: handshake authorized V3d9yHlQ2bLD2Hnq-bky
+debug: setting request GET /socket.io/1/websocket/V3d9yHlQ2bLD2Hnq-bky
+debug: set heartbeat interval for client V3d9yHlQ2bLD2Hnq-bky
+debug: client authorized for 
+debug: websocket writing 1::
+debug: websocket writing 5:::{"name":"whatArena","args":[{}]}
+debug: served static content /socket.io.js
+arenalist 
+{}
+debug: client authorized
+info: handshake authorized bxwFaru__u3IGaYg-bkz
+debug: setting request GET /socket.io/1/websocket/bxwFaru__u3IGaYg-bkz
+debug: set heartbeat interval for client bxwFaru__u3IGaYg-bkz
+debug: client authorized for 
+debug: websocket writing 1::
+debug: websocket writing 5:::{"name":"whatArena","args":[{}]}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client V3d9yHlQ2bLD2Hnq-bky
+debug: websocket writing 2::
+debug: set heartbeat timeout for client V3d9yHlQ2bLD2Hnq-bky
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client V3d9yHlQ2bLD2Hnq-bky
+debug: set heartbeat interval for client V3d9yHlQ2bLD2Hnq-bky
+arenalist 
+{}
+debug: emitting heartbeat for client bxwFaru__u3IGaYg-bkz
+debug: websocket writing 2::
+debug: set heartbeat timeout for client bxwFaru__u3IGaYg-bkz
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client bxwFaru__u3IGaYg-bkz
+debug: set heartbeat interval for client bxwFaru__u3IGaYg-bkz
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client V3d9yHlQ2bLD2Hnq-bky
+debug: websocket writing 2::
+debug: set heartbeat timeout for client V3d9yHlQ2bLD2Hnq-bky
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client V3d9yHlQ2bLD2Hnq-bky
+debug: set heartbeat interval for client V3d9yHlQ2bLD2Hnq-bky
+info: transport end (socket end)
+debug: set close timeout for client V3d9yHlQ2bLD2Hnq-bky
+debug: cleared close timeout for client V3d9yHlQ2bLD2Hnq-bky
+debug: cleared heartbeat interval for client V3d9yHlQ2bLD2Hnq-bky
+debug: discarding transport
+arenalist 
+{}
+debug: emitting heartbeat for client bxwFaru__u3IGaYg-bkz
+debug: websocket writing 2::
+debug: set heartbeat timeout for client bxwFaru__u3IGaYg-bkz
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client bxwFaru__u3IGaYg-bkz
+debug: set heartbeat interval for client bxwFaru__u3IGaYg-bkz
+info: transport end (socket end)
+debug: set close timeout for client bxwFaru__u3IGaYg-bkz
+debug: cleared close timeout for client bxwFaru__u3IGaYg-bkz
+debug: cleared heartbeat interval for client bxwFaru__u3IGaYg-bkz
+debug: discarding transport
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: client authorized
+info: handshake authorized tEmXtwRra5RmbMuz-bk0
+debug: setting request GET /socket.io/1/websocket/tEmXtwRra5RmbMuz-bk0
+debug: set heartbeat interval for client tEmXtwRra5RmbMuz-bk0
+debug: client authorized for 
+debug: websocket writing 1::
+debug: websocket writing 5:::{"name":"whatArena","args":[{}]}
+arenalist 
+{}
+debug: client authorized
+info: handshake authorized k3TFXu3QRecy0v9y-bk1
+debug: setting request GET /socket.io/1/websocket/k3TFXu3QRecy0v9y-bk1
+debug: set heartbeat interval for client k3TFXu3QRecy0v9y-bk1
+debug: client authorized for 
+debug: websocket writing 1::
+debug: websocket writing 5:::{"name":"whatArena","args":[{}]}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client tEmXtwRra5RmbMuz-bk0
+debug: websocket writing 2::
+debug: set heartbeat timeout for client tEmXtwRra5RmbMuz-bk0
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client tEmXtwRra5RmbMuz-bk0
+debug: set heartbeat interval for client tEmXtwRra5RmbMuz-bk0
+arenalist 
+{}
+debug: emitting heartbeat for client k3TFXu3QRecy0v9y-bk1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k3TFXu3QRecy0v9y-bk1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k3TFXu3QRecy0v9y-bk1
+debug: set heartbeat interval for client k3TFXu3QRecy0v9y-bk1
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client tEmXtwRra5RmbMuz-bk0
+debug: websocket writing 2::
+debug: set heartbeat timeout for client tEmXtwRra5RmbMuz-bk0
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client tEmXtwRra5RmbMuz-bk0
+debug: set heartbeat interval for client tEmXtwRra5RmbMuz-bk0
+arenalist 
+{}
+debug: emitting heartbeat for client k3TFXu3QRecy0v9y-bk1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k3TFXu3QRecy0v9y-bk1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k3TFXu3QRecy0v9y-bk1
+debug: set heartbeat interval for client k3TFXu3QRecy0v9y-bk1
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client tEmXtwRra5RmbMuz-bk0
+debug: websocket writing 2::
+debug: set heartbeat timeout for client tEmXtwRra5RmbMuz-bk0
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client tEmXtwRra5RmbMuz-bk0
+debug: set heartbeat interval for client tEmXtwRra5RmbMuz-bk0
+arenalist 
+{}
+debug: emitting heartbeat for client k3TFXu3QRecy0v9y-bk1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k3TFXu3QRecy0v9y-bk1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k3TFXu3QRecy0v9y-bk1
+debug: set heartbeat interval for client k3TFXu3QRecy0v9y-bk1
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+debug: client authorized
+info: handshake authorized mDOoqpM3BDuGJ8zs-bk2
+debug: setting request GET /socket.io/1/websocket/mDOoqpM3BDuGJ8zs-bk2
+debug: set heartbeat interval for client mDOoqpM3BDuGJ8zs-bk2
+debug: client authorized for 
+debug: websocket writing 1::
+debug: websocket writing 5:::{"name":"whatArena","args":[{}]}
+arenalist 
+{}
+debug: emitting heartbeat for client tEmXtwRra5RmbMuz-bk0
+debug: websocket writing 2::
+debug: set heartbeat timeout for client tEmXtwRra5RmbMuz-bk0
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client tEmXtwRra5RmbMuz-bk0
+debug: set heartbeat interval for client tEmXtwRra5RmbMuz-bk0
+arenalist 
+{}
+debug: emitting heartbeat for client k3TFXu3QRecy0v9y-bk1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k3TFXu3QRecy0v9y-bk1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k3TFXu3QRecy0v9y-bk1
+debug: set heartbeat interval for client k3TFXu3QRecy0v9y-bk1
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client mDOoqpM3BDuGJ8zs-bk2
+debug: websocket writing 2::
+debug: set heartbeat timeout for client mDOoqpM3BDuGJ8zs-bk2
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client mDOoqpM3BDuGJ8zs-bk2
+debug: set heartbeat interval for client mDOoqpM3BDuGJ8zs-bk2
+arenalist 
+{}
+debug: emitting heartbeat for client tEmXtwRra5RmbMuz-bk0
+debug: websocket writing 2::
+debug: set heartbeat timeout for client tEmXtwRra5RmbMuz-bk0
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client tEmXtwRra5RmbMuz-bk0
+debug: set heartbeat interval for client tEmXtwRra5RmbMuz-bk0
+arenalist 
+{}
+debug: emitting heartbeat for client k3TFXu3QRecy0v9y-bk1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k3TFXu3QRecy0v9y-bk1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k3TFXu3QRecy0v9y-bk1
+debug: set heartbeat interval for client k3TFXu3QRecy0v9y-bk1
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client mDOoqpM3BDuGJ8zs-bk2
+debug: websocket writing 2::
+debug: set heartbeat timeout for client mDOoqpM3BDuGJ8zs-bk2
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client mDOoqpM3BDuGJ8zs-bk2
+debug: set heartbeat interval for client mDOoqpM3BDuGJ8zs-bk2
+arenalist 
+{}
+debug: emitting heartbeat for client tEmXtwRra5RmbMuz-bk0
+debug: websocket writing 2::
+debug: set heartbeat timeout for client tEmXtwRra5RmbMuz-bk0
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client tEmXtwRra5RmbMuz-bk0
+debug: set heartbeat interval for client tEmXtwRra5RmbMuz-bk0
+arenalist 
+{}
+debug: emitting heartbeat for client k3TFXu3QRecy0v9y-bk1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k3TFXu3QRecy0v9y-bk1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k3TFXu3QRecy0v9y-bk1
+debug: set heartbeat interval for client k3TFXu3QRecy0v9y-bk1
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client mDOoqpM3BDuGJ8zs-bk2
+debug: websocket writing 2::
+debug: set heartbeat timeout for client mDOoqpM3BDuGJ8zs-bk2
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client mDOoqpM3BDuGJ8zs-bk2
+debug: set heartbeat interval for client mDOoqpM3BDuGJ8zs-bk2
+arenalist 
+{}
+debug: emitting heartbeat for client tEmXtwRra5RmbMuz-bk0
+debug: websocket writing 2::
+debug: set heartbeat timeout for client tEmXtwRra5RmbMuz-bk0
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client tEmXtwRra5RmbMuz-bk0
+debug: set heartbeat interval for client tEmXtwRra5RmbMuz-bk0
+arenalist 
+{}
+debug: emitting heartbeat for client k3TFXu3QRecy0v9y-bk1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k3TFXu3QRecy0v9y-bk1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k3TFXu3QRecy0v9y-bk1
+debug: set heartbeat interval for client k3TFXu3QRecy0v9y-bk1
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client mDOoqpM3BDuGJ8zs-bk2
+debug: websocket writing 2::
+debug: set heartbeat timeout for client mDOoqpM3BDuGJ8zs-bk2
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client mDOoqpM3BDuGJ8zs-bk2
+debug: set heartbeat interval for client mDOoqpM3BDuGJ8zs-bk2
+arenalist 
+{}
+debug: emitting heartbeat for client tEmXtwRra5RmbMuz-bk0
+debug: websocket writing 2::
+debug: set heartbeat timeout for client tEmXtwRra5RmbMuz-bk0
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client tEmXtwRra5RmbMuz-bk0
+debug: set heartbeat interval for client tEmXtwRra5RmbMuz-bk0
+arenalist 
+{}
+debug: emitting heartbeat for client k3TFXu3QRecy0v9y-bk1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k3TFXu3QRecy0v9y-bk1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k3TFXu3QRecy0v9y-bk1
+debug: set heartbeat interval for client k3TFXu3QRecy0v9y-bk1
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client mDOoqpM3BDuGJ8zs-bk2
+debug: websocket writing 2::
+debug: set heartbeat timeout for client mDOoqpM3BDuGJ8zs-bk2
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client mDOoqpM3BDuGJ8zs-bk2
+debug: set heartbeat interval for client mDOoqpM3BDuGJ8zs-bk2
+arenalist 
+{}
+info: transport end (socket end)
+debug: set close timeout for client mDOoqpM3BDuGJ8zs-bk2
+debug: cleared close timeout for client mDOoqpM3BDuGJ8zs-bk2
+debug: cleared heartbeat interval for client mDOoqpM3BDuGJ8zs-bk2
+debug: discarding transport
+info: transport end (socket end)
+debug: set close timeout for client tEmXtwRra5RmbMuz-bk0
+debug: cleared close timeout for client tEmXtwRra5RmbMuz-bk0
+debug: cleared heartbeat interval for client tEmXtwRra5RmbMuz-bk0
+debug: discarding transport
+info: transport end (socket end)
+debug: set close timeout for client k3TFXu3QRecy0v9y-bk1
+debug: cleared close timeout for client k3TFXu3QRecy0v9y-bk1
+debug: cleared heartbeat interval for client k3TFXu3QRecy0v9y-bk1
+debug: discarding transport
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+debug: client authorized
+info: handshake authorized 4vz7l_qWfHQzcNQ6-bk3
+debug: setting request GET /socket.io/1/websocket/4vz7l_qWfHQzcNQ6-bk3
+debug: set heartbeat interval for client 4vz7l_qWfHQzcNQ6-bk3
+debug: client authorized for 
+debug: websocket writing 1::
+debug: websocket writing 5:::{"name":"whatArena","args":[{}]}
+arenalist 
+{}
+debug: client authorized
+info: handshake authorized l3CWsRUGQCyrhINy-bk4
+debug: setting request GET /socket.io/1/websocket/l3CWsRUGQCyrhINy-bk4
+debug: set heartbeat interval for client l3CWsRUGQCyrhINy-bk4
+debug: client authorized for 
+debug: websocket writing 1::
+debug: websocket writing 5:::{"name":"whatArena","args":[{}]}
+arenalist 
+{}
+debug: client authorized
+info: handshake authorized UbDffSzr0D0PPPG8-bk5
+debug: setting request GET /socket.io/1/websocket/UbDffSzr0D0PPPG8-bk5
+debug: set heartbeat interval for client UbDffSzr0D0PPPG8-bk5
+debug: client authorized for 
+debug: websocket writing 1::
+debug: websocket writing 5:::{"name":"whatArena","args":[{}]}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client 4vz7l_qWfHQzcNQ6-bk3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 4vz7l_qWfHQzcNQ6-bk3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 4vz7l_qWfHQzcNQ6-bk3
+debug: set heartbeat interval for client 4vz7l_qWfHQzcNQ6-bk3
+arenalist 
+{}
+debug: emitting heartbeat for client l3CWsRUGQCyrhINy-bk4
+debug: websocket writing 2::
+debug: set heartbeat timeout for client l3CWsRUGQCyrhINy-bk4
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client l3CWsRUGQCyrhINy-bk4
+debug: set heartbeat interval for client l3CWsRUGQCyrhINy-bk4
+arenalist 
+{}
+info: transport end (socket end)
+debug: set close timeout for client UbDffSzr0D0PPPG8-bk5
+debug: cleared close timeout for client UbDffSzr0D0PPPG8-bk5
+debug: cleared heartbeat interval for client UbDffSzr0D0PPPG8-bk5
+debug: discarding transport
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+debug: client authorized
+info: handshake authorized OuUDfk9mxd2jWaqR-bk6
+debug: setting request GET /socket.io/1/websocket/OuUDfk9mxd2jWaqR-bk6
+debug: set heartbeat interval for client OuUDfk9mxd2jWaqR-bk6
+debug: client authorized for 
+debug: websocket writing 1::
+debug: websocket writing 5:::{"name":"whatArena","args":[{}]}
+arenalist 
+{}
+debug: emitting heartbeat for client 4vz7l_qWfHQzcNQ6-bk3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 4vz7l_qWfHQzcNQ6-bk3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 4vz7l_qWfHQzcNQ6-bk3
+debug: set heartbeat interval for client 4vz7l_qWfHQzcNQ6-bk3
+arenalist 
+{}
+debug: emitting heartbeat for client l3CWsRUGQCyrhINy-bk4
+debug: websocket writing 2::
+debug: set heartbeat timeout for client l3CWsRUGQCyrhINy-bk4
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client l3CWsRUGQCyrhINy-bk4
+debug: set heartbeat interval for client l3CWsRUGQCyrhINy-bk4
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+debug: emitting heartbeat for client OuUDfk9mxd2jWaqR-bk6
+debug: websocket writing 2::
+debug: set heartbeat timeout for client OuUDfk9mxd2jWaqR-bk6
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client OuUDfk9mxd2jWaqR-bk6
+debug: set heartbeat interval for client OuUDfk9mxd2jWaqR-bk6
+arenalist 
+{}
+debug: emitting heartbeat for client 4vz7l_qWfHQzcNQ6-bk3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 4vz7l_qWfHQzcNQ6-bk3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 4vz7l_qWfHQzcNQ6-bk3
+debug: set heartbeat interval for client 4vz7l_qWfHQzcNQ6-bk3
+arenalist 
+{}
+debug: emitting heartbeat for client l3CWsRUGQCyrhINy-bk4
+debug: websocket writing 2::
+debug: set heartbeat timeout for client l3CWsRUGQCyrhINy-bk4
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client l3CWsRUGQCyrhINy-bk4
+debug: set heartbeat interval for client l3CWsRUGQCyrhINy-bk4
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+debug: emitting heartbeat for client OuUDfk9mxd2jWaqR-bk6
+debug: websocket writing 2::
+debug: set heartbeat timeout for client OuUDfk9mxd2jWaqR-bk6
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client OuUDfk9mxd2jWaqR-bk6
+debug: set heartbeat interval for client OuUDfk9mxd2jWaqR-bk6
+arenalist 
+{}
+debug: emitting heartbeat for client 4vz7l_qWfHQzcNQ6-bk3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 4vz7l_qWfHQzcNQ6-bk3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 4vz7l_qWfHQzcNQ6-bk3
+debug: set heartbeat interval for client 4vz7l_qWfHQzcNQ6-bk3
+arenalist 
+{}
+debug: emitting heartbeat for client l3CWsRUGQCyrhINy-bk4
+debug: websocket writing 2::
+debug: set heartbeat timeout for client l3CWsRUGQCyrhINy-bk4
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client l3CWsRUGQCyrhINy-bk4
+debug: set heartbeat interval for client l3CWsRUGQCyrhINy-bk4
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+debug: emitting heartbeat for client OuUDfk9mxd2jWaqR-bk6
+debug: websocket writing 2::
+debug: set heartbeat timeout for client OuUDfk9mxd2jWaqR-bk6
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client OuUDfk9mxd2jWaqR-bk6
+debug: set heartbeat interval for client OuUDfk9mxd2jWaqR-bk6
+arenalist 
+{}
+debug: emitting heartbeat for client 4vz7l_qWfHQzcNQ6-bk3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 4vz7l_qWfHQzcNQ6-bk3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 4vz7l_qWfHQzcNQ6-bk3
+debug: set heartbeat interval for client 4vz7l_qWfHQzcNQ6-bk3
+arenalist 
+{}
+debug: emitting heartbeat for client l3CWsRUGQCyrhINy-bk4
+debug: websocket writing 2::
+debug: set heartbeat timeout for client l3CWsRUGQCyrhINy-bk4
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client l3CWsRUGQCyrhINy-bk4
+debug: set heartbeat interval for client l3CWsRUGQCyrhINy-bk4
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+debug: emitting heartbeat for client OuUDfk9mxd2jWaqR-bk6
+debug: websocket writing 2::
+debug: set heartbeat timeout for client OuUDfk9mxd2jWaqR-bk6
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client OuUDfk9mxd2jWaqR-bk6
+debug: set heartbeat interval for client OuUDfk9mxd2jWaqR-bk6
+arenalist 
+{}
+debug: emitting heartbeat for client 4vz7l_qWfHQzcNQ6-bk3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 4vz7l_qWfHQzcNQ6-bk3
+arenalist 
+{}
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 4vz7l_qWfHQzcNQ6-bk3
+debug: set heartbeat interval for client 4vz7l_qWfHQzcNQ6-bk3
+debug: emitting heartbeat for client l3CWsRUGQCyrhINy-bk4
+debug: websocket writing 2::
+debug: set heartbeat timeout for client l3CWsRUGQCyrhINy-bk4
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client l3CWsRUGQCyrhINy-bk4
+debug: set heartbeat interval for client l3CWsRUGQCyrhINy-bk4
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+debug: emitting heartbeat for client OuUDfk9mxd2jWaqR-bk6
+debug: websocket writing 2::
+debug: set heartbeat timeout for client OuUDfk9mxd2jWaqR-bk6
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client OuUDfk9mxd2jWaqR-bk6
+debug: set heartbeat interval for client OuUDfk9mxd2jWaqR-bk6
+arenalist 
+{}
+debug: emitting heartbeat for client 4vz7l_qWfHQzcNQ6-bk3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 4vz7l_qWfHQzcNQ6-bk3
+arenalist 
+{}
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 4vz7l_qWfHQzcNQ6-bk3
+debug: set heartbeat interval for client 4vz7l_qWfHQzcNQ6-bk3
+debug: emitting heartbeat for client l3CWsRUGQCyrhINy-bk4
+debug: websocket writing 2::
+debug: set heartbeat timeout for client l3CWsRUGQCyrhINy-bk4
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client l3CWsRUGQCyrhINy-bk4
+debug: set heartbeat interval for client l3CWsRUGQCyrhINy-bk4
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+debug: emitting heartbeat for client OuUDfk9mxd2jWaqR-bk6
+debug: websocket writing 2::
+debug: set heartbeat timeout for client OuUDfk9mxd2jWaqR-bk6
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client OuUDfk9mxd2jWaqR-bk6
+debug: set heartbeat interval for client OuUDfk9mxd2jWaqR-bk6
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client 4vz7l_qWfHQzcNQ6-bk3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 4vz7l_qWfHQzcNQ6-bk3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 4vz7l_qWfHQzcNQ6-bk3
+debug: set heartbeat interval for client 4vz7l_qWfHQzcNQ6-bk3
+debug: emitting heartbeat for client l3CWsRUGQCyrhINy-bk4
+debug: websocket writing 2::
+debug: set heartbeat timeout for client l3CWsRUGQCyrhINy-bk4
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client l3CWsRUGQCyrhINy-bk4
+debug: set heartbeat interval for client l3CWsRUGQCyrhINy-bk4
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+debug: emitting heartbeat for client OuUDfk9mxd2jWaqR-bk6
+debug: websocket writing 2::
+debug: set heartbeat timeout for client OuUDfk9mxd2jWaqR-bk6
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client OuUDfk9mxd2jWaqR-bk6
+debug: set heartbeat interval for client OuUDfk9mxd2jWaqR-bk6
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client 4vz7l_qWfHQzcNQ6-bk3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 4vz7l_qWfHQzcNQ6-bk3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 4vz7l_qWfHQzcNQ6-bk3
+debug: set heartbeat interval for client 4vz7l_qWfHQzcNQ6-bk3
+debug: emitting heartbeat for client l3CWsRUGQCyrhINy-bk4
+debug: websocket writing 2::
+debug: set heartbeat timeout for client l3CWsRUGQCyrhINy-bk4
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client l3CWsRUGQCyrhINy-bk4
+debug: set heartbeat interval for client l3CWsRUGQCyrhINy-bk4
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+debug: emitting heartbeat for client OuUDfk9mxd2jWaqR-bk6
+debug: websocket writing 2::
+debug: set heartbeat timeout for client OuUDfk9mxd2jWaqR-bk6
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client OuUDfk9mxd2jWaqR-bk6
+debug: set heartbeat interval for client OuUDfk9mxd2jWaqR-bk6
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client 4vz7l_qWfHQzcNQ6-bk3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 4vz7l_qWfHQzcNQ6-bk3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 4vz7l_qWfHQzcNQ6-bk3
+debug: set heartbeat interval for client 4vz7l_qWfHQzcNQ6-bk3
+debug: emitting heartbeat for client l3CWsRUGQCyrhINy-bk4
+debug: websocket writing 2::
+debug: set heartbeat timeout for client l3CWsRUGQCyrhINy-bk4
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client l3CWsRUGQCyrhINy-bk4
+debug: set heartbeat interval for client l3CWsRUGQCyrhINy-bk4
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+debug: emitting heartbeat for client OuUDfk9mxd2jWaqR-bk6
+debug: websocket writing 2::
+debug: set heartbeat timeout for client OuUDfk9mxd2jWaqR-bk6
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client OuUDfk9mxd2jWaqR-bk6
+debug: set heartbeat interval for client OuUDfk9mxd2jWaqR-bk6
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client 4vz7l_qWfHQzcNQ6-bk3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 4vz7l_qWfHQzcNQ6-bk3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 4vz7l_qWfHQzcNQ6-bk3
+debug: set heartbeat interval for client 4vz7l_qWfHQzcNQ6-bk3
+debug: emitting heartbeat for client l3CWsRUGQCyrhINy-bk4
+debug: websocket writing 2::
+debug: set heartbeat timeout for client l3CWsRUGQCyrhINy-bk4
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client l3CWsRUGQCyrhINy-bk4
+debug: set heartbeat interval for client l3CWsRUGQCyrhINy-bk4
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+debug: emitting heartbeat for client OuUDfk9mxd2jWaqR-bk6
+debug: websocket writing 2::
+debug: set heartbeat timeout for client OuUDfk9mxd2jWaqR-bk6
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client OuUDfk9mxd2jWaqR-bk6
+debug: set heartbeat interval for client OuUDfk9mxd2jWaqR-bk6
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client 4vz7l_qWfHQzcNQ6-bk3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 4vz7l_qWfHQzcNQ6-bk3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 4vz7l_qWfHQzcNQ6-bk3
+debug: set heartbeat interval for client 4vz7l_qWfHQzcNQ6-bk3
+debug: emitting heartbeat for client l3CWsRUGQCyrhINy-bk4
+debug: websocket writing 2::
+debug: set heartbeat timeout for client l3CWsRUGQCyrhINy-bk4
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client l3CWsRUGQCyrhINy-bk4
+debug: set heartbeat interval for client l3CWsRUGQCyrhINy-bk4
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+debug: emitting heartbeat for client OuUDfk9mxd2jWaqR-bk6
+debug: websocket writing 2::
+debug: set heartbeat timeout for client OuUDfk9mxd2jWaqR-bk6
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client OuUDfk9mxd2jWaqR-bk6
+debug: set heartbeat interval for client OuUDfk9mxd2jWaqR-bk6
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client 4vz7l_qWfHQzcNQ6-bk3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 4vz7l_qWfHQzcNQ6-bk3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 4vz7l_qWfHQzcNQ6-bk3
+debug: set heartbeat interval for client 4vz7l_qWfHQzcNQ6-bk3
+debug: emitting heartbeat for client l3CWsRUGQCyrhINy-bk4
+debug: websocket writing 2::
+debug: set heartbeat timeout for client l3CWsRUGQCyrhINy-bk4
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client l3CWsRUGQCyrhINy-bk4
+debug: set heartbeat interval for client l3CWsRUGQCyrhINy-bk4
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+debug: emitting heartbeat for client OuUDfk9mxd2jWaqR-bk6
+debug: websocket writing 2::
+debug: set heartbeat timeout for client OuUDfk9mxd2jWaqR-bk6
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client OuUDfk9mxd2jWaqR-bk6
+debug: set heartbeat interval for client OuUDfk9mxd2jWaqR-bk6
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client 4vz7l_qWfHQzcNQ6-bk3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 4vz7l_qWfHQzcNQ6-bk3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 4vz7l_qWfHQzcNQ6-bk3
+debug: set heartbeat interval for client 4vz7l_qWfHQzcNQ6-bk3
+debug: emitting heartbeat for client l3CWsRUGQCyrhINy-bk4
+debug: websocket writing 2::
+debug: set heartbeat timeout for client l3CWsRUGQCyrhINy-bk4
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client l3CWsRUGQCyrhINy-bk4
+debug: set heartbeat interval for client l3CWsRUGQCyrhINy-bk4
+arenalist 
+{}
+arenalist 
+{}
+info: transport end (socket end)
+debug: set close timeout for client OuUDfk9mxd2jWaqR-bk6
+debug: cleared close timeout for client OuUDfk9mxd2jWaqR-bk6
+debug: cleared heartbeat interval for client OuUDfk9mxd2jWaqR-bk6
+debug: discarding transport
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+info: transport end (socket end)
+debug: set close timeout for client 4vz7l_qWfHQzcNQ6-bk3
+debug: cleared close timeout for client 4vz7l_qWfHQzcNQ6-bk3
+debug: cleared heartbeat interval for client 4vz7l_qWfHQzcNQ6-bk3
+debug: discarding transport
+info: transport end (socket end)
+debug: set close timeout for client l3CWsRUGQCyrhINy-bk4
+debug: cleared close timeout for client l3CWsRUGQCyrhINy-bk4
+debug: cleared heartbeat interval for client l3CWsRUGQCyrhINy-bk4
+debug: discarding transport
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: client authorized
+info: handshake authorized 1d5MW6nZFeQmOurR-bk7
+debug: setting request GET /socket.io/1/websocket/1d5MW6nZFeQmOurR-bk7
+debug: set heartbeat interval for client 1d5MW6nZFeQmOurR-bk7
+debug: client authorized for 
+debug: websocket writing 1::
+debug: websocket writing 5:::{"name":"whatArena","args":[{}]}
+arenalist 
+{}
+debug: client authorized
+info: handshake authorized qUOu3swdRxDx48hv-bk8
+debug: setting request GET /socket.io/1/websocket/qUOu3swdRxDx48hv-bk8
+debug: set heartbeat interval for client qUOu3swdRxDx48hv-bk8
+debug: client authorized for 
+debug: websocket writing 1::
+debug: websocket writing 5:::{"name":"whatArena","args":[{}]}
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client 1d5MW6nZFeQmOurR-bk7
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 1d5MW6nZFeQmOurR-bk7
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 1d5MW6nZFeQmOurR-bk7
+debug: set heartbeat interval for client 1d5MW6nZFeQmOurR-bk7
+arenalist 
+{}
+debug: emitting heartbeat for client qUOu3swdRxDx48hv-bk8
+debug: websocket writing 2::
+debug: set heartbeat timeout for client qUOu3swdRxDx48hv-bk8
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client qUOu3swdRxDx48hv-bk8
+debug: set heartbeat interval for client qUOu3swdRxDx48hv-bk8
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client 1d5MW6nZFeQmOurR-bk7
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 1d5MW6nZFeQmOurR-bk7
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 1d5MW6nZFeQmOurR-bk7
+debug: set heartbeat interval for client 1d5MW6nZFeQmOurR-bk7
+arenalist 
+{}
+debug: emitting heartbeat for client qUOu3swdRxDx48hv-bk8
+debug: websocket writing 2::
+debug: set heartbeat timeout for client qUOu3swdRxDx48hv-bk8
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client qUOu3swdRxDx48hv-bk8
+debug: set heartbeat interval for client qUOu3swdRxDx48hv-bk8
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client 1d5MW6nZFeQmOurR-bk7
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 1d5MW6nZFeQmOurR-bk7
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 1d5MW6nZFeQmOurR-bk7
+debug: set heartbeat interval for client 1d5MW6nZFeQmOurR-bk7
+arenalist 
+{}
+debug: emitting heartbeat for client qUOu3swdRxDx48hv-bk8
+debug: websocket writing 2::
+debug: set heartbeat timeout for client qUOu3swdRxDx48hv-bk8
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client qUOu3swdRxDx48hv-bk8
+debug: set heartbeat interval for client qUOu3swdRxDx48hv-bk8
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client 1d5MW6nZFeQmOurR-bk7
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 1d5MW6nZFeQmOurR-bk7
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 1d5MW6nZFeQmOurR-bk7
+debug: set heartbeat interval for client 1d5MW6nZFeQmOurR-bk7
+arenalist 
+{}
+debug: emitting heartbeat for client qUOu3swdRxDx48hv-bk8
+debug: websocket writing 2::
+debug: set heartbeat timeout for client qUOu3swdRxDx48hv-bk8
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client qUOu3swdRxDx48hv-bk8
+debug: set heartbeat interval for client qUOu3swdRxDx48hv-bk8
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client 1d5MW6nZFeQmOurR-bk7
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 1d5MW6nZFeQmOurR-bk7
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 1d5MW6nZFeQmOurR-bk7
+debug: set heartbeat interval for client 1d5MW6nZFeQmOurR-bk7
+arenalist 
+{}
+debug: emitting heartbeat for client qUOu3swdRxDx48hv-bk8
+debug: websocket writing 2::
+debug: set heartbeat timeout for client qUOu3swdRxDx48hv-bk8
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client qUOu3swdRxDx48hv-bk8
+debug: set heartbeat interval for client qUOu3swdRxDx48hv-bk8
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client 1d5MW6nZFeQmOurR-bk7
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 1d5MW6nZFeQmOurR-bk7
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 1d5MW6nZFeQmOurR-bk7
+debug: set heartbeat interval for client 1d5MW6nZFeQmOurR-bk7
+arenalist 
+{}
+debug: emitting heartbeat for client qUOu3swdRxDx48hv-bk8
+debug: websocket writing 2::
+debug: set heartbeat timeout for client qUOu3swdRxDx48hv-bk8
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client qUOu3swdRxDx48hv-bk8
+debug: set heartbeat interval for client qUOu3swdRxDx48hv-bk8
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+arenalist 
+{}
+debug: emitting heartbeat for client 1d5MW6nZFeQmOurR-bk7
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 1d5MW6nZFeQmOurR-bk7
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 1d5MW6nZFeQmOurR-bk7
+debug: set heartbeat interval for client 1d5MW6nZFeQmOurR-bk7
+arenalist 
+{}
+debug: emitting heartbeat for client qUOu3swdRxDx48hv-bk8
+debug: websocket writing 2::
+debug: set heartbeat timeout for client qUOu3swdRxDx48hv-bk8
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client qUOu3swdRxDx48hv-bk8
+debug: set heartbeat interval for client qUOu3swdRxDx48hv-bk8
+debug: emitting heartbeat for client k8W0WuTtTPHHfKk6-bkr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client k8W0WuTtTPHHfKk6-bkr
+debug: set heartbeat interval for client k8W0WuTtTPHHfKk6-bkr
+debug: emitting heartbeat for client FdRdeQ406Za4Yky--bkq
+debug: websocket writing 2::
+debug: set heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: emitting heartbeat for client MCTfxAS35tk5A-pS-bks
+debug: websocket writing 2::
+debug: set heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client FdRdeQ406Za4Yky--bkq
+debug: set heartbeat interval for client FdRdeQ406Za4Yky--bkq
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client MCTfxAS35tk5A-pS-bks
+debug: set heartbeat interval for client MCTfxAS35tk5A-pS-bks
+arenalist 
+{}

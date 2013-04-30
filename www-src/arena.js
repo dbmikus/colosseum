@@ -72,6 +72,7 @@ if(urlParams.id){
 
   socket.on("arenaInfo",function(data){
     arenaInfo = data.roomSpecs;
+    $("#roomname").html(arenaInfo.name);
     var iframe = renderIFrame(arenaInfo);
     $("#game").append(iframe);
   });
