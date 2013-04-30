@@ -9,22 +9,19 @@
     <link rel="apple-touch-icon-precomposed" href="/mobile/icon.png" />
 
 	<meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 	<meta name="viewport" content="width=device-width, initial-scale=1,
                                    maximum-scale=1, user-scalable=no" />
   </head>
 
   <body>
-    <div id="titlebar">
-      <ol class="row_items">
-        <li><a href="/"> Colosseum</a></li>
-        <li><a href="/findarena">Browse Arenas</a></li>
-        <li><a href="/create">Create Arenas</a></li>
-      </ol>
+    <div id="banner" class="unselectable"> COLOSSEUM
     </div>
     <div id="wrapper">
-      zach should make this pretty.
-      This is on mobile.
+	<img id = 'splash' src = 'mobileSplash.jpg' width= 'device-width' height='200px' > </img> 
+	<div id='welcome'> Welcome to the Colosseum!<br>
+			Hit 'Browse Arenas' to get started! </div>
+      <a href ="/findarena"> <div id = 'bigBrowse' class="pressable"> Browse Arenas</div> </a> 
     </div>
   </body>
 </html>

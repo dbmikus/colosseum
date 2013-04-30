@@ -27,6 +27,8 @@ var arenalist = {};
 // number of milliseconds for a game
 var gamelength = 30000;
 
+//lifespan of an arena in minutes
+var arenaLifeSpan = 90;
 
 var gameData  = {};
 var chat
@@ -135,11 +137,12 @@ app.post('/arena', function(req, res){
             games: {},
             votes: {}
         }
-
+        var toBeDeleted = nextId
         setTimeout(function(){
-            delete arenalist[nextId];
-            delete gameData[nextId];
-        },1000*10);
+            console.log("fuck this shit "+ toBeDeleted);
+            delete arenalist[toBeDeleted];
+            delete gameData[toBeDeleted];
+        },1000*60*arenaLifeSpan);
 
         nextId += 1;
 
@@ -237,11 +240,11 @@ IO.sockets.on("connection",function(socket){
 
     // Sent when a client leaves a room
     socket.on("disconnect", function(data){
-        arenalist[gameSockets[socket.id]]-=1;
         // try to delete the client from being listed as a game participant.
         // Not all clients in a room are game participants, but try anyways
         try{
             delete gameData[gameSockets[socket.id]]["games"][socket.id];
+            arenalist[gameSockets[socket.id]].population-=1;
             delete gameSockets[socket.id];
         }
         catch(e){
@@ -373,20 +376,22 @@ function endGame(roomid){
 }
 
 
+//diagnostic purposes
+setInterval(function(){
+    console.log("arenalist ");
+    console.log(arenalist);
+},5000);
 
-// setInterval(function(){
-//     console.log("arenalist ");
-//     console.log(arenalist);
-// },5000);
 
 
+//picks a random socket from a table of them
 function randomSocket(sockets){
     var keys = Object.keys(sockets);
     return keys[Math.floor(keys.length * Math.random())];
 }
 
 
-
+//emits a messave to a table of sockets
 function emitToAll(sockets, msg, data){
     for (var s in sockets){
         sockets[s].emit(msg, data);

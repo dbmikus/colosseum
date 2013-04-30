@@ -22,13 +22,12 @@ socket.emit("setUp", {
 
 socket.on("newGame", function(data){
   $("#chatlog").html("");
-  $("#chatlog").append("<div>Player "+data.winner+ " won the last game!</div>");
   $("#chat-input").hide();
 });
 
 socket.on("selectedAsPlayer",function(data){
   $("#chat-input").show();
-})
+});
 
 socket.on("movemade", function(data){
   $("#chatlog").append("<div class='player" + data.player +
