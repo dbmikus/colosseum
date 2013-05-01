@@ -8,3 +8,4 @@ www/*
 <<<<<<< HEAD
 node_modules/
 db/*
+nohup.out
