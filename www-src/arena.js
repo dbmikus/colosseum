@@ -50,7 +50,7 @@ $(document).ready(function () {
 
 if(urlParams.id){
   // This line is modified by Mustache
-  var socket = io.connect("http://198.199.82.58:3000");
+  var socket = io.connect("{{{host}}}");
 
   console.log("JIEJFOIJWOFJEIO");
 
