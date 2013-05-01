@@ -50,7 +50,7 @@ $(document).ready(function () {
 
 if(urlParams.id){
   // This line is modified by Mustache
-  var socket = io.connect("http://198.199.82.58:3000");
+  var socket = io.connect("{{{host}}}");
 
   console.log("JIEJFOIJWOFJEIO");
 
@@ -100,9 +100,9 @@ if(urlParams.id){
     $("#notifications").html("");
     if(data.p1 === userName
       || data.p2 === userName){
-      $("#notifications").html("A new game has started, and you are playing!");      
+      $("#notifications").html("A new game has started, and you are playing!");
     }else{
-      $("#notifications").html("A new game has started!");            
+      $("#notifications").html("A new game has started!");
     }
     beginTimer();
   });
@@ -196,7 +196,7 @@ setInterval(function(){
   if(timer===0){
     $("#timer").html("waiting");
   }else{
-    $("#timer").html(timer);    
+    $("#timer").html(timer);
     timer-=1;
   }
 },1000);
@@ -208,34 +208,34 @@ function showVotingStats(p1,votes1,p2,votes2){
       return;
     }
     $("#gameIFrame").hide();
-    var w = 500;                        
-    var h = 500;                            
+    var w = 500;
+    var h = 500;
     var r = 150;
 
 
-    data = [{"label":p1, "value":votes1}, 
+    data = [{"label":p1, "value":votes1},
             {"label":p2, "value":votes2}];
-    
-    var vis = d3.select("#stats")
-        .append("svg:svg")              
-        .data([data])                   
-            .attr("width", w)           
-            .attr("height", h)
-        .append("svg:g")      
-            .attr("transform", "translate(" + r + "," + r + ")")   
 
-    var arc = d3.svg.arc() 
+    var vis = d3.select("#stats")
+        .append("svg:svg")
+        .data([data])
+            .attr("width", w)
+            .attr("height", h)
+        .append("svg:g")
+            .attr("transform", "translate(" + r + "," + r + ")")
+
+    var arc = d3.svg.arc()
         .outerRadius(r)
         .innerRadius(80);
 
     var pie = d3.layout.pie()
         .value(function(d) { return d.value; });
 
-    var arcs = vis.selectAll("g.slice")     
-        .data(pie)                           
-        .enter()                            
-            .append("svg:g")                
-                .attr("class", "slice");    
+    var arcs = vis.selectAll("g.slice")
+        .data(pie)
+        .enter()
+            .append("svg:g")
+                .attr("class", "slice");
 
         arcs.append("svg:path")
                 .attr("fill", function(d, i) {
@@ -243,8 +243,8 @@ function showVotingStats(p1,votes1,p2,votes2){
                     return "red";
                   }
                   return "blue";
-                 } ) 
-                .attr("d", arc);  
+                 } )
+                .attr("d", arc);
 
         arcs.append("svg:text")
                 .attr("transform", function(d) {
