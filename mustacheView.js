@@ -2,7 +2,7 @@ var view = {
     "host": function () {
         // simple_name can either be:
         // "dylan", "nathan", or "local"
-        var simple_name = "nathan";
+        var simple_name = "dylan";
 
         if (simple_name === 'local') {
             return 'http://localhost:3000';

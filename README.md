@@ -1,14 +1,45 @@
 Colosseum
 =========
 
+### Group name: ###
+Colosseum
+
+### Group members: ###
+Dylan Mikus <dmikus>
+Nathan Hamal <nhamal>
+Zach Matarasso <zim>
+
+
+Description
+------------
+
 Be a gladiator of debate, rap battling, and tic-tac-toe, held to the mercy of the crowd-sourced Commodus.
 
 Description of settings.json:
 'host' describes which machine is hosting the files.
 'host' is primarily responsible for dynamically changing
 
+How to Run
+-----------
+
+To run, check the file mustacheView.js.
+You can set the `simple_name` variable to either "dylan", "nathan", or "local".
+* "dylan" cooresponds to  "http://198.199.85.62:3000"
+* "nathan" cooresponds to "http://198.199.82.58:3000"
+* "local" cooresponds to  "http://localhost:3000"
+
+If you want to run the machine locally, set the `simple_name` to "local", and then
+type `node app.js` and navigate to localhost:3000.
+Otherwise, both the Nathan and Dylan servers should be running and you can just
+test on those.
+
+If you are running locally, you might need to install some dependencies. Make
+sure you have npm installed, and then in the directory where `package.json`
+resides, type `npm install`.
+
 
 Required Elements
+-----------------
 
 1. Javascript is clearly evident in the project. The best example of the
 advanced javascript techniques we learned is the webRTC object in app.js which
@@ -60,6 +91,7 @@ peer handshakes to make broadcasting to spectators work.
 
 
 Evidence of Iterative Design:
+-----------------------------
 
 The most major changes are found in two places. Our splash page did not really
 have any real explanation of our site. We found that our users needed more
